@@ -1,0 +1,78 @@
+
+[
+  {
+    "id": "1",
+    "materia": "Direito Penal Legislação Extravagante",
+    "assunto": "1. Lei n.º 8.072/1990 (Crimes Hediondos)",
+    "enunciado": "Sobre a vedação de benefícios nos crimes hediondos e equiparados, assinale a alternativa INCORRETA.",
+    "alternativas": [
+      "A comutação de pena, espécie de indulto parcial, é admitida nos crimes de tráfico de drogas equiparados a hediondos, desde que não tenha havido violência.",
+      "A vedação constitucional à anistia e à graça, por expressa previsão na Lei nº 8.072/1990, estende-se também ao indulto.",
+      "O crime de tortura, equiparado a hediondo, tem sua insuscetibilidade à graça e anistia prevista em lei específica, sendo pacífico o entendimento de que o indulto também é vedado.",
+      "A concessão de liberdade provisória, sem fiança, é possível ao acusado da prática de crime hediondo, desde que presentes os requisitos legais.",
+      "A Súmula 697 do STF, que versava sobre a impossibilidade de liberdade provisória nos crimes hediondos, foi superada por alteração legislativa."
+    ],
+    "indiceCorreto": 0,
+    "explicacao": "A alternativa A é incorreta. A comutação de pena é uma modalidade de indulto. Sendo vedado o indulto para crimes hediondos e equiparados (art. 2º, I, da Lei 8.072/90, com interpretação conforme o STF), a comutação também é inadmissível, independentemente da ausência de violência. As demais alternativas estão corretas."
+  },
+  {
+    "id": "2",
+    "materia": "Direito Penal Legislação Extravagante",
+    "assunto": "1. Lei n.º 8.072/1990 (Crimes Hediondos)",
+    "enunciado": "Analise as assertivas abaixo sobre o regime de cumprimento de pena e progressão nos crimes hediondos.\n\nI. O juiz pode fixar o regime inicial aberto ou semiaberto para crime hediondo, desde que a pena aplicada, considerados os requisitos do art. 33 do CP, assim o permita.\nII. Para progressão de regime do condenado primário por crime hediondo com resultado morte, deve-se observar o cumprimento de, no mínimo, 50% da pena, sendo vedado o livramento condicional.\nIII. O reincidente específico em crime hediondo (ex.: condenação anterior por estupro) poderá progredir de regime após o cumprimento de 60% da pena, nos termos do art. 112, VII, da LEP.\nIV. O percentual de 40% para progressão (art. 112, V, da LEP) aplica-se apenas ao primário condenado por crime hediondo sem resultado morte, não sendo aplicável por analogia ao reincidente genérico.\n\nEstá correto o que se afirma APENAS em:",
+    "alternativas": [
+      "I e II.",
+      "II e III.",
+      "I, II e III.",
+      "I, III e IV.",
+      "II, III e IV."
+    ],
+    "indiceCorreto": 2,
+    "explicacao": "A assertiva I está correta, pois o regime inicial fechado obrigatório foi declarado inconstitucional. A II está correta (art. 112, VI, 'a', da LEP). A III está correta (art. 112, VII, da LEP). A IV está incorreta, pois o STJ, no Tema 1.084, aplica por analogia in bonam partem o percentual de 40% (art. 112, V) ao reincidente genérico em crime hediondo sem morte."
+  },
+  {
+    "id": "3",
+    "materia": "Direito Penal Parte Geral",
+    "assunto": "3. Conceito de crime.",
+    "enunciado": "Tício, querendo matar Caio, atira contra o que pensa ser o seu inimigo deitado em uma rede. Contudo, o que estava na rede era, na verdade, um robusto espantalho colocado ali por Caio, que havia percebido a intenção de Tício. Diante do Código Penal Brasileiro, a conduta de Tício configura:",
+    "alternativas": [
+      "Homicídio tentado, pois houve intenção (animus necandi) e início de execução.",
+      "Crime impossível, pela impropriedade absoluta do objeto.",
+      "Crime impossível, pela ineficácia absoluta do meio empregado.",
+      "Erro de tipo essencial vencível, respondendo Tício por homicídio culposo.",
+      "Fato atípico, pois não houve perigo real à vida de qualquer pessoa."
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "Trata-se de crime impossível (art. 17 do CP). Como a intenção era matar um ser humano, mas o disparo foi efetuado contra um espantalho (objeto inanimado), há impropriedade absoluta do objeto. Não se pode matar o que não tem vida."
+  },
+  {
+    "id": "4",
+    "materia": "Direito Penal Parte Especial",
+    "assunto": "Crimes contra o patrimônio",
+    "enunciado": "Quanto ao crime de Furto (art. 155 do CP), assinale a alternativa que descreve corretamente uma causa de aumento de pena ou qualificadora conforme o entendimento dos Tribunais Superiores:",
+    "alternativas": [
+      "A causa de aumento do repouso noturno aplica-se tanto ao furto simples quanto ao furto qualificado.",
+      "O uso de chave falsa, para qualificar o furto, dispensa a realização de perícia técnica se houver confissão do réu.",
+      "O furto praticado com rompimento de obstáculo à subtração da própria coisa (ex: quebra do vidro para levar o carro) é sempre qualificado.",
+      "A qualificadora do concurso de duas ou mais pessoas não exige que todos os agentes sejam identificados ou imputáveis.",
+      "O privilégio no furto (art. 155, §2º) é incompatível com as figuras qualificadas, mesmo que de natureza objetiva."
+    ],
+    "indiceCorreto": 3,
+    "explicacao": "A alternativa D está correta. Para a configuração da qualificadora de concurso de pessoas, basta a comprovação de que o crime foi praticado por duas ou mais pessoas, sendo irrelevante se um dos comparsas é inimputável ou não foi identificado. Nota: A alternativa A está desatualizada conforme recente entendimento do STJ que restringiu o repouso noturno apenas ao furto simples."
+  },
+  {
+    "id": "5",
+    "materia": "Direito Penal Parte Especial",
+    "assunto": "Crimes contra a administração pública",
+    "enunciado": "O funcionário público que, tendo a posse de um bem móvel em razão do seu cargo, dele se apropria ou o desvia em proveito próprio ou alheio, comete o crime de:",
+    "alternativas": [
+      "Concussão.",
+      "Corrupção Passiva.",
+      "Peculato-apropriação ou Peculato-desvio.",
+      "Prevaricação.",
+      "Excesso de Exação."
+    ],
+    "indiceCorreto": 2,
+    "explicacao": "O enunciado descreve perfeitamente o Peculato (art. 312, caput, do CP). Na concussão exige-se (art. 316), na corrupção passiva solicita-se ou recebe-se (art. 317) e na prevaricação retarda-se ato de ofício por sentimento pessoal (art. 319)."
+  }
+]
