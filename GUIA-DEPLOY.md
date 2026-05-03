@@ -19,7 +19,7 @@
 5. Preencha:
    - **Organization:** crie uma ou selecione existente
    - **Project name:** `desvio-padrao`
-   - **Database Password:** gere uma senha forte (salve em local seguro)
+   - **Database Password:** gere uma senha forte (salve em local seguro) - 36457454Joao@
    - **Region:** escolha a mais próxima (ex: `South America (Brazil)`)
 6. Clique em **Create new project**
 7. Aguarde ~2 minutos enquanto o banco é criado
@@ -58,8 +58,8 @@ Se já tiver questões no `questions.json`, importe pelo **Table Editor**:
 1. No painel do Supabase, vá em **Project Settings** (ícone de engrenagem)
 2. Clique em **API** no menu lateral
 3. Copie:
-   - **Project URL:** `https://xxxxxxxxxxxxx.supabase.co`
-   - **anon public key:** uma chave longa que começa com `eyJ...`
+   - **Project URL:** `https://vullvbmzvwaxcthpcbuo.supabase.co/rest/v1/`
+   - **anon public key:** uma chave longa que começa com `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZ1bGx2Ym16dndheGN0aHBjYnVvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc4Mjc4MDAsImV4cCI6MjA5MzQwMzgwMH0.FRiFs6wPkasnf5rX-Z-XOmwpZvf7fI0Lh-LAiP22xrI`
 
 ---
 
