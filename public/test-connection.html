@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teste Conexão Supabase - Desvio Padrão</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; background: #1a1a2e; color: #eee; padding: 2rem; min-height: 100vh; }
+    .container { max-width: 700px; margin: 0 auto; }
+    h1 { font-size: 1.5rem; margin-bottom: 0.5rem; color: #00d4aa; }
+    .subtitle { color: #888; margin-bottom: 2rem; font-size: 0.85rem; }
+    .test { background: #16213e; border-radius: 12px; padding: 1.2rem; margin-bottom: 1rem; border-left: 4px solid #333; }
+    .test.pass { border-left-color: #00d4aa; }
+    .test.fail { border-left-color: #ff6b6b; }
+    .test.pending { border-left-color: #ffd93d; }
+    .test h3 { font-size: 0.9rem; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+    .test p { font-size: 0.85rem; color: #aaa; line-height: 1.6; }
+    .test .detail { background: #0f0f23; padding: 0.8rem; border-radius: 8px; margin-top: 0.5rem; font-family: monospace; font-size: 0.75rem; color: #ff6b6b; white-space: pre-wrap; word-break: break-all; }
+    .status-icon { font-size: 1.1rem; }
+    #run-btn { background: #00d4aa; color: #1a1a2e; border: none; padding: 0.8rem 2rem; border-radius: 8px; font-weight: bold; font-size: 1rem; cursor: pointer; margin-bottom: 2rem; transition: all 0.2s; }
+    #run-btn:hover { background: #00b894; transform: scale(1.02); }
+    #run-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+    .config-info { background: #16213e; border-radius: 12px; padding: 1rem; margin-bottom: 1.5rem; }
+    .config-info label { font-size: 0.7rem; color: #888; text-transform: uppercase; display: block; margin-bottom: 0.2rem; }
+    .config-info .value { font-family: monospace; font-size: 0.8rem; color: #00d4aa; word-break: break-all; margin-bottom: 0.8rem; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Teste de Conexão — Supabase</h1>
+    <p class="subtitle">Verifica se o site está conectado corretamente ao banco de dados</p>
+
+    <div class="config-info">
+      <label>Supabase URL</label>
+      <div class="value" id="url-display">Carregando...</div>
+      <label>Anon Key (primeiros 20 chars)</label>
+      <div class="value" id="key-display">Carregando...</div>
+    </div>
+
+    <button id="run-btn" onclick="runTests()">Executar Testes</button>
+
+    <div id="results"></div>
+  </div>
+
+  <script type="module">
+    import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm';
+
+    const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL;
+    const SUPABASE_KEY = import.meta.env.VITE_SUPABASE_ANON_KEY;
+
+    const urlDisplay = document.getElementById('url-display');
+    const keyDisplay = document.getElementById('key-display');
+
+    if (!SUPABASE_URL || !SUPABASE_KEY) {
+      urlDisplay.textContent = 'NÃO CONFIGURADO';
+      keyDisplay.textContent = 'NÃO CONFIGURADO';
+      urlDisplay.style.color = '#ff6b6b';
+      keyDisplay.style.color = '#ff6b6b';
+    } else {
+      urlDisplay.textContent = SUPABASE_URL;
+      keyDisplay.textContent = SUPABASE_KEY.substring(0, 20) + '...';
+    }
+
+    let supabase;
+    try {
+      supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
+    } catch (e) {
+      document.getElementById('results').innerHTML = `
+        <div class="test fail">
+          <h3><span class="status-icon">✕</span> Falha ao inicializar cliente Supabase</h3>
+          <div class="detail">Variáveis de ambiente não configuradas. Adicione VITE_SUPABASE_URL e VITE_SUPABASE_ANON_KEY no Netlify.</div>
+        </div>`;
+      document.getElementById('run-btn').disabled = true;
+    }
+
+    window.runTests = async () => {
+      const btn = document.getElementById('run-btn');
+      btn.disabled = true;
+      btn.textContent = 'Testando...';
+      const results = document.getElementById('results');
+      results.innerHTML = '';
+
+      const addTest = (id, title, status, message, detail) => {
+        const icons = { pass: '✓', fail: '✕', pending: '...' };
+        const div = document.createElement('div');
+        div.className = `test ${status}`;
+        div.id = id;
+        div.innerHTML = `
+          <h3><span class="status-icon">${icons[status]}</span> ${title}</h3>
+          <p>${message}</p>
+          ${detail ? `<div class="detail">${detail}</div>` : ''}
+        `;
+        results.appendChild(div);
+        return div;
+      };
+
+      const updateTest = (id, status, message, detail) => {
+        const div = document.getElementById(id);
+        if (!div) return;
+        const icons = { pass: '✓', fail: '✕', pending: '...' };
+        div.className = `test ${status}`;
+        div.querySelector('h3 .status-icon').textContent = icons[status];
+        div.querySelector('p').textContent = message;
+        if (detail) {
+          const existing = div.querySelector('.detail');
+          if (existing) existing.remove();
+          const d = document.createElement('div');
+          d.className = 'detail';
+          d.textContent = detail;
+          div.appendChild(d);
+        }
+      };
+
+      // Test 1: Connection
+      addTest('t1', '1. Conexão com Supabase', 'pending', 'Verificando...');
+      const { data: usersData, error: connError } = await supabase.from('users').select('*').limit(1);
+
+      if (connError) {
+        updateTest('t1', 'fail', 'Falha na conexão!', `${connError.code}: ${connError.message}`);
+        btn.textContent = 'Testes concluídos (com erros)';
+        return;
+      }
+      updateTest('t1', 'pass', `Conexão OK. Encontrou ${usersData.length} usuário(s) no resultado.`);
+
+      // Test 2: Count all users
+      addTest('t2', '2. Contagem de usuários', 'pending', 'Contando...');
+      const { count, error: countError } = await supabase.from('users').select('*', { count: 'exact', head: true });
+      if (countError) {
+        updateTest('t2', 'fail', 'Erro ao contar usuários', `${countError.code}: ${countError.message}`);
+      } else {
+        updateTest('t2', 'pass', `Total de usuários no banco: ${count}`);
+      }
+
+      // Test 3: Create test user
+      addTest('t3', '3. Criar usuário de teste', 'pending', 'Tentando INSERT...');
+      const testEmail = `teste-${Date.now()}@desvio.com`;
+      const { data: inserted, error: insertError } = await supabase
+        .from('users')
+        .insert({ nome: 'Teste Conexão', email: testEmail, senha: 'teste123', role: 'student', ativo: true })
+        .select()
+        .single();
+
+      if (insertError) {
+        updateTest('t3', 'fail', 'ERRO ao criar usuário — RLS provavelmente bloqueando', `${insertError.code}: ${insertError.message}\n\nSOLUÇÃO: Execute o arquivo supabase-fix-rls.sql no SQL Editor do Supabase para desabilitar Row Level Security.`);
+      } else {
+        updateTest('t3', 'pass', `Usuário criado! ID: ${inserted.id}`);
+
+        // Test 4: Delete test user
+        addTest('t4', '4. Deletar usuário de teste', 'pending', 'Limpando...');
+        const { error: deleteError } = await supabase.from('users').delete().eq('id', inserted.id);
+        if (deleteError) {
+          updateTest('t4', 'fail', 'Não foi possível deletar o usuário de teste', `${deleteError.code}: ${deleteError.message}`);
+        } else {
+          updateTest('t4', 'pass', 'Usuário de teste removido com sucesso');
+        }
+      }
+
+      // Test 5: Access questions
+      addTest('t5', '5. Acessar questões', 'pending', 'Buscando...');
+      const { data: questionsData, error: questionsError } = await supabase.from('questions').select('*').limit(5);
+      if (questionsError) {
+        updateTest('t5', 'fail', 'Erro ao acessar questões', `${questionsError.code}: ${questionsError.message}`);
+      } else {
+        updateTest('t5', 'pass', `OK! Encontrou ${questionsData.length} questão(ões).`);
+      }
+
+      // Test 6: Try insert question
+      addTest('t6', '6. Inserir questão de teste', 'pending', 'Tentando INSERT...');
+      const testQId = `test-q-${Date.now()}`;
+      const { data: insertedQ, error: insertQError } = await supabase
+        .from('questions')
+        .insert({
+          id: testQId,
+          materia: 'Teste',
+          assunto: 'Teste',
+          enunciado: 'Questão de teste',
+          alternativas: ['A', 'B', 'C', 'D'],
+          indice_correto: 0,
+          explicacao: 'Teste'
+        })
+        .select()
+        .single();
+
+      if (insertQError) {
+        updateTest('t6', 'fail', 'ERRO ao inserir questão — RLS bloqueando', `${insertQError.code}: ${insertQError.message}`);
+      } else {
+        updateTest('t6', 'pass', 'Questão inserida com sucesso!');
+        await supabase.from('questions').delete().eq('id', testQId);
+      }
+
+      btn.textContent = 'Testes concluídos';
+    };
+  </script>
+</body>
+</html>

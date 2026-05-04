@@ -125,6 +125,7 @@ const App: React.FC = () => {
 
     if (error) {
       console.error('Erro ao inserir questões:', error);
+      alert(`Erro ao inserir questões: ${error.message}`);
       return;
     }
 
@@ -268,7 +269,7 @@ const App: React.FC = () => {
 
     if (error) {
       console.error('Erro ao criar usuário:', error);
-      alert('Erro ao criar conta. Tente novamente.');
+      alert(`Erro ao criar conta: ${error.message}`);
       return;
     }
 
