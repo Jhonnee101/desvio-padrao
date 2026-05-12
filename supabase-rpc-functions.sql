@@ -71,7 +71,7 @@ BEGIN
     p_role::user_role,
     p_ativo
   )
-  RETURNING id, nome, email, role::TEXT, ativo, created_at, updated_at;
+  RETURNING users.id, users.nome, users.email, users.role::TEXT, users.ativo, users.created_at, users.updated_at;
 END;
 $$;
 
@@ -108,7 +108,7 @@ BEGIN
     p_role::user_role,
     p_ativo
   )
-  RETURNING id, nome, email, role::TEXT, ativo, created_at, updated_at;
+  RETURNING users.id, users.nome, users.email, users.role::TEXT, users.ativo, users.created_at, users.updated_at;
 END;
 $$;
 
