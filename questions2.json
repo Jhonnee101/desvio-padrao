@@ -1,0 +1,1352 @@
+[
+  {
+    "id": "112",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "No curso de uma ação penal pública por crime de corrupção, o juiz, após a audiência de instrução, proferiu decisão saneadora na qual, de ofício, declarou a nulidade da denúncia por considerar inepta sua descrição fática. O Ministério Público não foi previamente ouvido sobre a matéria. Com base nos princípios das nulidades, assinale a alternativa correta.",
+    "alternativas": [
+      "A) O juiz agiu corretamente, pois a nulidade da denúncia por inépcia é absoluta e pode ser declarada de ofício a qualquer tempo.",
+      "B) O juiz poderia declarar a nulidade de ofício, mas deveria antes ouvir o Ministério Público, sob pena de violação do contraditório.",
+      "C) A nulidade da denúncia por inépcia é relativa, dependendo de arguição pela parte, não podendo ser declarada de ofício.",
+      "D) A decisão é válida, pois a inépcia da inicial é matéria de ordem pública, conhecível ex officio em qualquer momento.",
+      "E) O ato do juiz configura excesso de poder, mas é mera irregularidade, não gerando nulidade."
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "B) Correta. Embora a inépcia da denúncia possa ser declarada de ofício, o juiz deve observar o contraditório, ouvindo previamente o Ministério Público para que se manifeste sobre a alegação. A violação do contraditório gera nulidade."
+  },
+  {
+    "id": "113",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Sobre o princípio do interesse (art. 565, parte final, CPP), assinale a alternativa incorreta.",
+    "alternativas": [
+      "A) Aplica-se apenas às nulidades relativas, pois nas absolutas qualquer parte pode arguir o vício.",
+      "B) Impede que a parte argua nulidade referente a formalidade cuja observância só interesse à parte contrária.",
+      "C) O Ministério Público está excluído da aplicação deste princípio, podendo arguir nulidade relativa em favor da defesa.",
+      "D) A defesa não pode arguir nulidade decorrente da falta do Ministério Público à audiência se a sentença foi absolutória.",
+      "E) O princípio veda que o juiz declare de ofício nulidade relativa, pois esta depende de provocação do interessado."
+    ],
+    "indiceCorreto": 4,
+    "explicacao": "E) Incorreta. O princípio do interesse, previsto no art. 565, parte final, do CPP, refere-se à arguição das partes, não à atuação de ofício do juiz. O juiz pode declarar de ofício nulidade relativa em alguns casos, especialmente quando configurada a violação a direitos fundamentais. As demais alternativas estão corretas."
+  },
+  {
+    "id": "114",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Em habeas corpus impetrado contra decisão que negou seguimento a recurso especial, a defesa alegou a nulidade do julgamento do recurso no Tribunal de Justiça, por não ter havido intimação prévia da pauta de julgamento. À luz da Súmula 431 do STF, assinale a alternativa correta.",
+    "alternativas": [
+      "A) É nulo o julgamento de recurso criminal sem prévia intimação ou publicação da pauta, salvo em habeas corpus.",
+      "B) A falta de intimação da pauta em recurso criminal sempre gera nulidade absoluta do julgamento.",
+      "C) A Súmula 431 foi recepcionada pelo CPC/2015, não mais se aplicando ao processo penal.",
+      "D) Em habeas corpus, a intimação da pauta é obrigatória se a defesa tiver requerido sustentação oral.",
+      "E) A nulidade é relativa e preclui se não arguida antes do julgamento."
+    ],
+    "indiceCorreto": 0,
+    "explicacao": "A) Correta. Conforme a Súmula 431 do STF, \"É nulo o julgamento de recurso criminal, na segunda instância, sem prévia intimação, ou publicação da pauta, salvo em habeas corpus\". A exceção para o habeas corpus justifica-se pela natureza urgente deste remédio constitucional."
+  },
+  {
+    "id": "115",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Após a pronúncia em processo do Júri, o réu foi intimado da data da sessão plenária. No dia marcado, ele estava preso, mas não foi conduzido ao plenário por falha da administração carcerária. Seu defensor compareceu e nada alegou. O julgamento prosseguiu à revelia, resultando em condenação. No recurso, alega-se a nulidade por falta de presença do réu. Com base no art. 457, §2º, CPP, assinale a alternativa correta.",
+    "alternativas": [
+      "A) Havendo intimação válida, a não presença do réu, mesmo preso, autoriza o julgamento à revelia, sem nulidade.",
+      "B) A falta de condução do réu preso gera nulidade absoluta, independente de arguição, por violação ao direito de presença.",
+      "C) O defensor, ao não arguir a nulidade no momento, convalidou o ato, aplicando-se a preclusão.",
+      "D) Ocorre nulidade relativa, que deveria ter sido arguida imediatamente, sob pena de preclusão.",
+      "E) O juiz deveria ter adiado o julgamento para o primeiro dia desimpedido da mesma reunião."
+    ],
+    "indiceCorreto": 4,
+    "explicacao": "E) Correta. Nos termos do art. 457, §2º, primeira parte, do CPP, se o acusado preso não for conduzido ao plenário, o julgamento será adiado para o primeiro dia desimpedido da mesma reunião. O direito de presença do réu preso é garantido, sendo dever do Estado providenciar sua condução."
+  },
+  {
+    "id": "116",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Sobre a ilegitimidade de parte (art. 564, II, CPP), assinale a alternativa que apresenta a correta distinção entre ilegitimidade ad causam e ad processum.",
+    "alternativas": [
+      "A) A ilegitimidade ad causam gera nulidade relativa, enquanto a ad processum gera nulidade absoluta.",
+      "B) A ilegitimidade ad causam refere-se à falta de capacidade processual, gerando nulidade relativa sanável por ratificação.",
+      "C) A ilegitimidade ad processum refere-se à falta de pertinência subjetiva da ação, gerando nulidade absoluta.",
+      "D) A ilegitimidade ad causam refere-se à falta de pertinência subjetiva da ação, gerando nulidade absoluta.",
+      "E) Ambas geram nulidade absoluta, pois a legitimidade é pressuposto processual de validade."
+    ],
+    "indiceCorreto": 3,
+    "explicacao": "D) Correta. A ilegitimidade ad causam (falta de pertinência subjetiva da ação) gera nulidade absoluta. Já a ilegitimidade ad processum (falta de capacidade processual) gera nulidade relativa, passível de convalidação nos termos do art. 568 do CPP."
+  },
+  {
+    "id": "117",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Em ação penal por crime de lesão corporal leve, o Ministério Público ofereceu denúncia que, em sua conclusão, pedia a \"aplicação da pena sem suspenção [sic] do processo\". O juiz recebeu a denúncia e citou o réu. Na resposta, a defesa alegou a nulidade da denúncia por inépcia, por conter pedido juridicamente impossível (suspensão do processo em crime de menor potencial ofensivo). Com base no art. 569 do CPP, assinale a alternativa correta.",
+    "alternativas": [
+      "A) A denúncia é nula por inépcia absoluta, pois o pedido é juridicamente impossível, devendo ser rejeitada in limine.",
+      "B) A omissão ou erro no pedido da denúncia pode ser suprida a todo tempo antes da sentença, não acarretando necessariamente nulidade.",
+      "C) Trata-se de nulidade relativa, que depende de arguição oportuna pela defesa.",
+      "D) Configura ato inexistente, por falta de elemento essencial da peça acusatória.",
+      "E) O erro de português não vicia a denúncia, sendo mera irregularidade."
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "B) Correta. Conforme o art. 569 do CPP, \"As omissões da denúncia ou da queixa [...] poderão ser supridas a todo o tempo, antes da sentença final\". O erro no pedido não torna a denúncia inepta de plano, podendo ser suprido."
+  },
+  {
+    "id": "118",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "No julgamento de um recurso em sentido estrito contra decisão que recebeu denúncia, o Tribunal, por maioria, reformou a decisão e rejeitou a denúncia. Um dos desembargadores vencidos, ao proferir seu voto, utilizou expressões ofensivas e pejorativas contra a honra do réu, chamando-o de \"criminoso contumaz\" e \"verdadeira ameaça social\". Com base no Informativo 743 do STJ, assinale a alternativa correta.",
+    "alternativas": [
+      "A) As expressões proferidas no voto vencido são irrelevantes, pois não influenciaram o resultado.",
+      "B) As expressões podem configurar quebra de imparcialidade e causar nulidade absoluta, se o desembargador integrar a maioria em outros julgamentos do mesmo réu.",
+      "C) A manifestação do juiz no exercício de sua convicção é inviolável, não podendo gerar nulidade.",
+      "D) Trata-se de mera irregularidade, passível apenas de sanção disciplinar.",
+      "E) A nulidade é relativa e depende de demonstração de prejuízo concreto para o réu."
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "B) Correta. Conforme o Informativo 743 do STJ, \"expressões ofensivas, desrespeitosas e pejorativas proferidas pelo magistrado na sessão de julgamento contra a honra do réu podem configurar quebra de imparcialidade e causa de nulidade absoluta\". O fato de o voto ser vencido não exclui a possibilidade de o magistrado integrar maioria em outros julgamentos."
+  },
+  {
+    "id": "119",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Em processo por crime de tráfico de drogas, a defesa requereu a exclusão de provas por considerá-las ilícitas, por violação ao domicílio. O juiz rejeitou o pedido na sentença, condenando o réu. No recurso, o Tribunal, ao reexaminar as provas, entendeu que realmente houve violação e declarou a ilicitude. Sobre os efeitos dessa declaração, à luz do princípio da causalidade, assinale a alternativa correta.",
+    "alternativas": [
+      "A) A declaração de ilicitude da prova gera a nulidade apenas da própria prova, mantendo-se válidas as demais.",
+      "B) A nulidade se estende a todos os atos que dependam diretamente da prova ilícita, podendo contaminar a sentença.",
+      "C) O Tribunal pode prosseguir no julgamento com base nas demais provas lícitas, independente da ilicitude declarada.",
+      "D) Declarada a ilicitude, o processo deve ser anulado in totum e reiniciado desde o início com novas provas.",
+      "E) A prova ilícita é aproveitável para a condenação se houver outras provas robustas, aplicando-se a teoria da proporcionalidade."
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "B) Correta. Nos termos do art. 573, §1º, do CPP (princípio da causalidade), \"a nulidade de um ato, uma vez declarada, causará a dos atos que dele diretamente dependam ou seja consequência\". A prova ilícita contamina os atos que dela dependem, podendo levar à anulação da sentença se foi essencial para a condenação."
+  },
+  {
+    "id": "120",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Sobre o momento para arguição das nulidades relativas, conforme o art. 571 do CPP atualizado, analise as assertivas: I. Nos processos perante o juiz singular, nulidades ocorridas após a resposta à acusação devem ser alegadas até as alegações finais. II. No procedimento do Júri, nulidades da instrução criminal após a resposta devem ser arguidas em sede de alegações orais da primeira fase. III. Nulidades relativas ocorridas após as alegações finais e antes da sentença devem ser arguidas nas razões recursais. IV. Nulidades do julgamento em plenário do Júri devem ser arguidas imediatamente após ocorrerem. Estão corretas as assertivas:",
+    "alternativas": [
+      "A) I, II e III.",
+      "B) I, II e IV.",
+      "C) I, III e IV.",
+      "D) II, III e IV.",
+      "E) I, II, III e IV."
+    ],
+    "indiceCorreto": 4,
+    "explicacao": "E) Correta. Todas as assertivas estão de acordo com a interpretação atualizada do art. 571 do CPP à luz das reformas processuais. A assertiva III decorre de interpretação extensiva do inciso VII, que prevê a arguição nas razões recursais para nulidades verificadas após a decisão de primeira instância."
+  },
+  {
+    "id": "121",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Em ação penal por crime de homicídio, a defesa requereu a realização de exame de corpo de delito para comprovar a direção e o alcance dos tiros, crucial para sua tese de legítima defesa. O juiz indeferiu o requerimento, considerando desnecessária a prova. A sentença condenatória não se valeu de qualquer elemento que o exame poderia ter trazido. No recurso, a defesa alega nulidade por ausência de exame de corpo de delito nos crimes que deixam vestígios (art. 564, III, \"b\", CPP). Assinale a alternativa correta.",
+    "alternativas": [
+      "A) É nulidade absoluta, pois o exame era possível e necessário, não havendo desaparecimento de vestígios.",
+      "B) É nulidade relativa, pois o indeferimento de prova é decisão discricionária do juiz, sujeita apenas a reexame no mérito.",
+      "C) Não há nulidade, pois o exame não foi realizado por decisão judicial, e não por omissão das partes.",
+      "D) O art. 564, III, \"b\", só se aplica se o exame não foi realizado em absoluto, não ao seu indeferimento.",
+      "E) A nulidade está condicionada à demonstração de que o exame era essencial e que sua falta causou prejuízo à defesa."
+    ],
+    "indiceCorreto": 3,
+    "explicacao": "D) Correta. O art. 564, III, \"b\", do CPP refere-se à ausência de exame de corpo de delito, não ao seu indeferimento por decisão judicial. O indeferimento de prova requerida é decisão interlocutória, cabendo recurso em sentido estrito, mas não configura a nulidade prevista no referido dispositivo."
+  },
+  {
+    "id": "122",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Durante a instrução de processo por crime ambiental, uma testemunha idosa, com dificuldade auditiva, foi ouvida sem a presença de intérprete ou assistente. Seu depoimento foi breve e não foi utilizado como fundamento pela acusação ou pela sentença. Na apelação, a defesa alega a nulidade da oitiva. Com base no art. 566 do CPP, assinale a alternativa correta.",
+    "alternativas": [
+      "A) É nulidade absoluta por violação à ampla defesa e ao contraditório, independente do uso do depoimento.",
+      "B) Não será declarada a nulidade, pois o ato não influiu na apuração da verdade substancial ou na decisão da causa.",
+      "C) É nulidade relativa, mas precluiu por não ter sido argüida na primeira oportunidade.",
+      "D) A falta de intérprete configura ato inexistente, por impossibilidade de comunicação válida.",
+      "E) A nulidade só existe se a testemunha fosse surda, e não apenas com dificuldade auditiva."
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "B) Correta. Conforme o art. 566 do CPP, \"não será declarada a nulidade de ato processual que não houver influído na apuração da verdade substancial ou na decisão da causa\". Se o depoimento não foi utilizado pelas partes nem pelo juiz, não há que se falar em prejuízo."
+  },
+  {
+    "id": "123",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Em processo por crime de roubo majorado, a defesa arguiu a incompetência relativa do juízo (em razão do lugar da ação). O juiz, reconhecendo a incompetência, declarou a nulidade dos atos decisórios e remeteu os autos ao juízo competente, determinando a ratificação dos atos instrutórios. A defesa insurgiu-se, alegando que, sendo incompetência relativa, todos os atos deveriam ser refeitos. À luz do art. 567 do CPP e da doutrina, assinale a alternativa correta.",
+    "alternativas": [
+      "A) A defesa tem razão: na incompetência relativa, todos os atos (instrutórios e decisórios) devem ser anulados e refeitos.",
+      "B) O juiz agiu corretamente: o art. 567 determina a anulação apenas dos atos decisórios, independente do tipo de incompetência.",
+      "C) Para a doutrina majoritária, o art. 567 se aplica apenas à incompetência absoluta; na relativa, só os decisórios são anulados.",
+      "D) O STF entende que, mesmo em incompetência absoluta, pode haver ratificação dos atos decisórios, não necessitando repetição.",
+      "E) A incompetência relativa, uma vez arguida, gera a anulação do processo todo, que deve ser reiniciado no juízo competente."
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "B) Correta. O art. 567 do CPP estabelece que \"a incompetência do juízo anula somente os atos decisórios\". A norma não faz distinção entre incompetência absoluta e relativa. A doutrina majoritária aplica a literalidade do dispositivo a ambas as espécies."
+  },
+  {
+    "id": "124",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Durante a instrução de processo por crime de peculato, o juiz, de ofício, determinou a quebra do sigilo bancário do réu, sem ouvir previamente a defesa. A defesa só tomou ciência do ato quando da juntada dos extratos bancários aos autos. Imediatamente, arguiu a nulidade. O juiz rejeitou a preliminar, fundamentando que a quebra foi determinada para apuração da verdade real. No recurso, a defesa mantém a tese de nulidade. Assinale a alternativa correta.",
+    "alternativas": [
+      "A) O juiz agiu corretamente, pois a busca da verdade real autoriza medidas de ofício sem prévio contraditório.",
+      "B) A falta de prévio contraditório em medida que restringe direito fundamental gera nulidade absoluta.",
+      "C) É nulidade relativa, que foi argüida em momento oportuno e cujo prejuízo é evidente.",
+      "D) A quebra de sigilo é ato de investigação, cujos vícios não contaminam a ação penal.",
+      "E) O vício foi sanado pela posterior ciência e impugnação pela defesa."
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "B) Correta. A quebra de sigilo bancário é medida que restringe direito fundamental. Sua determinação sem prévio contraditório viola o devido processo legal, configurando nulidade absoluta. A busca da verdade real não justifica a supressão de garantias processuais fundamentais."
+  },
+  {
+    "id": "125",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Sobre a distinção doutrinária entre \"nulidade como sanção\" e \"nulidade como defeito\", assinale a alternativa que melhor descreve a corrente majoritária.",
+    "alternativas": [
+      "A) Compreende a nulidade como qualidade ou característica do ato processual defeituoso.",
+      "B) Entende que a nulidade é sinônimo de vício, imperfeição ou inobservância da forma legal.",
+      "C) Compreende a nulidade como espécie de sanção aplicada ao ato processual defeituoso, privando-o de seus efeitos.",
+      "D) Defende que todo ato viciado é automaticamente nulo, independente de declaração judicial.",
+      "E) Considera que a nulidade só existe quando expressamente prevista em lei (sistema legalista)."
+    ],
+    "indiceCorreto": 2,
+    "explicacao": "C) Correta. A corrente majoritária entende a nulidade como sanção processual de ineficácia aplicada ao ato defeituoso. Não se trata de mera característica do ato, mas de consequência jurídica que priva o ato de seus efeitos regulares, dependendo de declaração judicial."
+  },
+  {
+    "id": "126",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "No julgamento de recurso em sentido estrito, o Tribunal, por maioria, confirmou a decisão de pronúncia. Um dos desembargadores da maioria havia, em entrevista à imprensa anos antes, manifestado opinião contundente sobre a necessidade de rigor no combate ao crime organizado, do qual o réu era acusado. A defesa alega suspeição do julgador. Considerando a jurisprudência, assinale a alternativa correta.",
+    "alternativas": [
+      "A) Manifestações genéricas anteriores ao processo não configuram suspeição, salvo se referirem especificamente ao caso.",
+      "B) Qualquer manifestação pública do juiz sobre temas correlatos gera suspeição e nulidade absoluta.",
+      "C) A suspeição deve ser arguida antes do julgamento, sob pena de preclusão.",
+      "D) Trata-se de impedimento, que gera inexistência do ato decisório.",
+      "E) A mera convicção do juiz não gera vício, pois a imparcialidade é presumida."
+    ],
+    "indiceCorreto": 0,
+    "explicacao": "A) Correta. Manifestações genéricas do magistrado sobre temas de política criminal, anteriores ao processo, não configuram suspeição. Para caracterizar a parcialidade, é necessário que as declarações se refiram especificamente ao caso concreto ou demonstrem pré-julgamento."
+  },
+  {
+    "id": "127",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Em processo por crime de injúria racial (ação pública incondicionada), o Ministério Público ofereceu denúncia sem a prévia representação da vítima. A defesa arguia a falta de condição de procedibilidade. O juiz, contudo, recebeu a denúncia, entendendo que a representação era dispensável. Na sentença, condenou o réu. No recurso, a defesa mantém a tese. Com base no art. 564, III, \"a\", CPP, assinale a alternativa correta.",
+    "alternativas": [
+      "A) A falta de representação, quando exigida, gera nulidade absoluta, por ser condição de procedibilidade.",
+      "B) É questão de mérito, a ser decidida na sentença, não gerando nulidade processual.",
+      "C) Trata-se de nulidade relativa, que precluiu por não ter sido arguida por ocasião da exceção de incompetência.",
+      "D) A representação é requisito da ação penal, e sua falta gera carência, devendo o processo ser extinto sem resolução de mérito.",
+      "E) O juiz pode suprir a omissão determinando a oitiva da vítima sobre sua vontade de representar."
+    ],
+    "indiceCorreto": 0,
+    "explicacao": "A) Correta. A falta de representação, quando exigida por lei como condição de procedibilidade, configura nulidade absoluta nos termos do art. 564, III, \"a\", do CPP. Trata-se de vício que atinge a própria existência válida da ação penal."
+  },
+  {
+    "id": "128",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Durante a instrução de processo por crime de homicídio, uma testemunha de acusação faleceu antes de ser interrogada. O Ministério Público requereu a juntada de seu depoimento colhido no inquérito policial, sob a alegação de impossibilidade superveniente. A defesa opôs-se, alegando violação ao contraditório. O juiz deferiu o requerimento. Na sentença, o juiz não se valeu do referido depoimento para fundamentar a condenação. A defesa alega a nulidade. Assinale a alternativa correta.",
+    "alternativas": [
+      "A) A juntada de depoimento inquisitorial viola o contraditório, gerando nulidade absoluta, ainda que não utilizado.",
+      "B) A admissão da prova foi legal, por força da impossibilidade superveniente; não sendo utilizada, não há prejuízo.",
+      "C) É nulidade relativa, que deve ser demonstrado o prejuízo pela defesa.",
+      "D) O depoimento policial é prova ilícita por derivar do inquérito, nulo por natureza.",
+      "E) O juiz deveria ter determinado a reconstituição do depoimento por outras testemunhas."
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "B) Correta. A impossibilidade superveniente de oitiva da testemunha autoriza a juntada do depoimento colhido no inquérito, desde que observado o contraditório sobre sua admissão. Não sendo a prova utilizada na fundamentação da sentença, não há prejuízo a justificar a declaração de nulidade."
+  },
+  {
+    "id": "129",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Em recurso de apelação contra sentença absolutória, o Ministério Público alegou, pela primeira vez, a nulidade da pronúncia por falta de fundamentação. O Tribunal, acolhendo a preliminar, anulou a sentença e determinou a realização de novo julgamento a partir da fase de pronúncia. A defesa impetrou habeas corpus. Com base na Súmula 160 do STF, assinale a alternativa correta.",
+    "alternativas": [
+      "A) O Tribunal pode conhecer de nulidade absoluta a qualquer tempo, inclusive de ofício.",
+      "B) É nula a decisão do tribunal que acolhe, contra o réu, nulidade não arguida no recurso da acusação.",
+      "C) A nulidade da pronúncia é relativa e precluiu com o trânsito em julgado da sentença de pronúncia.",
+      "D) O Ministério Público, como custos legis, pode arguir nulidades em qualquer momento.",
+      "E) A decisão é válida, pois a falta de fundamentação é vício insanável de ordem pública."
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "B) Correta. Conforme a Súmula 160 do STF, \"É nula a decisão do tribunal que acolhe, contra o réu, nulidade não arguida no recurso da acusação, ressalvados os casos de recurso de ofício\". O MP não pode arguir pela primeira vez no Tribunal nulidade que não alegou na primeira instância."
+  },
+  {
+    "id": "130",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Um réu foi processado e condenado por crime de estelionato. Na execução penal, descobriu-se que o juízo condenante era absolutamente incompetente ratione materiae (o crime era de competência da Justiça Federal). A defesa impetrou habeas corpus. Sobre os efeitos da declaração de nulidade por incompetência absoluta, à luz do art. 567 do CPP, assinale a alternativa que reflete o entendimento do STF.",
+    "alternativas": [
+      "A) Todos os atos do processo são nulos e devem ser refeitos perante o juízo competente.",
+      "B) Apenas os atos decisórios são anulados, podendo os atos instrutórios serem ratificados.",
+      "C) O STF, no HC 83.006/SP, entende que mesmo os atos decisórios podem ser ratificados, não necessitando repetição.",
+      "D) A nulidade só atinge os atos posteriores à declaração de incompetência.",
+      "E) A incompetência absoluta gera inexistência do processo, que deve ser considerado como nunca tendo existido."
+    ],
+    "indiceCorreto": 2,
+    "explicacao": "C) Correta. No julgamento do HC 83.006/SP, o STF afastou-se da literalidade do art. 567 do CPP e passou a entender que, mesmo em caso de incompetência absoluta, pode haver simples ratificação dos atos decisórios, não necessitando de sua repetição perante o juízo competente."
+  },
+  {
+    "id": "131",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Em processo perante o Tribunal do Júri, o juiz presidente, ao explicar os quesitos aos jurados, \"afirmou\": \"A tese da legítima defesa, alegada pela defesa, é muito difícil de aceitar neste caso concreto\". A defesa nada alegou na ocasião. O réu foi condenado. No recurso, alega nulidade por parcialidade do juiz e influência sobre os jurados. Assinale a alternativa correta.",
+    "alternativas": [
+      "A) A manifestação do juiz configura quebra de imparcialidade, gerando nulidade absoluta do julgamento.",
+      "B) É dever do juiz explicar os quesitos, podendo manifestar sua opinião técnica, não gerando vício.",
+      "C) Trata-se de nulidade relativa, que precluiu por não ter sido argüida imediatamente.",
+      "D) Configura ato inexistente, pois o juiz agiu com excesso de poder, fora de suas funções.",
+      "E) A nulidade depende da demonstração de que os jurados foram efetivamente influenciados pela fala."
+    ],
+    "indiceCorreto": 2,
+    "explicacao": "C) Correta. A manifestação do juiz que demonstra parcialidade configura nulidade relativa, que deve ser arguida imediatamente após ocorrer, nos termos do art. 571, VIII, do CPP. Não arguindo na ocasião, a defesa precluiu o direito de alegar o vício."
+  },
+  {
+    "id": "132",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Após a pronúncia, o réu foi intimado da data da sessão plenária. No dia, ele compareceu, mas, antes da instalação do plenário, solicitou ao juiz sua dispensa, declarando que confiava em seu defensor. O juiz deferiu, e o julgamento prosseguiu sem a presença do réu. Na apelação, nova defesa alega nulidade por falta de presença do réu. Com base no art. 457, §2º, parte final, CPP, assinale a alternativa correta.",
+    "alternativas": [
+      "A) A dispensa da presença do réu é ilegal, gerando nulidade absoluta do julgamento.",
+      "B) O réu pode renunciar ao direito de presença, desde que junto com seu defensor, não havendo nulidade.",
+      "C) A renúncia deve ser feita expressamente antes da intimação, não sendo admitida no dia do julgamento.",
+      "D) É nulidade relativa, que deveria ter sido argüida pelo defensor presente, sob pena de preclusão.",
+      "E) A presença do réu é obrigatória em crimes inafiançáveis, não podendo ele renunciar."
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "B) Correta. Nos termos do art. 457, §2º, parte final, do CPP, o acusado preso que não quiser comparecer à sessão plenária pode, juntamente com seu defensor, pedir sua dispensa do ato. Por analogia, aplica-se o mesmo entendimento ao réu solto que renuncia ao direito de presença."
+  },
+  {
+    "id": "133",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Em ação penal por crime de roubo, o réu foi citado e constituiu advogado. Durante a instrução, o advogado faleceu. O réu foi intimado pessoalmente para constituir novo defensor no prazo de 10 dias. Ele não o fez. O juiz, então, nomeou defensor dativo, que passou a atuar. Na sentença, o réu foi condenado. No recurso, alega-se a nulidade por falta de defesa técnica, pois o defensor dativo não teria tido contato com o réu. Assinale a alternativa correta à luz da Súmula 523 do STF.",
+    "alternativas": [
+      "A) A falta de contato com o réu configura falta de defesa, nulidade absoluta.",
+      "B) A nomeação de defensor dativo supre a falta, sendo deficiência de defesa, que exige demonstração de prejuízo.",
+      "C) O réu, intimado, foi negligente, convalidando a atuação do dativo.",
+      "D) A nulidade é relativa e precluiu por não ter sido argüida durante a instrução.",
+      "E) A nomeação de defensor dativo sem prévia oitiva do réu é nula, por violação ao contraditório."
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "B) Correta. Conforme a Súmula 523 do STF, \"No processo penal, a falta de defesa constitui nulidade absoluta, mas a sua deficiência só o anulará se houver prova de prejuízo para o réu\". A nomeação de defensor dativo supre a falta de defesa; eventuais deficiências na atuação são nulidades relativas, exigindo demonstração de prejuízo."
+  },
+  {
+    "id": "134",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Em recurso especial, a defesa alega a violação do art. 564, V, CPP (decisão carente de fundamentação). O acórdão recorrido, entretanto, limitou-se a afirmar que \"os argumentos da defesa não prosperam perante as robustas provas dos autos\", sem enfrentar cada um deles. O Ministério Público Federal opõe-se, alegando que o requisito do prequestionamento não foi atendido, pois a defesa não especificou no recurso de apelação qual tese deixou de ser enfrentada. Assinale a alternativa correta.",
+    "alternativas": [
+      "A) A falta de fundamentação é vício formal do acórdão, dispensando prequestionamento específico.",
+      "B) Para alegar violação ao art. 564, V, é necessário que a defesa tenha arguido a falta de enfrentamento de tese específica na instância ordinária.",
+      "C) A fundamentação é pressuposto de existência do ato, podendo ser arguida a qualquer tempo.",
+      "D) O prequestionamento é suprido pela mera interposição do recurso especial.",
+      "E) A Súmula 356 do STF não se aplica a vícios de fundamentação, que são de ordem pública."
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "B) Correta. Para alegar violação ao art. 564, V, CPP em recurso especial, é necessário que a defesa tenha arguido especificamente, na instância ordinária, qual tese não foi enfrentada pelo juízo a quo. O mero recurso genérico não configura prequestionamento adequado."
+  },
+  {
+    "id": "135",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Durante a sessão plenária do Júri, após os debates, o juiz presidente formulou os quesitos. Ao fazê-lo, inverteu a ordem, formulando primeiro o quesito sobre a qualificadora (motivo fútil) e depois o quesito sobre a causa de diminuição de pena (legítima defesa). A defesa nada alegou. O réu foi condenado. No recurso, alega-se a nulidade com base na Súmula 162 do STF. Assinale a alternativa correta.",
+    "alternativas": [
+      "A) A inversão gera nulidade absoluta, conforme a Súmula 162, não sujeita à preclusão.",
+      "B) A nulidade é relativa e precluiu por não ter sido impugnada na ocasião.",
+      "C) A Súmula 162 foi superada pela Lei 11.689/2008, que alterou a ordem dos quesitos.",
+      "D) A inversão é mera irregularidade, desde que todos os quesitos tenham sido formulados.",
+      "E) A nulidade depende da demonstração de que a inversão influenciou o resultado do julgamento."
+    ],
+    "indiceCorreto": 0,
+    "explicacao": "A) Correta. Conforme a Súmula 162 do STF, \"É absoluta a nulidade do julgamento pelo júri, quando os quesitos da defesa não precedem aos das circunstâncias agravantes\". Trata-se de nulidade absoluta, não sujeita à preclusão, podendo ser alegada a qualquer tempo."
+  },
+  {
+    "id": "136",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Em ação penal por crime de corrupção ativa, a defesa requereu a produção de prova pericial contábil para demonstrar a inexistência de vantagem indevida. O juiz indeferiu o requerimento, fundamentando que a prova era desnecessária diante das outras provas dos autos. A sentença condenatória se baseou em elementos testemunhais e documentais. No recurso, a defesa alega cerceamento de defesa. Considerando o princípio do prejuízo, assinale a alternativa correta.",
+    "alternativas": [
+      "A) O indeferimento de prova requisitada pela defesa constitui, por si só, cerceamento de defesa e nulidade absoluta.",
+      "B) É necessário que a defesa demonstre, de forma concreta, que a prova indeferida era imprescindível e que sua falta gerou prejuízo à sua estratégia defensiva.",
+      "C) O cerceamento de defesa é nulidade relativa, que deve ser arguida imediatamente após o indeferimento, sob pena de preclusão.",
+      "D) O juiz tem ampla discricionariedade para indeferir provas, não cabendo reapreciação da decisão no mérito.",
+      "E) A alegação de cerceamento só é cabível se a prova foi efetivamente produzida e depois desconsiderada."
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "B) Correta. O cerceamento de defesa exige demonstração de que a prova indeferida era essencial para a defesa e que sua falta causou efetivo prejuízo. O indeferimento por si só não configura cerceamento, sendo necessário o binômio imprescindibilidade + prejuízo."
+  },
+  {
+    "id": "137",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Em processo por crime de tráfico de drogas, o réu foi citado e interrogado. Posteriormente, sua defesa requereu a realização de novo interrogatório para esclarecer pontos obscuros, alegando que o primeiro foi realizado sem a presença de seu defensor (que havia se atrasado). O juiz indeferiu o pedido, considerando preclusa a oportunidade. A defesa alega violação ao art. 564, III, \"e\", CPP. Assinale a alternativa correta à luz da jurisprudência.",
+    "alternativas": [
+      "A) A falta de defensor no interrogatório gera nulidade absoluta, que pode ser alegada a qualquer tempo, devendo o juiz determinar novo ato.",
+      "B) A nulidade é relativa e, não arguida no momento do ato, precluiu, convalidando-se o interrogatório.",
+      "C) O réu pode renunciar à presença do defensor, e o fato de o defensor ter se atrasado configura renúncia tácita.",
+      "D) O juiz deveria ter reiniciado o interrogatório assim que o defensor chegou, sob pena de nulidade absoluta.",
+      "E) A defesa pode requerer novo interrogatório a qualquer tempo, pois o direito de defesa é contínuo."
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "B) Correta. A falta de defensor no interrogatório, quando o defensor foi intimado e se atrasou, configura nulidade relativa. Deve ser arguida no momento do ato; não arguindo, preclui. O direito a novo interrogatório por escolha estratégica da defesa não é absoluto."
+  },
+  {
+    "id": "138",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "No curso de um processo por crime de homicídio, o Ministério Público requereu a produção de prova antecipada de uma testemunha idosa e enferma. O juiz deferiu e determinou a intimação da defesa para o ato, marcado para dali a 48 horas. A defesa, contudo, só foi intimada 24 horas antes, não conseguindo se preparar adequadamente. A testemunha foi ouvida. Na sentença, seu depoimento foi um dos pilares da condenação. A defesa alega nulidade. Com base no art. 564, III, \"e\", CPP, assinale a alternativa correta.",
+    "alternativas": [
+      "A) A redução do prazo para preparo da defesa em prova antecipada gera nulidade absoluta, por violação à ampla defesa.",
+      "B) Trata-se de nulidade relativa, cujo prejuízo deve ser demonstrado, e que poderia ter sido sanado se a defesa tivesse requerido adiamento.",
+      "C) É mera irregularidade, pois a prova antecipada é de urgência, justificando prazos reduzidos.",
+      "D) A nulidade está configurada independentemente de prejuízo, pois o prazo legal é ordem pública.",
+      "E) A intimação com menos de 24 horas é ato inexistente, por não atender ao mínimo legal."
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "B) Correta. A redução do prazo para preparo da defesa configura nulidade relativa. A defesa deve demonstrar o prejuízo e poderia ter tentado sanar o vício requerendo adiamento. Não se trata de nulidade absoluta, pois há possibilidade de convalidação."
+  },
+  {
+    "id": "139",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Em habeas corpus coletivo julgado pelo STF, foi reconhecida a ilegalidade de determinada prática investigatória em todo o território nacional. Com base nesse precedente, a defesa em um processo penal em curso impetrou novo habeas corpus, pleiteando o trancamento da ação porque as provas que embasam a denúncia foram obtidas por meio dessa prática agora considerada ilícita. O Ministério Público opõe-se, alegando que a decisão do STF não tem efeito erga omnes em sede de habeas corpus. À luz do HC 100.879/RJ do STJ, assinale a alternativa correta.",
+    "alternativas": [
+      "A) O habeas corpus do STF tem eficácia inter partes, não podendo beneficiar réus em outros processos.",
+      "B) Aplicam-se os princípios da isonomia e da segurança jurídica, devendo-se estender os efeitos da decisão do STF a todos os casos análogos.",
+      "C) Cabe ao juízo de primeiro grau reanalisar a licitude da prova à luz do caso concreto, independente do entendimento do STF.",
+      "D) A teoria dos frutos da árvore envenenada só se aplica se a prova ilícita for a única existente nos autos.",
+      "E) O STJ não está vinculado à decisão do STF em matéria de prova ilícita."
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "B) Correta. Conforme o julgado do STJ no HC 100.879/RJ, devem ser aplicados os princípios da isonomia e da segurança jurídica, estendendo-se os efeitos da decisão que reconheceu a ilicitude da prova a todos os casos análogos, ainda que em processos distintos."
+  },
+  {
+    "id": "140",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Em ação penal por crime de estupro de vulnerável, a denúncia foi oferecida sem a indicação da data exata do fato, constando apenas o mês e o ano. A defesa arguiu a inépcia da denúncia por falta de elemento essencial. O juiz rejeitou a preliminar, entendendo que a inexatidão da data não impede o exercício do direito de defesa. A sentença condenatória foi proferida. No recurso, a defesa mantém a tese. Com base no art. 569 do CPP, assinale a alternativa correta.",
+    "alternativas": [
+      "A) A falta da data exata torna a denúncia inepta, gerando nulidade absoluta que vicia toda a ação penal.",
+      "B) A omissão da data exata pode ser suprida a todo tempo antes da sentença, não acarretando necessariamente nulidade.",
+      "C) É nulidade relativa, que precluiu com o trânsito em julgado da decisão que rejeitou a exceção.",
+      "D) A data do fato é elemento essencial do tipo penal, e sua omissão gera ato inexistente.",
+      "E) A defesa deve demonstrar que a falta da data exata causou prejuízo concreto à sua atividade defensiva."
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "B) Correta. Conforme o art. 569 do CPP, as omissões da denúncia podem ser supridas a todo tempo antes da sentença final. A inexatidão da data, desde que não impeça o exercício do direito de defesa, não torna a denúncia inepta."
+  },
+  {
+    "id": "141",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Durante a instrução de processo por crime de lavagem de dinheiro, o juiz determinou a quebra de sigilo fiscal e bancário do réu, oficiosamente, sem requerimento do Ministério Público. A defesa, ao tomar ciência, não se manifestou contrariamente, focando sua estratégia em outras questões. Na sentença, o juiz utilizou os documentos obtidos para fundamentar a condenação. No recurso, a defesa alega a nulidade da quebra de sigilo por falta de requerimento da acusação. Assinale a alternativa correta.",
+    "alternativas": [
+      "A) O juiz pode determinar de ofício medidas probatórias em busca da verdade real, não havendo vício.",
+      "B) A quebra de sigilo sem requerimento viola o princípio da iniciativa das partes, gerando nulidade absoluta das provas obtidas.",
+      "C) É nulidade relativa, que precluiu por não ter sido argüida no momento da juntada dos documentos.",
+      "D) A prova é ilícita por derivar de ato jurisdicional inválido, devendo ser excluída dos autos.",
+      "E) A defesa, ao não impugnar, aceitou tacitamente a prova, convalidando o ato."
+    ],
+    "indiceCorreto": 0,
+    "explicacao": "A) Correta. O juiz pode determinar de ofício a produção de provas, inclusive a quebra de sigilo, em observância ao princípio da verdade real. Não há exigência de requerimento das partes para tal medida, desde que observado o contraditório posterior."
+  },
+  {
+    "id": "142",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Em processo por crime de roubo, o juiz, ao proferir a sentença condenatória, fundamentou-a exclusivamente na confissão do réu, registrada no interrogatório. A defesa apelou, alegando que a confissão foi obtida sob coação, pois o réu estava incomunicável por mais de 24 horas antes do interrogatório. A alegação de coação não havia sido feita antes. O Tribunal, ao analisar o recurso, entendeu que a confissão era efetivamente ilegal e a desconsiderou. Contudo, manteve a condenação com base em outras provas robustas dos autos. A defesa insurgiu-se, alegando que a sentença estava viciada em sua origem. Assinale a alternativa correta sobre o efeito do vício.",
+    "alternativas": [
+      "A) A confissão ilícita contamina toda a sentença que a utilizou como fundamento, devendo ser anulada e o processo retornado à primeira instância.",
+      "B) O Tribunal, ao desconsiderar a prova ilícita e manter a condenação com base em outras provas, atuou corretamente, aplicando o princípio da conservação dos atos.",
+      "C) A nulidade é relativa e precluiu por não ter sido argüida na primeira oportunidade.",
+      "D) A sentença é nula por falta de fundamentação válida, pois seu único esteio era a confissão.",
+      "E) A ilegalidade da confissão é questão de mérito, não gerando nulidade processual."
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "B) Correta. Aplicando-se o princípio da conservação dos atos processuais, o Tribunal pode desconsiderar a prova ilícita e manter a condenação se houver outras provas lícitas e robustas que a sustentem. Não há necessidade de anular toda a sentença."
+  },
+  {
+    "id": "143",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "No julgamento de um recurso em sentido estrito pelo Tribunal de Justiça, a defesa alegou a incompetência absoluta do juízo de primeiro grau (por foro por prerrogativa de função). O Tribunal, no entanto, julgou prejudicada a questão, por entender que a defesa não a havia arguido na primeira oportunidade, na exceção de incompetência. Em sede de habeas corpus, a defesa reitera a alegação. Assinale a alternativa correta.",
+    "alternativas": [
+      "A) A incompetência absoluta pode ser alegada a qualquer tempo e grau de jurisdição, não se sujeitando à preclusão.",
+      "B) A incompetência, ainda que absoluta, deve ser arguida na primeira oportunidade, sob pena de preclusão.",
+      "C) O Tribunal agiu corretamente, pois a incompetência só pode ser conhecida se houver prequestionamento.",
+      "D) A incompetência absoluta gera nulidade relativa, sujeita aos prazos do art. 571 do CPP.",
+      "E) A questão da incompetência só pode ser suscitada pela parte na instância inferior, não cabendo ao Tribunal conhecê-la de ofício."
+    ],
+    "indiceCorreto": 0,
+    "explicacao": "A) Correta. A incompetência absoluta é nulidade absoluta que pode ser alegada a qualquer tempo e grau de jurisdição, inclusive de ofício pelo juiz. Não se sujeita à preclusão. O Tribunal deveria tê-la conhecido, independentemente de arguição prévia."
+  },
+  {
+    "id": "144",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Em ação penal por crime de homicídio, a defesa requereu a exclusão de provas por considerar ter havido violação ao sigilo telefônico sem autorização judicial. O juiz, na sentença, rejeitou o pedido sem analisar o mérito da alegação, limitando-se a dizer que \"as provas são lícitas\". No recurso, o Tribunal entendeu que a autorização judicial existente era regular e manteve a condenação. A defesa interpôs recurso especial alegando violação ao art. 564, V, CPP, pois o juízo a quo não enfrentou sua argumentação específica sobre os vícios da autorização. Assinale a alternativa correta sobre o prequestionamento.",
+    "alternativas": [
+      "A) A defesa, ao arguir a ilicitude na primeira instância, prequestionou a matéria, ainda que o juiz não a tenha enfrentado.",
+      "B) O prequestionamento exige que o Tribunal de origem tenha se manifestado expressamente sobre a questão, o que ocorreu ao analisar a regularidade da autorização.",
+      "C) A falta de enfrentamento pelo juiz de primeiro grau não importa, pois o Tribunal enfrentou a questão, suprindo a omissão.",
+      "D) A violação ao art. 564, V, é questão de ordem pública, dispensando prequestionamento.",
+      "E) A defesa deveria ter oposto embargos de declaração para suprir a omissão da sentença, sob pena de não prequestionamento."
+    ],
+    "indiceCorreto": 4,
+    "explicacao": "E) Correta. Para configurar o prequestionamento em caso de falta de fundamentação, a defesa deveria ter oposto embargos de declaração para suprir a omissão da sentença. A mera alegação na primeira instância não basta se o Tribunal não enfrentou especificamente a questão da falta de fundamentação."
+  },
+  {
+    "id": "145",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Em processo por crime de corrupção passiva, o réu foi denunciado com base no art. 317 do CP. Durante a instrução, o Ministério Público requereu a produção de prova documental anexada ao inquérito, sem, contudo, juntar cópias à defesa, apenas fazendo referência aos folhos. A defesa nada alegou. Na sentença, o juiz condenou o réu com base nesses documentos. Na apelação, a defesa alega violação ao contraditório por não ter tido acesso integral aos documentos. Assinale a alternativa correta.",
+    "alternativas": [
+      "A) A falta de juntada de cópias dos documentos viola o contraditório, gerando nulidade absoluta.",
+      "B) É dever da defesa requerer a exibição dos documentos, não o fazendo, convalidou a omissão.",
+      "C) A referência aos folhos do inquérito supre a juntada, pois a defesa pode acessar o inquérito.",
+      "D) Trata-se de nulidade relativa, que precluiu por não ter sido argüida na primeira oportunidade.",
+      "E) A nulidade só existe se a defesa demonstrar que os documentos eram essenciais e que a falta de acesso causou prejuízo."
+    ],
+    "indiceCorreto": 3,
+    "explicacao": "D) Correta. A falta de juntada de cópias de documentos anexados ao inquérito configura nulidade relativa. A defesa deveria tê-la arguido na primeira oportunidade, sob pena de preclusão. Não arguindo, convalidou-se o ato."
+  },
+  {
+    "id": "146",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "No plenário do Tribunal do Júri, após a instalação com 16 jurados, o juiz presidente realizou o sorteio dos sete jurados que comporiam o conselho de sentença. Após o sorteio, um dos jurados sorteados declarou, em voz alta e antes de se retirar o plenário, que \"já estava decidido a condenar aquele bandido\". A defesa nada alegou na ocasião. O réu foi condenado. No recurso, alega-se a nulidade por quebra da incomunicabilidade e parcialidade do jurado. Assinale a alternativa correta.",
+    "alternativas": [
+      "A) A manifestação prévia de condenação configura impedimento do jurado, gerando nulidade absoluta do julgamento.",
+      "B) A declaração quebra a incomunicabilidade, gerando nulidade relativa, que deve ser arguida imediatamente.",
+      "C) É mera irregularidade, pois o jurado emitiu sua opinião antes da votação, o que é natural.",
+      "D) A defesa, ao silenciar, aceitou tacitamente o jurado, convalidando o vício.",
+      "E) A nulidade depende da demonstração de que o jurado influenciou os outros membros do conselho."
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "B) Correta. A declaração prévia de condenação por jurado configura quebra da incomunicabilidade e parcialidade, gerando nulidade relativa. Deve ser arguida imediatamente após ocorrer, nos termos do art. 571, VIII, do CPP. Não arguindo, preclui."
+  },
+  {
+    "id": "147",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Em ação penal por crime de falsidade ideológica, o réu foi citado e interrogado. Posteriormente, mudou de endereço e não comunicou ao juízo. As intimações subsequentes, inclusive da data da audiência de instrução, foram feitas por edital. O réu não compareceu à audiência, que foi realizada à revelia. Foi condenado. No recurso, alega nulidade da citação por edital para atos posteriores à citação inicial, por não ter sido declarado revelia. Assinale a alternativa correta.",
+    "alternativas": [
+      "A) Após a citação inicial válida, o réu tem o dever de comunicar mudança de endereço; não o fazendo, as intimações por edital são válidas.",
+      "B) A intimação por edital de réu citado pessoalmente é nula, pois viola o direito ao contraditório efetivo.",
+      "C) O réu deve ser declarado revelia para que as intimações por edital sejam válidas.",
+      "D) É nulidade relativa, que precluiu por não ter sido argüida antes da audiência.",
+      "E) A defesa constituída responde pelos atos, suprindo a falta de intimação pessoal do réu."
+    ],
+    "indiceCorreto": 0,
+    "explicacao": "A) Correta. Após citado pessoalmente, o réu tem o dever de comunicar mudança de endereço ao juízo. Não o fazendo, as intimações por edital são válidas, aplicando-se o art. 366 do CPP. Não é necessário declarar revelia para cada ato posterior."
+  },
+  {
+    "id": "148",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Em recurso de apelação, o Tribunal, ao dar provimento ao recurso do Ministério Público, reformou a sentença absolutória e condenou o réu. No entanto, o acórdão não enfrentou um dos argumentos centrais da defesa: a prescrição da pretensão punitiva. A defesa interpôs recurso especial. O Ministério Público Federal opõe-se, alegando que a questão da prescrição é de direito material, não cabendo recurso especial. Assinale a alternativa correta sobre a possibilidade de conhecer do vício de falta de fundamentação.",
+    "alternativas": [
+      "A) A prescrição é questão de direito material, não sendo cabível recurso especial por falta de fundamentação.",
+      "B) A omissão do Tribunal em enfrentar argumento decisivo da defesa configura violação ao art. 564, V, CPP, cabendo recurso especial.",
+      "C) A defesa deveria ter oposto embargos de declaração para suprir a omissão, sob pena de não prequestionamento.",
+      "D) A falta de fundamentação sobre a prescrição é vício insanável que gera nulidade absoluta do acórdão, conhecível em habeas corpus.",
+      "E) O recurso especial não é via adequada para reparar vícios de fundamentação do acórdão."
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "B) Correta. A omissão do Tribunal em enfrentar argumento decisivo da defesa (prescrição) configura violação ao art. 564, V, CPP (decisão carente de fundamentação), cabendo recurso especial. A prescrição, embora seja matéria de direito material, quando não enfrentada gera vício de fundamentação processual."
+  },
+  {
+    "id": "149",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "No julgamento de um habeas corpus pelo Tribunal de Justiça, a defesa requereu sustentação oral. O Tribunal marcou a sessão de julgamento sem intimar a defesa, e o habeas corpus foi denegado. A defesa impetrou novo habeas corpus no STJ, alegando a nulidade do julgamento por falta de intimação para a sustentação oral requerida. Com base na jurisprudência, assinale a alternativa correta.",
+    "alternativas": [
+      "A) O julgamento de habeas corpus independe de pauta ou intimação, mesmo com requerimento de sustentação oral.",
+      "B) Se a defesa manifestou interesse na sustentação oral, a falta de intimação gera nulidade absoluta do julgamento.",
+      "C) A defesa deve acompanhar diariamente a pauta do Tribunal, sendo desnecessária intimação específica.",
+      "D) A nulidade é relativa e preclui se não argüida antes do julgamento.",
+      "E) O habeas corpus é processo de urgência, justificando-se a dispensa de intimação."
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "B) Correta. Embora, em regra, o julgamento de habeas corpus independa de pauta (Súmula 431, STF), se a defesa manifestou expressamente interesse na sustentação oral, a falta de intimação viola a ampla defesa, gerando nulidade absoluta do julgamento."
+  },
+  {
+    "id": "150",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Em ação penal por crime de homicídio, o réu foi pronunciado. No plenário, após a instalação do júri com 16 jurados, o juiz presidente realizou o sorteio dos sete jurados. Contudo, um dos sorteados era policial militar, o que configura impedimento (art. 449, CPP, combinado com a Lei do Júri). A defesa nada alegou. O júri prosseguiu e o réu foi condenado. Na apelação, alega-se a nulidade. Assinale a alternativa correta.",
+    "alternativas": [
+      "A) A participação de jurado impedido gera nulidade absoluta, independente de arguição.",
+      "B) A nulidade é relativa e precluiu por não ter sido argüida imediatamente após o sorteio.",
+      "C) O impedimento do jurado é causa de nulidade relativa, que depende de demonstração de prejuízo.",
+      "D) O juiz presidente tem o dever de verificar os impedimentos antes do sorteio; sua omissão não gera nulidade se a defesa não argüir.",
+      "E) A presença de jurado impedido contamina apenas o voto dele, não o julgamento como um todo."
+    ],
+    "indiceCorreto": 0,
+    "explicacao": "A) Correta. A participação de jurado impedido (policial militar) configura nulidade absoluta, nos termos do art. 449 do CPP combinado com a Lei do Júri. O prejuízo é presumido, não se sujeitando à preclusão, podendo ser alegada a qualquer tempo."
+  },
+  {
+    "id": "151",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Em processo por crime de furto, a defesa requereu a produção de prova documental para demonstrar que o réu estava em outro local na data do fato (coartada). O juiz indeferiu, considerando a prova irrelevante, pois já havia prova robusta da autoria. A defesa não recorreu. Na sentença, o juiz condenou o réu. Na apelação, a defesa não alegou o cerceamento. O Tribunal manteve a condenação. Em sede de habeas corpus, a defesa alega a nulidade por cerceamento de defesa. Assinale a alternativa correta.",
+    "alternativas": [
+      "A) O habeas corpus é via adequada para reparar cerceamento de defesa não arguido nas instâncias ordinárias.",
+      "B) A defesa, ao não recorrer da decisão interlocutória e não alegar o vício na apelação, precluiu o direito de argui-lo em habeas corpus.",
+      "C) O cerceamento de defesa é nulidade absoluta, conhecível a qualquer tempo e em qualquer via.",
+      "D) O indeferimento de prova é questão de mérito, não cabendo habeas corpus.",
+      "E) O habeas corpus só é cabível se a prova indeferida era a única capaz de demonstrar a inocência."
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "B) Correta. A defesa, ao não recorrer da decisão interlocutória que indeferiu a prova e ao não alegar o cerceamento na apelação, precluiu o direito de argüir o vício. O habeas corpus não serve para suprir a omissão da defesa em utilizar os recursos ordinários."
+  },
+  {
+    "id": "152",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Em recurso de apelação, o Tribunal reformou sentença absolutória e condenou o réu. O acórdão, no entanto, fundamentou a condenação com base em prova que havia sido excluída por ilicitude na primeira instância (e essa exclusão não foi objeto do recurso do MP). A defesa interpôs recurso especial. Assinale a alternativa correta sobre a possibilidade de o Tribunal utilizar prova excluída.",
+    "alternativas": [
+      "A) O Tribunal pode reexaminar a ilicitude da prova e, se entender que é lícita, utilizá-la para fundamentar a condenação.",
+      "B) A prova excluída por decisão transitada em julgado (não recorrida) não pode ser ressuscitada pelo Tribunal para condenar.",
+      "C) A exclusão de prova é questão de mérito, e o Tribunal pode reapreciar todas as provas livremente.",
+      "D) A defesa deveria ter alegado a coisa julgada da exclusão no Tribunal, sob pena de preclusão.",
+      "E) A utilização de prova excluída viola o duplo grau de jurisdição, mas não gera nulidade absoluta."
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "B) Correta. A prova excluída por decisão não recorrida transitou em julgado quanto à sua ilicitude. O Tribunal não pode \"ressuscitar\" prova excluída para fundamentar condenação, sob pena de violação à coisa julgada e ao princípio da congruência."
+  },
+  {
+    "id": "153",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Em processo por crime de roubo, o réu foi citado e interrogado. Durante a instrução, o juiz determinou a realização de uma inspeção judicial no local do crime. A defesa não foi intimada para o ato. A inspeção foi realizada e seu resultado juntado aos autos. A defesa, ao tomar ciência, não arguiu nulidade. Na sentença, o juiz utilizou elementos da inspeção para fundamentar a condenação. Na apelação, a defesa alega pela primeira vez a nulidade da inspeção. Assinale a alternativa correta.",
+    "alternativas": [
+      "A) A falta de intimação para ato instrutivo gera nulidade absoluta, conhecível a qualquer tempo.",
+      "B) A defesa, ao não arguir a nulidade na primeira oportunidade, precluiu o direito de alegá-la na apelação.",
+      "C) A inspeção judicial é ato de ofício do juiz, não necessitando da presença das partes.",
+      "D) A nulidade é relativa, mas o prejuízo é presumido, cabendo ao MP demonstrar sua inexistência.",
+      "E) A defesa pode alegar o vício na apelação, pois só teve ciência do resultado quando da sentença."
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "B) Correta. A falta de intimação para ato instrutivo configura nulidade relativa. A defesa, ao tomar ciência do ato e não arguir imediatamente a nulidade, precluiu o direito de alegá-la posteriormente. Deveria tê-la arguido na primeira oportunidade após a ciência."
+  },
+  {
+    "id": "154",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Em ação penal por crime de estupro, o réu foi condenado. Na apelação, o Tribunal, por maioria, reformou a sentença e absolveu o réu. Um dos desembargadores da minoria, ao proferir voto, utilizou expressões ofensivas à honra do réu, chamando-o de \"predador sexual\". O Ministério Público não recorreu. O réu, inconformado com as expressões, impetrou habeas corpus para anular o acórdão no que diz respeito ao voto ofensivo. Assinale a alternativa correta.",
+    "alternativas": [
+      "A) O habeas corpus não é via adequada para anular parte de acórdão absolutório.",
+      "B) As expressões do voto vencido são irrelevantes, pois não influenciaram o resultado.",
+      "C) As expressões podem configurar quebra de imparcialidade, mas como o réu foi absolvido, não há prejuízo a reparar.",
+      "D) O réu pode ajuizar ação de indenização por danos morais contra o desembargador, mas não anular o acórdão.",
+      "E) A ofensa à honra em voto judicial gera nulidade absoluta do julgamento, ainda que o réu tenha sido absolvido."
+    ],
+    "indiceCorreto": 2,
+    "explicacao": "C) Correta. Embora as expressões ofensivas possam configurar quebra de imparcialidade, como o voto foi vencido e o réu foi absolvido, não há prejuízo processual a reparar. A via adequada seria a ação de indenização por danos morais, não a anulação do acórdão."
+  },
+  {
+    "id": "155",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Em processo por crime de homicídio, a defesa requereu a exclusão de prova (arma do crime) por alegar que a busca e apreensão foi realizada sem mandado e sem qualquer justificativa legal. O juiz, na sentença, rejeitou o pedido com a seguinte fundamentação: \"A prova é lícita por atender ao interesse público de combate ao crime.\" Não analisou a legalidade do procedimento. O réu foi condenado. No recurso, a defesa alega violação ao art. 564, V, CPP. O Tribunal, ao analisar, entendeu que a busca foi, de fato, ilegal, e excluiu a prova. No entanto, manteve a condenação com base em outras provas. A defesa interpôs recurso especial, mantendo a alegação de falta de fundamentação da sentença. Assinale a alternativa correta.",
+    "alternativas": [
+      "A) O Tribunal, ao excluir a prova, sanou o vício da sentença; não há mais que falar em falta de fundamentação.",
+      "B) A falta de fundamentação da sentença sobre a legalidade da busca é vício autônomo, que pode ser objeto de recurso especial.",
+      "C) A defesa deveria ter oposto embargos de declaração na primeira instância para suprir a omissão.",
+      "D) A questão da legalidade da prova é de direito material, não cabendo recurso especial por vício de fundamentação.",
+      "E) O recurso especial é cabível apenas para violação a lei federal, e a fundamentação é questão infraconstitucional."
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "B) Correta. A falta de fundamentação da sentença sobre questão essencial (licitude da prova) é vício autônomo que pode ser alegado em recurso especial, independentemente da correção do mérito pelo Tribunal. O fato de o Tribunal ter excluído a prova não sana o vício de fundamentação da sentença."
+  },
+  {
+    "id": "156",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Sobre o princípio da causalidade das nulidades (art. 573, §1º, CPP) e o princípio da conservação dos atos processuais, analise as assertivas: I. A nulidade de um ato se comunica apenas aos atos que dele diretamente dependam ou sejam sua consequência. II. A relação de dependência é meramente cronológica: todo ato posterior ao ato nulo também é nulo. III. O juiz que declara a nulidade deve indicar expressamente os atos a que ela se estende. IV. O princípio da conservação determina que atos independentes do ato nulo devem ser preservados. Estão corretas as assertivas:",
+    "alternativas": [
+      "A) I, II e III.",
+      "B) I, III e IV.",
+      "C) II e IV.",
+      "D) I, II, III e IV.",
+      "E) III e IV."
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "B) Correta. As assertivas I, III e IV estão corretas. A assertiva II está incorreta porque a relação de dependência não é meramente cronológica, mas de causalidade ou consequencialidade. Atos posteriores ao ato nulo podem ser válidos se forem independentes dele."
+  },
+  {
+    "id": "157",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Em processo por crime de homicídio culposo no trânsito, a defesa requereu a realização de nova perícia no local do fato, alegando vícios na primeira. O juiz indeferiu, considerando desnecessária. Na sentença, o juiz se baseou na perícia original para afastar a tese de culpa exclusiva da vítima. A defesa alega cerceamento. O Tribunal, ao julgar a apelação, entendeu que a nova perícia era, de fato, desnecessária, mas reconheceu que a primeira tinha vícios técnicos. Assim, afastou a perícia dos autos, mas manteve a condenação com base em prova testemunhal robusta. Assinale a alternativa que melhor reflete a consequência processual.",
+    "alternativas": [
+      "A) O Tribunal anulou a sentença e determinou a realização de nova instrução com a perícia requerida.",
+      "B) O Tribunal, ao afastar a prova pericial viciada e manter a condenação com outras provas, aplicou corretamente o princípio da conservação dos atos.",
+      "C) A manutenção da condenação com base em prova testemunhal, após a exclusão da prova pericial, viola o princípio do in dubio pro reo.",
+      "D) O cerceamento de defesa configurado pelo indeferimento da nova perícia gera nulidade absoluta, anulando toda a instrução.",
+      "E) A decisão do Tribunal constituiu reformatio in pejus, pois piorou a situação do réu ao afastar a única prova que poderia beneficiá-lo (a perícia viciada)."
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "B) Correta. O Tribunal aplicou corretamente o princípio da conservação dos atos: reconheceu o vício na prova pericial, afastou-a, mas manteve a condenação com base em outras provas robustas. Não houve cerceamento, pois a nova perícia foi considerada desnecessária."
+  },
+  {
+    "id": "158",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Um Promotor de Justiça ofereceu denúncia por crime de tortura. Após o recebimento, o juiz verificou que o Promotor estava impedido, pois era primo do ofendido. O juiz, de ofício, declarou a nulidade da denúncia e determinou seu arquivamento, para que outro Promotor a oferecesse. O Ministério Público recorreu. Assinale a alternativa correta sobre a declaração de nulidade de ofício.",
+    "alternativas": [
+      "A) O juiz agiu corretamente, pois o impedimento do Promotor gera nulidade absoluta, conhecível de ofício.",
+      "B) A nulidade por impedimento da parte é relativa, dependendo de arguição pelo interessado (o réu), não podendo ser declarada de ofício.",
+      "C) O juiz deveria ter suspendido o processo e comunicado o fato ao Procurador-Geral de Justiça, para que designasse outro Promotor, não declarando a nulidade.",
+      "D) O impedimento do Promotor contamina apenas os atos por ele praticados, não a denúncia em si, que é ato do órgão ministerial.",
+      "E) A denúncia oferecida por promotor impedido é ato inexistente."
+    ],
+    "indiceCorreto": 2,
+    "explicacao": "C) Correta. O impedimento do Promotor não torna a denúncia nula. O correto seria o juiz suspender o processo e comunicar ao Procurador-Geral de Justiça para que designe outro Promotor. A denúncia é ato do órgão ministerial, não do indivíduo."
+  },
+  {
+    "id": "159",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Em ação penal por crime de roubo, a sentença condenatória foi proferida em 15 de março. A defesa foi intimada em 20 de março. Interpôs apelação em 25 de março. O Ministério Público, no prazo, apresentou contra-razões. O Tribunal, no entanto, julgou a apelação em sessão de 10 de abril, sem que a defesa tivesse sido intimada da pauta de julgamento. A apelação foi improvida. A defesa alega nulidade. Com base na Súmula 431 do STF, assinale a alternativa correta.",
+    "alternativas": [
+      "A) A falta de intimação da pauta de julgamento de apelação criminal gera nulidade absoluta do acórdão.",
+      "B) A intimação da defesa da sentença supre a falta de intimação da pauta, pois ela já tem ciência do recurso.",
+      "C) A defesa, ao interpor o recurso, assume o risco de ser julgado a qualquer momento, não sendo necessária intimação da pauta.",
+      "D) A nulidade é relativa e preclui se não argüida antes do julgamento.",
+      "E) A Súmula 431 do STF só se aplica a julgamentos de Tribunais Superiores, não aos Tribunais de Justiça."
+    ],
+    "indiceCorreto": 0,
+    "explicacao": "A) Correta. Conforme a Súmula 431 do STF, \"É nulo o julgamento de recurso criminal, na segunda instância, sem prévia intimação, ou publicação da pauta, salvo em habeas corpus\". A falta de intimação da pauta gera nulidade absoluta do acórdão."
+  },
+  {
+    "id": "160",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Em ação penal por crime de estelionato, o réu foi citado e interrogado. Na fase de alegações finais, a defesa apresentou memoriais com extensa argumentação jurídica. A sentença condenatória, em sua fundamentação, limitou-se a transcrever os dispositivos legais e a dizer: \"Ficam rejeitados os argumentos da defesa, por contrariarem as provas dos autos.\" A defesa alega falta de fundamentação. Com base no art. 315, §2º, CPP, assinale a alternativa correta.",
+    "alternativas": [
+      "A) A sentença está fundamentada, pois o juiz manifestou sua rejeição aos argumentos da defesa.",
+      "B) A sentença não enfrentou os argumentos da defesa, limitando-se a uma rejeição genérica, o que a torna não fundamentada.",
+      "C) A defesa deveria ter apresentado embargos de declaração para precisar a fundamentação.",
+      "D) A fundamentação é suficiente se o juiz indicar as provas que contrariam a defesa, o que fez.",
+      "E) A análise de argumentos jurídicos é facultativa ao juiz, que deve se ater aos fatos provados."
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "B) Correta. Conforme o art. 315, §2º, IV, do CPP, não se considera fundamentada a decisão que \"não enfrentar todos os argumentos deduzidos no processo capazes de, em tese, infirmar a conclusão adotada pelo julgador\". A rejeição genérica sem análise específica configura falta de fundamentação."
+  },
+  {
+    "id": "161",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "No julgamento de um recurso em sentido estrito pelo Tribunal, um dos desembargadores era amigo próximo do Promotor que ofereceu a denúncia, fato conhecido publicamente. A defesa não arguiu a suspeição antes do julgamento. O recurso foi improvido. Em sede de habeas corpus, a defesa alega a nulidade. Assinale a alternativa correta.",
+    "alternativas": [
+      "A) A suspeição, não arguida no momento oportuno, precluiu, não podendo ser alegada em habeas corpus.",
+      "B) A suspeição de membro do Tribunal gera nulidade absoluta, que pode ser alegada a qualquer tempo.",
+      "C) A amizade com o Promotor não configura suspeição, pois o Promotor não é parte no recurso em sentido estrito.",
+      "D) A defesa deve demonstrar que a amizade influenciou o voto do desembargador, o que é muito difícil.",
+      "E) A suspeição só pode ser arguida perante o próprio Tribunal, via reclamação disciplinar."
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "B) Correta. A suspeição do julgador configura nulidade absoluta, que pode ser alegada a qualquer tempo, inclusive em habeas corpus. Não se sujeita à preclusão, pois viola garantia constitucional (juiz imparcial)."
+  },
+  {
+    "id": "162",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Em processo por crime de furto, a defesa requereu a produção de prova documental para demonstrar que o réu estava em outro local na data do fato (coartada). O juiz indeferiu, considerando a prova irrelevante, pois já havia prova robusta da autoria. A defesa não recorreu. Na sentença, o juiz condenou o réu. Na apelação, a defesa não alegou o cerceamento. O Tribunal manteve a condenação. Em sede de habeas corpus, a defesa alega a nulidade por cerceamento de defesa. Assinale a alternativa correta.",
+    "alternativas": [
+      "A) O habeas corpus é via adequada para reparar cerceamento de defesa não arguido nas instâncias ordinárias.",
+      "B) A defesa, ao não recorrer da decisão interlocutória e não alegar o vício na apelação, precluiu o direito de argui-lo em habeas corpus.",
+      "C) O cerceamento de defesa é nulidade absoluta, conhecível a qualquer tempo e em qualquer via.",
+      "D) O indeferimento de prova é questão de mérito, não cabendo habeas corpus.",
+      "E) O habeas corpus só é cabível se a prova indeferida era a única capaz de demonstrar a inocência."
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "B) Correta. A defesa, ao não utilizar os recursos ordinários (recurso em sentido estrito da decisão interlocutória e alegação na apelação), precluiu o direito de alegar o cerceamento em habeas corpus. O habeas corpus não serve para suprir omissão da defesa."
+  },
+  {
+    "id": "163",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Em processo por crime de roubo, o réu foi citado por edital. Ele nunca compareceu, nem constituiu defensor. O juiz nomeou defensor dativo, que apresentou resposta à acusação e participou de toda a instrução. Na sentença, o juiz condenou o réu à revelia. No recurso de apelação interposto pelo defensor dativo, alega-se a nulidade da citação por edital, por ser o crime inafiançável. Com base na legislação e na jurisprudência, assinale a alternativa correta.",
+    "alternativas": [
+      "A) A citação por edital em crime inafiançável é nula, gerando nulidade absoluta de todo o processo.",
+      "B) A citação por edital é permitida em qualquer crime, desde que esgotados os outros meios.",
+      "C) A revelia é admitida em qualquer crime após a Lei 11.689/2008, não havendo vício na citação editalícia.",
+      "D) A nulidade da citação está sanada pela atuação do defensor dativo, que respondeu à acusação e conduziu a defesa.",
+      "E) O vício gera nulidade relativa, que precluiu por não ter sido argüida na primeira oportunidade pelo defensor."
+    ],
+    "indiceCorreto": 2,
+    "explicacao": "C) Correta. Após a Lei 11.689/2008, que reformou o procedimento do júri, a distinção entre crimes afiançáveis e inafiançáveis para fins de citação por edital e revelia perdeu o sentido. A revelia é admitida em qualquer crime, desde que observados os pressupostos legais."
+  },
+  {
+    "id": "164",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Em processo por crime de lavagem de dinheiro, a sentença condenatória foi proferida com base no art. 1º, §1º, inciso IV, da Lei 9.613/98, sem que essa qualificadora estivesse descrita na denúncia. A defesa alega violação ao princípio da congruência. Considerando o art. 569 do CPP, assinale a alternativa correta.",
+    "alternativas": [
+      "A) A mudança de fundamentação legal sem descrição na denúncia viola a ampla defesa, gerando nulidade absoluta.",
+      "B) A omissão na denúncia quanto ao dispositivo específico pode ser suprida a todo tempo antes da sentença, não gerando necessariamente nulidade.",
+      "C) Trata-se de erro in judicando, não de vício processual, cabível apenas recurso no mérito.",
+      "D) A sentença que se funda em dispositivo não descrito na denúncia é nula por falta de fundamentação.",
+      "E) É nulidade relativa, que deve ser arguida na primeira oportunidade, sob pena de preclusão."
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "B) Correta. Conforme o art. 569 do CPP, as omissões da denúncia podem ser supridas a todo tempo antes da sentença. A falta de descrição de qualificadora específica pode ser suprida, desde que não impeça o exercício do direito de defesa."
+  },
+  {
+    "id": "165",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Em processo por crime de tráfico de drogas, a defesa requereu a exclusão de prova (apreensão de drogas) por alegar que o flagrante foi forjado. O juiz, na sentença, rejeitou o pedido com a seguinte fundamentação: \"A prova é lícita, pois a autoridade agiu de acordo com a lei.\" Não analisou as específicas alegações de forjamento. A defesa apelou. O Tribunal, ao analisar, entendeu que as alegações de forjamento eram inconsistentes e manteve a condenação. A defesa interpôs recurso especial alegando violação ao art. 564, V, CPP. Assinale a alternativa correta sobre o prequestionamento.",
+    "alternativas": [
+      "A) A defesa prequestionou a matéria ao arguir o forjamento na primeira instância; a omissão do juiz é vício autônomo.",
+      "B) O Tribunal, ao analisar o mérito das alegações de forjamento, prequestionou a matéria para o recurso especial.",
+      "C) A defesa deveria ter oposto embargos de declaração para suprir a omissão da sentença.",
+      "D) A violação ao art. 564, V, CPP é questão de ordem pública, dispensando prequestionamento.",
+      "E) A questão da licitude da prova é de direito material, não cabendo recurso especial por vício de fundamentação."
+    ],
+    "indiceCorreto": 2,
+    "explicacao": "C) Correta. Para configurar o prequestionamento da falta de fundamentação, a defesa deveria ter oposto embargos de declaração para suprir a omissão da sentença em analisar as alegações de forjamento. A mera alegação na primeira instância e o exame de mérito pelo Tribunal não prequestionam o vício de fundamentação."
+  },
+  {
+    "id": "166",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Em ação penal por crime de homicídio, o réu foi pronunciado. No plenário do Júri, após os debates, o juiz presidente formulou os quesitos. Ao fazê-lo, formulou um único quesito para duas qualificadoras distintas alegadas na denúncia (motivo fútil e emprego de meio cruel). A defesa nada alegou. Os jurados responderam \"sim\" ao quesito. Na apelação, a defesa alega a nulidade por violação ao art. 483, §6º, do CPP, que exige quesitação distinta para cada qualificadora. Assinale a alternativa correta.",
+    "alternativas": [
+      "A) A fusão de qualificadoras em um único quesito gera nulidade absoluta, por impedir a vontade claramente manifestada do conselho.",
+      "B) É nulidade relativa, que precluiu por não ter sido impugnada na ocasião.",
+      "C) O juiz pode fundir qualificadoras se elas estiverem intimamente relacionadas no caso concreto.",
+      "D) A defesa deve demonstrar que a fusão causou prejuízo, pois os jurados poderiam ter absolvido em uma das qualificadoras.",
+      "E) A Súmula 156 do STF só se aplica à falta de quesito, não à sua formulação deficiente."
+    ],
+    "indiceCorreto": 0,
+    "explicacao": "A) Correta. O art. 483, §6º, do CPP exige quesitação distinta para cada qualificadora. A fusão em único quesito impede saber se o conselho aceitou ambas, apenas uma ou nenhuma, violando a clareza da vontade do júri e gerando nulidade absoluta."
+  },
+  {
+    "id": "167",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Em recurso especial, a defesa alega violação ao art. 564, V, CPP (decisão carente de fundamentação). O acórdão recorrido, entretanto, limitou-se a afirmar que \"os argumentos da defesa não prosperam perante as robustas provas dos autos\", sem enfrentar cada um deles. O Ministério Público Federal opõe-se, alegando que o requisito do prequestionamento não foi atendido, pois a defesa não especificou no recurso de apelação qual tese deixou de ser enfrentada. Assinale a alternativa correta.",
+    "alternativas": [
+      "A) A falta de fundamentação é vício formal do acórdão, dispensando prequestionamento específico.",
+      "B) Para alegar violação ao art. 564, V, é necessário que a defesa tenha arguido a falta de enfrentamento de tese específica na instância ordinária.",
+      "C) A fundamentação é pressuposto de existência do ato, podendo ser arguida a qualquer tempo.",
+      "D) O prequestionamento é suprido pela mera interposição do recurso especial.",
+      "E) A Súmula 356 do STF não se aplica a vícios de fundamentação, que são de ordem pública."
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "B) Correta. Para alegar violação ao art. 564, V, CPP em recurso especial, é necessário que a defesa tenha arguido especificamente, na instância ordinária, qual tese não foi enfrentada pelo juízo a quo. O mero recurso genérico não configura prequestionamento adequado."
+  },
+  {
+    "id": "168",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "No julgamento de um habeas corpus pelo Tribunal de Justiça, a defesa requereu sustentação oral. O Tribunal marcou a sessão de julgamento sem intimar a defesa, e o habeas corpus foi denegado. A defesa impetrou novo habeas corpus no STJ, alegando a nulidade do julgamento por falta de intimação para a sustentação oral requerida. Com base na jurisprudência, assinale a alternativa correta.",
+    "alternativas": [
+      "A) O julgamento de habeas corpus independe de pauta ou intimação, mesmo com requerimento de sustentação oral.",
+      "B) Se a defesa manifestou interesse na sustentação oral, a falta de intimação gera nulidade absoluta do julgamento.",
+      "C) A defesa deve acompanhar diariamente a pauta do Tribunal, sendo desnecessária intimação específica.",
+      "D) A nulidade é relativa e preclui se não argüida antes do julgamento.",
+      "E) O habeas corpus é processo de urgência, justificando-se a dispensa de intimação."
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "B) Correta. Embora, em regra, o julgamento de habeas corpus independa de pauta (Súmula 431, STF), se a defesa manifestou expressamente interesse na sustentação oral, a falta de intimação viola a ampla defesa, gerando nulidade absoluta do julgamento."
+  },
+  {
+    "id": "169",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Em processo por crime de homicídio, a defesa requereu a exclusão de prova (arma do crime) por alegar que a busca e apreensão foi realizada sem mandado e sem qualquer justificativa legal. O juiz, na sentença, rejeitou o pedido com a seguinte fundamentação: \"A prova é lícita por atender ao interesse público de combate ao crime.\" Não analisou a legalidade do procedimento. O réu foi condenado. No recurso, a defesa alega violação ao art. 564, V, CPP. O Tribunal, ao analisar, entendeu que a busca foi, de fato, ilegal, e excluiu a prova. No entanto, manteve a condenação com base em outras provas. A defesa interpôs recurso especial, mantendo a alegação de falta de fundamentação da sentença. Assinale a alternativa correta.",
+    "alternativas": [
+      "A) O Tribunal, ao excluir a prova, sanou o vício da sentença; não há mais que falar em falta de fundamentação.",
+      "B) A falta de fundamentação da sentença sobre a legalidade da busca é vício autônomo, que pode ser objeto de recurso especial.",
+      "C) A defesa deveria ter oposto embargos de declaração na primeira instância para suprir a omissão.",
+      "D) A questão da legalidade da prova é de direito material, não cabendo recurso especial por vício de fundamentação.",
+      "E) O recurso especial é cabível apenas para violação a lei federal, e a fundamentação é questão infraconstitucional."
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "B) Correta. A falta de fundamentação da sentença sobre questão essencial (licitude da prova) é vício autônomo que pode ser alegado em recurso especial, independentemente da correção do mérito pelo Tribunal. O fato de o Tribunal ter excluído a prova não sana o vício de fundamentação da sentença."
+  },
+  {
+    "id": "170",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Sobre o princípio da causalidade das nulidades (art. 573, §1º, CPP) e o princípio da conservação dos atos processuais, analise as assertivas: I. A nulidade de um ato se comunica apenas aos atos que dele diretamente dependam ou sejam sua consequência. II. A relação de dependência é meramente cronológica: todo ato posterior ao ato nulo também é nulo. III. O juiz que declara a nulidade deve indicar expressamente os atos a que ela se estende. IV. O princípio da conservação determina que atos independentes do ato nulo devem ser preservados. Estão corretas as assertivas:",
+    "alternativas": [
+      "A) I, II e III.",
+      "B) I, III e IV.",
+      "C) II e IV.",
+      "D) I, II, III e IV.",
+      "E) III e IV."
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "B) Correta. As assertivas I, III e IV estão corretas. A assertiva II está incorreta porque a relação de dependência não é meramente cronológica, mas de causalidade ou consequencialidade. Atos posteriores ao ato nulo podem ser válidos se forem independentes dele."
+  },
+  {
+    "id": "171",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Em processo por crime de homicídio, o réu foi pronunciado. No plenário do Júri, após os debates, o juiz presidente formulou os quesitos, mas esqueceu de formular o quesito sobre uma causa de diminuição de pena alegada pela defesa (coação moral irresistível). A defesa nada disse na ocasião. Os jurados responderam \"sim\" ao quesito da materialidade e autoria, e \"não\" ao quesito da qualificadora. O réu foi condenado. Na apelação, a defesa alega a falta do quesito obrigatório. Com base na Súmula 156 do STF, assinale a alternativa correta.",
+    "alternativas": [
+      "A) A falta de quesito sobre causa de diminuição de pena alegada gera nulidade absoluta do julgamento.",
+      "B) A nulidade é relativa e precluiu por não ter sido impugnada na ocasião da leitura dos quesitos.",
+      "C) A causa de diminuição de pena não é quesito obrigatório, pois sua apreciação é facultativa ao júri.",
+      "D) O juiz presidente pode suprir a falta do quesito no momento da votação, instruindo os jurados oralmente.",
+      "E) A defesa pode alegar a causa de diminuição na fase de execução penal, não sendo essencial no plenário."
+    ],
+    "indiceCorreto": 0,
+    "explicacao": "A) Correta. Conforme a Súmula 156 do STF, \"É absoluta a nulidade do julgamento, pelo júri, por falta de quesito obrigatório\". A causa de diminuição de pena, quando alegada pela defesa, deve ser objeto de quesito específico. Sua falta gera nulidade absoluta."
+  },
+  {
+    "id": "172",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Em recurso de apelação, o Tribunal reformou sentença absolutória e condenou o réu. O acórdão, no entanto, não enfrentou a alegação da defesa de que a pretensão punitiva estava prescrita. A defesa interpôs recurso especial. O Ministério Público Federal opõe-se, alegando que a prescrição é questão de direito material, não cabendo recurso especial por vício de fundamentação. Assinale a alternativa correta.",
+    "alternativas": [
+      "A) A prescrição é matéria de direito material, portanto, a alegação de falta de fundamentação sobre ela não viabiliza recurso especial.",
+      "B) A omissão do Tribunal em enfrentar argumento decisivo da defesa configura violação ao art. 564, V, CPP, cabendo recurso especial.",
+      "C) A defesa deveria ter oposto embargos de declaração para suprir a omissão, sob pena de não prequestionamento.",
+      "D) A falta de fundamentação sobre a prescrição gera nulidade absoluta do acórdão, conhecível em habeas corpus.",
+      "E) O recurso especial só é cabível para violação a lei federal, e a prescrição é regulada pelo Código Penal, que é lei federal."
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "B) Correta. A omissão do Tribunal em enfrentar argumento decisivo da defesa (prescrição) configura violação ao art. 564, V, CPP (decisão carente de fundamentação), cabendo recurso especial. A prescrição, embora seja matéria de direito material, quando não enfrentada gera vício de fundamentação processual."
+  },
+  {
+    "id": "173",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Em ação penal por crime de estelionato, a defesa requereu a produção de prova testemunhal. O juiz indeferiu, considerando irrelevante. A defesa não recorreu. Na sentença, o juiz condenou o réu. Na apelação, a defesa não alegou o cerceamento. O Tribunal manteve a condenação. Em sede de revisão criminal, a defesa alega o cerceamento como erro judicial. Assinale a alternativa correta.",
+    "alternativas": [
+      "A) A revisão criminal é via adequada para reparar cerceamento de defesa não arguido no processo principal.",
+      "B) O cerceamento de defesa, não argüido nas instâncias ordinárias, precluiu e não pode ser alegado na revisão criminal.",
+      "C) A revisão criminal só analisa erros de fato ou de direito na sentença, não vícios processuais.",
+      "D) O indeferimento de prova é decisão discricionária do juiz, não configurando erro judicial revisível.",
+      "E) A defesa pode alegar o cerceamento na revisão, desde que demonstre a novidade da prova e sua potencialidade para a absolvição."
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "B) Correta. O cerceamento de defesa, não argüido nas instâncias ordinárias mediante os recursos cabíveis, preclui e não pode ser alegado pela primeira vez em revisão criminal. A revisão pressupõe a exaurição das vias ordinárias."
+  },
+  {
+    "id": "174",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Em processo por crime de roubo, o réu foi citado por edital. Ele nunca compareceu, nem constituiu defensor. O juiz nomeou defensor dativo, que apresentou resposta à acusação. No dia da audiência de instrução, o defensor dativo não compareceu, sem justificar. O juiz adiou a audiência e nomeou outro defensor dativo. Este novo defensor requereu vista dos autos e novo prazo para se preparar, o que foi concedido. O processo seguiu normalmente, com a atuação do segundo dativo, resultando em condenação. Na apelação, o primeiro defensor dativo (que nunca atuou) foi intimado e nada alegou. O segundo defensor apresentou razões. O Tribunal manteve a condenação. Em habeas corpus, alega-se a nulidade por falta de defesa técnica, pois o primeiro defensor dativo foi nomeado mas nunca exerceu a defesa. Assinale a alternativa correta.",
+    "alternativas": [
+      "A) A nomeação de defensor dativo que não atua gera nulidade absoluta, por falta de defesa.",
+      "B) A substituição do defensor dativo antes de qualquer ato instrutivo saneou o vício; a defesa foi exercida regularmente pelo segundo.",
+      "C) O réu, ao não constituir advogado, assume o risco da atuação deficitária do dativo, não cabendo nulidade.",
+      "D) A nulidade é relativa e precluiu por não ter sido argüida na primeira oportunidade pelo segundo defensor.",
+      "E) A nomeação de defensor dativo é ato complexo; se o primeiro não atua, a nomeação é ineficaz, gerando inexistência de defesa."
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "B) Correta. A substituição do defensor dativo antes da prática de qualquer ato instrutivo saneia eventual vício. A defesa foi exercida regularmente pelo segundo defensor dativo, que teve tempo hábil para preparar a defesa. Não há nulidade."
+  },
+  {
+    "id": "175",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Em sede de recurso extraordinário, a defesa alega violação ao princípio da ampla defesa porque o Tribunal negou provimento a apelação sem que ela tivesse sido intimada da pauta de julgamento. O acórdão recorrido não tratou da questão, pois a defesa não a havia alegado. O Ministério Público Federal opõe-se, alegando falta de prequestionamento. À luz da Súmula 356 do STF, assinale a alternativa correta.",
+    "alternativas": [
+      "A) A violação ao contraditório e à ampla defesa é questão de ordem pública, dispensando prequestionamento.",
+      "B) A defesa, ao não alegar a falta de intimação da pauta no Tribunal de origem, não prequestionou a matéria.",
+      "C) A Súmula 356 do STF aplica-se apenas a questões fáticas, não a violações constitucionais.",
+      "D) O prequestionamento é requisito apenas para o recurso especial, não para o extraordinário.",
+      "E) A falta de intimação da pauta é nulidade absoluta, conhecível a qualquer tempo, inclusive no recurso extraordinário."
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "B) Correta. Conforme a Súmula 356 do STF, o ponto omisso da decisão, sobre o qual não foram opostos embargos declaratórios, não pode ser objeto de recurso extraordinário, por faltar o requisito do prequestionamento. A defesa deveria ter alegado a falta de intimação no Tribunal de origem."
+  },
+  {
+    "id": "176",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Em processo por crime de homicídio, o réu foi pronunciado. No plenário do Júri, após os debates, o juiz presidente formulou os quesitos. Ao fazê-lo, formulou um único quesito para duas qualificadoras distintas alegadas na denúncia (motivo fútil e emprego de meio cruel). A defesa nada alegou. Os jurados responderam \"sim\" ao quesito. Na apelação, a defesa alega a nulidade por violação ao art. 483, §6º, do CPP, que exige quesitação distinta para cada qualificadora. Assinale a alternativa correta.",
+    "alternativas": [
+      "A) A fusão de qualificadoras em um único quesito gera nulidade absoluta, por impedir a vontade claramente manifestada do conselho.",
+      "B) É nulidade relativa, que precluiu por não ter sido impugnada na ocasião.",
+      "C) O juiz pode fundir qualificadoras se elas estiverem intimamente relacionadas no caso concreto.",
+      "D) A defesa deve demonstrar que a fusão causou prejuízo, pois os jurados poderiam ter absolvido em uma das qualificadoras.",
+      "E) A Súmula 156 do STF só se aplica à falta de quesito, não à sua formulação deficiente."
+    ],
+    "indiceCorreto": 0,
+    "explicacao": "A) Correta. O art. 483, §6º, do CPP exige quesitação distinta para cada qualificadora. A fusão em único quesito impede saber se o conselho aceitou ambas, apenas uma ou nenhuma, violando a clareza da vontade do júri e gerando nulidade absoluta."
+  },
+  {
+    "id": "177",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Em ação penal por crime de homicídio, a defesa requereu a exclusão de provas obtidas por interceptação telefônica, alegando que a autorização judicial não atendeu aos requisitos legais. O juiz, na sentença, rejeitou o pedido com a seguinte fundamentação: \"As interceptações foram regularmente autorizadas e as provas são lícitas.\" Não analisou cada um dos vícios apontados pela defesa. O réu foi condenado. No recurso, a defesa alega violação ao art. 564, V, CPP. O Tribunal, ao analisar, entendeu que os vícios apontados eram irrelevantes e manteve a condenação. A defesa interpôs recurso especial. Assinale a alternativa correta sobre o prequestionamento.",
+    "alternativas": [
+      "A) A defesa prequestionou a matéria ao arguir os vícios na primeira instância; a omissão do juiz não a desconfigura.",
+      "B) O Tribunal, ao enfrentar a questão, ainda que para rejeitá-la, prequestionou a matéria para o recurso especial.",
+      "C) A defesa deveria ter oposto embargos de declaração para suprir a omissão da sentença, sob pena de não prequestionamento.",
+      "D) A violação ao art. 564, V, CPP é questão de ordem pública, dispensando prequestionamento.",
+      "E) A questão é de direito material (licitude da prova), não cabendo recurso especial por vício de fundamentação."
+    ],
+    "indiceCorreto": 2,
+    "explicacao": "C) Correta. Para configurar o prequestionamento em caso de falta de fundamentação, a defesa deveria ter oposto embargos de declaração para suprir a omissão da sentença em analisar os vícios específicos. A mera alegação na primeira instância não basta."
+  },
+  {
+    "id": "178",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Em ação penal por crime de homicídio, o réu foi condenado. Na apelação, o Tribunal, por maioria, reformou a sentença e absolveu o réu. Um dos desembargadores da minoria, ao proferir voto, utilizou expressões ofensivas à honra do réu, chamando-o de \"predador sexual\". O Ministério Público não recorreu. O réu, inconformado com as expressões, impetrou habeas corpus para anular o acórdão no que diz respeito ao voto ofensivo. Assinale a alternativa correta.",
+    "alternativas": [
+      "A) O habeas corpus não é via adequada para anular parte de acórdão absolutório.",
+      "B) As expressões do voto vencido são irrelevantes, pois não influenciaram o resultado.",
+      "C) As expressões podem configurar quebra de imparcialidade, mas como o réu foi absolvido, não há prejuízo a reparar.",
+      "D) O réu pode ajuizar ação de indenização por danos morais contra o desembargador, mas não anular o acórdão.",
+      "E) A ofensa à honra em voto judicial gera nulidade absoluta do julgamento, ainda que o réu tenha sido absolvido."
+    ],
+    "indiceCorreto": 2,
+    "explicacao": "C) Correta. Embora as expressões ofensivas possam configurar quebra de imparcialidade, como o voto foi vencido e o réu foi absolvido, não há prejuízo processual a reparar. A via adequada seria a ação de indenização por danos morais, não a anulação do acórdão."
+  },
+  {
+    "id": "179",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Em processo por crime de homicídio, a defesa requereu a exclusão de prova (arma do crime) por alegar que a busca e apreensão foi realizada sem mandado e sem qualquer justificativa legal. O juiz, na sentença, rejeitou o pedido com a seguinte fundamentação: \"A prova é lícita por atender ao interesse público de combate ao crime.\" Não analisou a legalidade do procedimento. O réu foi condenado. No recurso, a defesa alega violação ao art. 564, V, CPP. O Tribunal, ao analisar, entendeu que a busca foi, de fato, ilegal, e excluiu a prova. No entanto, manteve a condenação com base em outras provas. A defesa interpôs recurso especial, mantendo a alegação de falta de fundamentação da sentença. Assinale a alternativa correta.",
+    "alternativas": [
+      "A) O Tribunal, ao excluir a prova, sanou o vício da sentença; não há mais que falar em falta de fundamentação.",
+      "B) A falta de fundamentação da sentença sobre a legalidade da busca é vício autônomo, que pode ser objeto de recurso especial.",
+      "C) A defesa deveria ter oposto embargos de declaração na primeira instância para suprir a omissão.",
+      "D) A questão da legalidade da prova é de direito material, não cabendo recurso especial por vício de fundamentação.",
+      "E) O recurso especial é cabível apenas para violação a lei federal, e a fundamentação é questão infraconstitucional."
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "B) Correta. A falta de fundamentação da sentença sobre questão essencial (licitude da prova) é vício autônomo que pode ser alegado em recurso especial, independentemente da correção do mérito pelo Tribunal. O fato de o Tribunal ter excluído a prova não sana o vício de fundamentação da sentença."
+  },
+  {
+    "id": "180",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Sobre o princípio da causalidade das nulidades (art. 573, §1º, CPP) e o princípio da conservação dos atos processuais, analise as assertivas: I. A nulidade de um ato se comunica apenas aos atos que dele diretamente dependam ou sejam sua consequência. II. A relação de dependência é meramente cronológica: todo ato posterior ao ato nulo também é nulo. III. O juiz que declara a nulidade deve indicar expressamente os atos a que ela se estende. IV. O princípio da conservação determina que atos independentes do ato nulo devem ser preservados. Estão corretas as assertivas:",
+    "alternativas": [
+      "A) I, II e III.",
+      "B) I, III e IV.",
+      "C) II e IV.",
+      "D) I, II, III e IV.",
+      "E) III e IV."
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "B) Correta. As assertivas I, III e IV estão corretas. A assertiva II está incorreta porque a relação de dependência não é meramente cronológica, mas de causalidade ou consequencialidade. Atos posteriores ao ato nulo podem ser válidos se forem independentes dele."
+  },
+  {
+    "id": "181",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Em processo por crime de homicídio, o réu foi pronunciado. No plenário do Júri, após os debates, o juiz presidente formulou os quesitos, mas esqueceu de formular o quesito sobre uma causa de diminuição de pena alegada pela defesa (coação moral irresistível). A defesa nada disse na ocasião. Os jurados responderam \"sim\" ao quesito da materialidade e autoria, e \"não\" ao quesito da qualificadora. O réu foi condenado. Na apelação, a defesa alega a falta do quesito obrigatório. Com base na Súmula 156 do STF, assinale a alternativa correta.",
+    "alternativas": [
+      "A) A falta de quesito sobre causa de diminuição de pena alegada gera nulidade absoluta do julgamento.",
+      "B) A nulidade é relativa e precluiu por não ter sido impugnada na ocasião da leitura dos quesitos.",
+      "C) A causa de diminuição de pena não é quesito obrigatório, pois sua apreciação é facultativa ao júri.",
+      "D) O juiz presidente pode suprir a falta do quesito no momento da votação, instruindo os jurados oralmente.",
+      "E) A defesa pode alegar a causa de diminuição na fase de execução penal, não sendo essencial no plenário."
+    ],
+    "indiceCorreto": 0,
+    "explicacao": "A) Correta. Conforme a Súmula 156 do STF, \"É absoluta a nulidade do julgamento, pelo júri, por falta de quesito obrigatório\". A causa de diminuição de pena, quando alegada pela defesa, deve ser objeto de quesito específico. Sua falta gera nulidade absoluta."
+  },
+  {
+    "id": "182",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Em recurso de apelação, o Tribunal reformou sentença absolutória e condenou o réu. O acórdão, no entanto, não enfrentou a alegação da defesa de que a pretensão punitiva estava prescrita. A defesa interpôs recurso especial. O Ministério Público Federal opõe-se, alegando que a prescrição é questão de direito material, não cabendo recurso especial por vício de fundamentação. Assinale a alternativa correta.",
+    "alternativas": [
+      "A) A prescrição é matéria de direito material, portanto, a alegação de falta de fundamentação sobre ela não viabiliza recurso especial.",
+      "B) A omissão do Tribunal em enfrentar argumento decisivo da defesa configura violação ao art. 564, V, CPP, cabendo recurso especial.",
+      "C) A defesa deveria ter oposto embargos de declaração para suprir a omissão, sob pena de não prequestionamento.",
+      "D) A falta de fundamentação sobre a prescrição gera nulidade absoluta do acórdão, conhecível em habeas corpus.",
+      "E) O recurso especial só é cabível para violação a lei federal, e a prescrição é regulada pelo Código Penal, que é lei federal."
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "B) Correta. A omissão do Tribunal em enfrentar argumento decisivo da defesa (prescrição) configura violação ao art. 564, V, CPP (decisão carente de fundamentação), cabendo recurso especial. A prescrição, embora seja matéria de direito material, quando não enfrentada gera vício de fundamentação processual."
+  },
+  {
+    "id": "183",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Em ação penal por crime de estelionato, a defesa requereu a produção de prova testemunhal. O juiz indeferiu, considerando irrelevante. A defesa não recorreu. Na sentença, o juiz condenou o réu. Na apelação, a defesa não alegou o cerceamento. O Tribunal manteve a condenação. Em sede de revisão criminal, a defesa alega o cerceamento como erro judicial. Assinale a alternativa correta.",
+    "alternativas": [
+      "A) A revisão criminal é via adequada para reparar cerceamento de defesa não arguido no processo principal.",
+      "B) O cerceamento de defesa, não argüido nas instâncias ordinárias, precluiu e não pode ser alegado na revisão criminal.",
+      "C) A revisão criminal só analisa erros de fato ou de direito na sentença, não vícios processuais.",
+      "D) O indeferimento de prova é decisão discricionária do juiz, não configurando erro judicial revisível.",
+      "E) A defesa pode alegar o cerceamento na revisão, desde que demonstre a novidade da prova e sua potencialidade para a absolvição."
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "B) Correta. O cerceamento de defesa, não argüido nas instâncias ordinárias mediante os recursos cabíveis, preclui e não pode ser alegado pela primeira vez em revisão criminal. A revisão pressupõe a exaurimento das vias ordinárias."
+  },
+  {
+    "id": "184",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Em processo por crime de roubo, o réu foi citado por edital. Ele nunca compareceu, nem constituiu defensor. O juiz nomeou defensor dativo, que apresentou resposta à acusação. No dia da audiência de instrução, o defensor dativo não compareceu, sem justificar. O juiz adiou a audiência e nomeou outro defensor dativo. Este novo defensor requereu vista dos autos e novo prazo para se preparar, o que foi concedido. O processo seguiu normalmente, com a atuação do segundo dativo, resultando em condenação. Na apelação, o primeiro defensor dativo (que nunca atuou) foi intimado e nada alegou. O segundo defensor apresentou razões. O Tribunal manteve a condenação. Em habeas corpus, alega-se a nulidade por falta de defesa técnica, pois o primeiro defensor dativo foi nomeado mas nunca exerceu a defesa. Assinale a alternativa correta.",
+    "alternativas": [
+      "A) A nomeação de defensor dativo que não atua gera nulidade absoluta, por falta de defesa.",
+      "B) A substituição do defensor dativo antes de qualquer ato instrutivo saneou o vício; a defesa foi exercida regularmente pelo segundo.",
+      "C) O réu, ao não constituir advogado, assume o risco da atuação deficitária do dativo, não cabendo nulidade.",
+      "D) A nulidade é relativa e precluiu por não ter sido argüida na primeira oportunidade pelo segundo defensor.",
+      "E) A nomeação de defensor dativo é ato complexo; se o primeiro não atua, a nomeação é ineficaz, gerando inexistência de defesa."
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "B) Correta. A substituição do defensor dativo antes da prática de qualquer ato instrutivo saneia eventual vício. A defesa foi exercida regularmente pelo segundo defensor dativo, que teve tempo hábil para preparar a defesa. Não há nulidade."
+  },
+  {
+    "id": "185",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Em sede de recurso extraordinário, a defesa alega violação ao princípio da ampla defesa porque o Tribunal negou provimento a apelação sem que ela tivesse sido intimada da pauta de julgamento. O acórdão recorrido não tratou da questão, pois a defesa não a havia alegado. O Ministério Público Federal opõe-se, alegando falta de prequestionamento. À luz da Súmula 356 do STF, assinale a alternativa correta.",
+    "alternativas": [
+      "A) A violação ao contraditório e à ampla defesa é questão de ordem pública, dispensando prequestionamento.",
+      "B) A defesa, ao não alegar a falta de intimação da pauta no Tribunal de origem, não prequestionou a matéria.",
+      "C) A Súmula 356 do STF aplica-se apenas a questões fáticas, não a violações constitucionais.",
+      "D) O prequestionamento é requisito apenas para o recurso especial, não para o extraordinário.",
+      "E) A falta de intimação da pauta é nulidade absoluta, conhecível a qualquer tempo, inclusive no recurso extraordinário."
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "B) Correta. Conforme a Súmula 356 do STF, o ponto omisso da decisão, sobre o qual não foram opostos embargos declaratórios, não pode ser objeto de recurso extraordinário, por faltar o requisito do prequestionamento. A defesa deveria ter alegado a falta de intimação no Tribunal de origem."
+  },
+  {
+    "id": "186",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Em processo por crime de homicídio, o réu foi pronunciado. No plenário do Júri, após os debates, o juiz presidente formulou os quesitos. Ao fazê-lo, formulou um único quesito para duas qualificadoras distintas alegadas na denúncia (motivo fútil e emprego de meio cruel). A defesa nada alegou. Os jurados responderam \"sim\" ao quesito. Na apelação, a defesa alega a nulidade por violação ao art. 483, §6º, do CPP, que exige quesitação distinta para cada qualificadora. Assinale a alternativa correta.",
+    "alternativas": [
+      "A) A fusão de qualificadoras em um único quesito gera nulidade absoluta, por impedir a vontade claramente manifestada do conselho.",
+      "B) É nulidade relativa, que precluiu por não ter sido impugnada na ocasião.",
+      "C) O juiz pode fundir qualificadoras se elas estiverem intimamente relacionadas no caso concreto.",
+      "D) A defesa deve demonstrar que a fusão causou prejuízo, pois os jurados poderiam ter absolvido em uma das qualificadoras.",
+      "E) A Súmula 156 do STF só se aplica à falta de quesito, não à sua formulação deficiente."
+    ],
+    "indiceCorreto": 0,
+    "explicacao": "A) Correta. O art. 483, §6º, do CPP exige quesitação distinta para cada qualificadora. A fusão em único quesito impede saber se o conselho aceitou ambas, apenas uma ou nenhuma, violando a clareza da vontade do júri e gerando nulidade absoluta."
+  },
+  {
+    "id": "187",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Em ação penal por crime de homicídio, a defesa requereu a exclusão de provas obtidas por interceptação telefônica, alegando que a autorização judicial não atendeu aos requisitos legais. O juiz, na sentença, rejeitou o pedido com a seguinte fundamentação: \"As interceptações foram regularmente autorizadas e as provas são lícitas.\" Não analisou cada um dos vícios apontados pela defesa. O réu foi condenado. No recurso, a defesa alega violação ao art. 564, V, CPP. O Tribunal, ao analisar, entendeu que os vícios apontados eram irrelevantes e manteve a condenação. A defesa interpôs recurso especial. Assinale a alternativa correta sobre o prequestionamento.",
+    "alternativas": [
+      "A) A defesa prequestionou a matéria ao arguir os vícios na primeira instância; a omissão do juiz não a desconfigura.",
+      "B) O Tribunal, ao enfrentar a questão, ainda que para rejeitá-la, prequestionou a matéria para o recurso especial.",
+      "C) A defesa deveria ter oposto embargos de declaração para suprir a omissão da sentença, sob pena de não prequestionamento.",
+      "D) A violação ao art. 564, V, CPP é questão de ordem pública, dispensando prequestionamento.",
+      "E) A questão é de direito material (licitude da prova), não cabendo recurso especial por vício de fundamentação."
+    ],
+    "indiceCorreto": 2,
+    "explicacao": "C) Correta. Para configurar o prequestionamento em caso de falta de fundamentação, a defesa deveria ter oposto embargos de declaração para suprir a omissão da sentença em analisar os vícios específicos. A mera alegação na primeira instância não basta."
+  },
+  {
+    "id": "188",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Em ação penal por crime de homicídio, o réu foi condenado. Na apelação, o Tribunal, por maioria, reformou a sentença e absolveu o réu. Um dos desembargadores da minoria, ao proferir voto, utilizou expressões ofensivas à honra do réu, chamando-o de \"predador sexual\". O Ministério Público não recorreu. O réu, inconformado com as expressões, impetrou habeas corpus para anular o acórdão no que diz respeito ao voto ofensivo. Assinale a alternativa correta.",
+    "alternativas": [
+      "A) O habeas corpus não é via adequada para anular parte de acórdão absolutório.",
+      "B) As expressões do voto vencido são irrelevantes, pois não influenciaram o resultado.",
+      "C) As expressões podem configurar quebra de imparcialidade, mas como o réu foi absolvido, não há prejuízo a reparar.",
+      "D) O réu pode ajuizar ação de indenização por danos morais contra o desembargador, mas não anular o acórdão.",
+      "E) A ofensa à honra em voto judicial gera nulidade absoluta do julgamento, ainda que o réu tenha sido absolvido."
+    ],
+    "indiceCorreto": 2,
+    "explicacao": "C) Correta. Embora as expressões ofensivas possam configurar quebra de imparcialidade, como o voto foi vencido e o réu foi absolvido, não há prejuízo processual a reparar. A via adequada seria a ação de indenização por danos morais, não a anulação do acórdão."
+  },
+  {
+    "id": "189",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Em processo por crime de homicídio, a defesa requereu a exclusão de prova (arma do crime) por alegar que a busca e apreensão foi realizada sem mandado e sem qualquer justificativa legal. O juiz, na sentença, rejeitou o pedido com a seguinte fundamentação: \"A prova é lícita por atender ao interesse público de combate ao crime.\" Não analisou a legalidade do procedimento. O réu foi condenado. No recurso, a defesa alega violação ao art. 564, V, CPP. O Tribunal, ao analisar, entendeu que a busca foi, de fato, ilegal, e excluiu a prova. No entanto, manteve a condenação com base em outras provas. A defesa interpôs recurso especial, mantendo a alegação de falta de fundamentação da sentença. Assinale a alternativa correta.",
+    "alternativas": [
+      "A) O Tribunal, ao excluir a prova, sanou o vício da sentença; não há mais que falar em falta de fundamentação.",
+      "B) A falta de fundamentação da sentença sobre a legalidade da busca é vício autônomo, que pode ser objeto de recurso especial.",
+      "C) A defesa deveria ter oposto embargos de declaração na primeira instância para suprir a omissão.",
+      "D) A questão da legalidade da prova é de direito material, não cabendo recurso especial por vício de fundamentação.",
+      "E) O recurso especial é cabível apenas para violação a lei federal, e a fundamentação é questão infraconstitucional."
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "B) Correta. A falta de fundamentação da sentença sobre questão essencial (licitude da prova) é vício autônomo que pode ser alegado em recurso especial, independentemente da correção do mérito pelo Tribunal. O fato de o Tribunal ter excluído a prova não sana o vício de fundamentação da sentença."
+  },
+  {
+    "id": "190",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Sobre o princípio da causalidade das nulidades (art. 573, §1º, CPP) e o princípio da conservação dos atos processuais, analise as assertivas: I. A nulidade de um ato se comunica apenas aos atos que dele diretamente dependam ou sejam sua consequência. II. A relação de dependência é meramente cronológica: todo ato posterior ao ato nulo também é nulo. III. O juiz que declara a nulidade deve indicar expressamente os atos a que ela se estende. IV. O princípio da conservação determina que atos independentes do ato nulo devem ser preservados. Estão corretas as assertivas:",
+    "alternativas": [
+      "A) I, II e III.",
+      "B) I, III e IV.",
+      "C) II e IV.",
+      "D) I, II, III e IV.",
+      "E) III e IV."
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "B) Correta. As assertivas I, III e IV estão corretas. A assertiva II está incorreta porque a relação de dependência não é meramente cronológica, mas de causalidade ou consequencialidade. Atos posteriores ao ato nulo podem ser válidos se forem independentes dele."
+  },
+  {
+    "id": "191",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Em processo por crime de homicídio, o réu foi pronunciado. No plenário do Júri, após os debates, o juiz presidente formulou os quesitos, mas esqueceu de formular o quesito sobre uma causa de diminuição de pena alegada pela defesa (coação moral irresistível). A defesa nada disse na ocasião. Os jurados responderam \"sim\" ao quesito da materialidade e autoria, e \"não\" ao quesito da qualificadora. O réu foi condenado. Na apelação, a defesa alega a falta do quesito obrigatório. Com base na Súmula 156 do STF, assinale a alternativa correta.",
+    "alternativas": [
+      "A) A falta de quesito sobre causa de diminuição de pena alegada gera nulidade absoluta do julgamento.",
+      "B) A nulidade é relativa e precluiu por não ter sido impugnada na ocasião da leitura dos quesitos.",
+      "C) A causa de diminuição de pena não é quesito obrigatório, pois sua apreciação é facultativa ao júri.",
+      "D) O juiz presidente pode suprir a falta do quesito no momento da votação, instruindo os jurados oralmente.",
+      "E) A defesa pode alegar a causa de diminuição na fase de execução penal, não sendo essencial no plenário."
+    ],
+    "indiceCorreto": 0,
+    "explicacao": "A) Correta. Conforme a Súmula 156 do STF, \"É absoluta a nulidade do julgamento, pelo júri, por falta de quesito obrigatório\". A causa de diminuição de pena, quando alegada pela defesa, deve ser objeto de quesito específico. Sua falta gera nulidade absoluta."
+  },
+  {
+    "id": "192",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Em recurso de apelação, o Tribunal reformou sentença absolutória e condenou o réu. O acórdão, no entanto, não enfrentou a alegação da defesa de que a pretensão punitiva estava prescrita. A defesa interpôs recurso especial. O Ministério Público Federal opõe-se, alegando que a prescrição é questão de direito material, não cabendo recurso especial por vício de fundamentação. Assinale a alternativa correta.",
+    "alternativas": [
+      "A) A prescrição é matéria de direito material, portanto, a alegação de falta de fundamentação sobre ela não viabiliza recurso especial.",
+      "B) A omissão do Tribunal em enfrentar argumento decisivo da defesa configura violação ao art. 564, V, CPP, cabendo recurso especial.",
+      "C) A defesa deveria ter oposto embargos de declaração para suprir a omissão, sob pena de não prequestionamento.",
+      "D) A falta de fundamentação sobre a prescrição gera nulidade absoluta do acórdão, conhecível em habeas corpus.",
+      "E) O recurso especial só é cabível para violação a lei federal, e a prescrição é regulada pelo Código Penal, que é lei federal."
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "B) Correta. A omissão do Tribunal em enfrentar argumento decisivo da defesa (prescrição) configura violação ao art. 564, V, CPP (decisão carente de fundamentação), cabendo recurso especial. A prescrição, embora seja matéria de direito material, quando não enfrentada gera vício de fundamentação processual."
+  },
+  {
+    "id": "193",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Em ação penal por crime de estelionato, a defesa requereu a produção de prova testemunhal. O juiz indeferiu, considerando irrelevante. A defesa não recorreu. Na sentença, o juiz condenou o réu. Na apelação, a defesa não alegou o cerceamento. O Tribunal manteve a condenação. Em sede de revisão criminal, a defesa alega o cerceamento como erro judicial. Assinale a alternativa correta.",
+    "alternativas": [
+      "A) A revisão criminal é via adequada para reparar cerceamento de defesa não arguido no processo principal.",
+      "B) O cerceamento de defesa, não argüido nas instâncias ordinárias, precluiu e não pode ser alegado na revisão criminal.",
+      "C) A revisão criminal só analisa erros de fato ou de direito na sentença, não vícios processuais.",
+      "D) O indeferimento de prova é decisão discricionária do juiz, não configurando erro judicial revisível.",
+      "E) A defesa pode alegar o cerceamento na revisão, desde que demonstre a novidade da prova e sua potencialidade para a absolvição."
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "B) Correta. O cerceamento de defesa, não argüido nas instâncias ordinárias mediante os recursos cabíveis, preclui e não pode ser alegado pela primeira vez em revisão criminal. A revisão pressupõe a exaurimento das vias ordinárias."
+  },
+  {
+    "id": "194",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Em processo por crime de roubo, o réu foi citado por edital. Ele nunca compareceu, nem constituiu defensor. O juiz nomeou defensor dativo, que apresentou resposta à acusação. No dia da audiência de instrução, o defensor dativo não compareceu, sem justificar. O juiz adiou a audiência e nomeou outro defensor dativo. Este novo defensor requereu vista dos autos e novo prazo para se preparar, o que foi concedido. O processo seguiu normalmente, com a atuação do segundo dativo, resultando em condenação. Na apelação, o primeiro defensor dativo (que nunca atuou) foi intimado e nada alegou. O segundo defensor apresentou razões. O Tribunal manteve a condenação. Em habeas corpus, alega-se a nulidade por falta de defesa técnica, pois o primeiro defensor dativo foi nomeado mas nunca exerceu a defesa. Assinale a alternativa correta.",
+    "alternativas": [
+      "A) A nomeação de defensor dativo que não atua gera nulidade absoluta, por falta de defesa.",
+      "B) A substituição do defensor dativo antes de qualquer ato instrutivo saneou o vício; a defesa foi exercida regularmente pelo segundo.",
+      "C) O réu, ao não constituir advogado, assume o risco da atuação deficitária do dativo, não cabendo nulidade.",
+      "D) A nulidade é relativa e precluiu por não ter sido argüida na primeira oportunidade pelo segundo defensor.",
+      "E) A nomeação de defensor dativo é ato complexo; se o primeiro não atua, a nomeação é ineficaz, gerando inexistência de defesa."
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "B) Correta. A substituição do defensor dativo antes da prática de qualquer ato instrutivo saneia eventual vício. A defesa foi exercida regularmente pelo segundo defensor dativo, que teve tempo hábil para preparar a defesa. Não há nulidade."
+  },
+  {
+    "id": "195",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Em sede de recurso extraordinário, a defesa alega violação ao princípio da ampla defesa porque o Tribunal negou provimento a apelação sem que ela tivesse sido intimada da pauta de julgamento. O acórdão recorrido não tratou da questão, pois a defesa não a havia alegado. O Ministério Público Federal opõe-se, alegando falta de prequestionamento. À luz da Súmula 356 do STF, assinale a alternativa correta.",
+    "alternativas": [
+      "A) A violação ao contraditório e à ampla defesa é questão de ordem pública, dispensando prequestionamento.",
+      "B) A defesa, ao não alegar a falta de intimação da pauta no Tribunal de origem, não prequestionou a matéria.",
+      "C) A Súmula 356 do STF aplica-se apenas a questões fáticas, não a violações constitucionais.",
+      "D) O prequestionamento é requisito apenas para o recurso especial, não para o extraordinário.",
+      "E) A falta de intimação da pauta é nulidade absoluta, conhecível a qualquer tempo, inclusive no recurso extraordinário."
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "B) Correta. Conforme a Súmula 356 do STF, o ponto omisso da decisão, sobre o qual não foram opostos embargos declaratórios, não pode ser objeto de recurso extraordinário, por faltar o requisito do prequestionamento. A defesa deveria ter alegado a falta de intimação no Tribunal de origem."
+  },
+  {
+    "id": "196",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Em processo por crime de homicídio, o réu foi pronunciado. No plenário do Júri, após os debates, o juiz presidente formulou os quesitos. Ao fazê-lo, formulou um único quesito para duas qualificadoras distintas alegadas na denúncia (motivo fútil e emprego de meio cruel). A defesa nada alegou. Os jurados responderam \"sim\" ao quesito. Na apelação, a defesa alega a nulidade por violação ao art. 483, §6º, do CPP, que exige quesitação distinta para cada qualificadora. Assinale a alternativa correta.",
+    "alternativas": [
+      "A) A fusão de qualificadoras em um único quesito gera nulidade absoluta, por impedir a vontade claramente manifestada do conselho.",
+      "B) É nulidade relativa, que precluiu por não ter sido impugnada na ocasião.",
+      "C) O juiz pode fundir qualificadoras se elas estiverem intimamente relacionadas no caso concreto.",
+      "D) A defesa deve demonstrar que a fusão causou prejuízo, pois os jurados poderiam ter absolvido em uma das qualificadoras.",
+      "E) A Súmula 156 do STF só se aplica à falta de quesito, não à sua formulação deficiente."
+    ],
+    "indiceCorreto": 0,
+    "explicacao": "A) Correta. O art. 483, §6º, do CPP exige quesitação distinta para cada qualificadora. A fusão em único quesito impede saber se o conselho aceitou ambas, apenas uma ou nenhuma, violando a clareza da vontade do júri e gerando nulidade absoluta."
+  },
+  {
+    "id": "197",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Em ação penal por crime de homicídio, a defesa requereu a exclusão de provas obtidas por interceptação telefônica, alegando que a autorização judicial não atendeu aos requisitos legais. O juiz, na sentença, rejeitou o pedido com a seguinte fundamentação: \"As interceptações foram regularmente autorizadas e as provas são lícitas.\" Não analisou cada um dos vícios apontados pela defesa. O réu foi condenado. No recurso, a defesa alega violação ao art. 564, V, CPP. O Tribunal, ao analisar, entendeu que os vícios apontados eram irrelevantes e manteve a condenação. A defesa interpôs recurso especial. Assinale a alternativa correta sobre o prequestionamento.",
+    "alternativas": [
+      "A) A defesa prequestionou a matéria ao arguir os vícios na primeira instância; a omissão do juiz não a desconfigura.",
+      "B) O Tribunal, ao enfrentar a questão, ainda que para rejeitá-la, prequestionou a matéria para o recurso especial.",
+      "C) A defesa deveria ter oposto embargos de declaração para suprir a omissão da sentença, sob pena de não prequestionamento.",
+      "D) A violação ao art. 564, V, CPP é questão de ordem pública, dispensando prequestionamento.",
+      "E) A questão é de direito material (licitude da prova), não cabendo recurso especial por vício de fundamentação."
+    ],
+    "indiceCorreto": 2,
+    "explicacao": "C) Correta. Para configurar o prequestionamento em caso de falta de fundamentação, a defesa deveria ter oposto embargos de declaração para suprir a omissão da sentença em analisar os vícios específicos. A mera alegação na primeira instância não basta."
+  },
+  {
+    "id": "198",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Em ação penal por crime de homicídio, o réu foi condenado. Na apelação, o Tribunal, por maioria, reformou a sentença e absolveu o réu. Um dos desembargadores da minoria, ao proferir voto, utilizou expressões ofensivas à honra do réu, chamando-o de \"predador sexual\". O Ministério Público não recorreu. O réu, inconformado com as expressões, impetrou habeas corpus para anular o acórdão no que diz respeito ao voto ofensivo. Assinale a alternativa correta.",
+    "alternativas": [
+      "A) O habeas corpus não é via adequada para anular parte de acórdão absolutório.",
+      "B) As expressões do voto vencido são irrelevantes, pois não influenciaram o resultado.",
+      "C) As expressões podem configurar quebra de imparcialidade, mas como o réu foi absolvido, não há prejuízo a reparar.",
+      "D) O réu pode ajuizar ação de indenização por danos morais contra o desembargador, mas não anular o acórdão.",
+      "E) A ofensa à honra em voto judicial gera nulidade absoluta do julgamento, ainda que o réu tenha sido absolvido."
+    ],
+    "indiceCorreto": 2,
+    "explicacao": "C) Correta. Embora as expressões ofensivas possam configurar quebra de imparcialidade, como o voto foi vencido e o réu foi absolvido, não há prejuízo processual a reparar. A via adequada seria a ação de indenização por danos morais, não a anulação do acórdão."
+  },
+  {
+    "id": "199",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Em processo por crime de homicídio, a defesa requereu a exclusão de prova (arma do crime) por alegar que a busca e apreensão foi realizada sem mandado e sem qualquer justificativa legal. O juiz, na sentença, rejeitou o pedido com a seguinte fundamentação: \"A prova é lícita por atender ao interesse público de combate ao crime.\" Não analisou a legalidade do procedimento. O réu foi condenado. No recurso, a defesa alega violação ao art. 564, V, CPP. O Tribunal, ao analisar, entendeu que a busca foi, de fato, ilegal, e excluiu a prova. No entanto, manteve a condenação com base em outras provas. A defesa interpôs recurso especial, mantendo a alegação de falta de fundamentação da sentença. Assinale a alternativa correta.",
+    "alternativas": [
+      "A) O Tribunal, ao excluir a prova, sanou o vício da sentença; não há mais que falar em falta de fundamentação.",
+      "B) A falta de fundamentação da sentença sobre a legalidade da busca é vício autônomo, que pode ser objeto de recurso especial.",
+      "C) A defesa deveria ter oposto embargos de declaração na primeira instância para suprir a omissão.",
+      "D) A questão da legalidade da prova é de direito material, não cabendo recurso especial por vício de fundamentação.",
+      "E) O recurso especial é cabível apenas para violação a lei federal, e a fundamentação é questão infraconstitucional."
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "B) Correta. A falta de fundamentação da sentença sobre questão essencial (licitude da prova) é vício autônomo que pode ser alegado em recurso especial, independentemente da correção do mérito pelo Tribunal. O fato de o Tribunal ter excluído a prova não sana o vício de fundamentação da sentença."
+  },
+  {
+    "id": "200",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Sobre o princípio da causalidade das nulidades (art. 573, §1º, CPP) e o princípio da conservação dos atos processuais, analise as assertivas: I. A nulidade de um ato se comunica apenas aos atos que dele diretamente dependam ou sejam sua consequência. II. A relação de dependência é meramente cronológica: todo ato posterior ao ato nulo também é nulo. III. O juiz que declara a nulidade deve indicar expressamente os atos a que ela se estende. IV. O princípio da conservação determina que atos independentes do ato nulo devem ser preservados. Estão corretas as assertivas:",
+    "alternativas": [
+      "A) I, II e III.",
+      "B) I, III e IV.",
+      "C) II e IV.",
+      "D) I, II, III e IV.",
+      "E) III e IV."
+    ],
+    "indiceCorreto": 1,
+    "explicacao": "B) Correta. As assertivas I, III e IV estão corretas. A assertiva II está incorreta porque a relação de dependência não é meramente cronológica, mas de causalidade ou consequencialidade. Atos posteriores ao ato nulo podem ser válidos se forem independentes dele."
+  },
+  {
+    "id": "201",
+    "materia": "Direito Processual Penal",
+    "assunto": "20. Nulidades",
+    "enunciado": "Em processo por crime de homicídio, o réu foi pronunciado. No plenário do Júri, após os debates, o juiz presidente formulou os quesitos, mas esqueceu de formular o quesito sobre uma causa de diminuição de pena alegada pela defesa (coação moral irresistível). A defesa nada disse na ocasião. Os jurados responderam \"sim\" ao quesito da materialidade e autoria, e \"não\" ao quesito da qualificadora. O réu foi condenado. Na apelação, a defesa alega a falta do quesito obrigatório. Com base na Súmula 156 do STF, assinale a alternativa correta.",
+    "alternativas": [
+      "A) A falta de quesito sobre causa de diminuição de pena alegada gera nulidade absoluta do julgamento.",
+      "B) A nulidade é relativa e precluiu por não ter sido impugnada na ocasião da leitura dos quesitos.",
+      "C) A causa de diminuição de pena não é quesito obrigatório, pois sua apreciação é facultativa ao júri.",
+      "D) O juiz presidente pode suprir a falta do quesito no momento da votação, instruindo os jurados oralmente.",
+      "E) A defesa pode alegar a causa de diminuição na fase de execução penal, não sendo essencial no plenário."
+    ],
+    "indiceCorreto": 0,
+    "explicacao": "A) Correta. Conforme a Súmula 156 do STF, \"É absoluta a nulidade do julgamento, pelo júri, por falta de quesito obrigatório\". A causa de diminuição de pena, quando alegada pela defesa, deve ser objeto de quesito específico. Sua falta gera nulidade absoluta."
+  }
+]
