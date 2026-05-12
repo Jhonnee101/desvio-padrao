@@ -1,30 +1,24 @@
 -- ============================================
 -- CORREÇÃO: Desabilitar RLS nas tabelas
--- Execute este SQL no SQL Editor do Supabase
--- para corrigir o problema de registro/questões
 -- ============================================
+-- ATENÇÃO: Prefira usar supabase-rls-policies.sql
+-- para habilitar RLS com políticas adequadas.
+-- 
+-- Descomente as linhas abaixo APENAS se as
+-- políticas de RLS estiverem bloqueando o app:
 
--- Desabilita Row Level Security em todas as tabelas
--- (Não usamos Supabase Auth, então RLS bloqueia tudo)
+-- ALTER TABLE users DISABLE ROW LEVEL SECURITY;
+-- ALTER TABLE questions DISABLE ROW LEVEL SECURITY;
+-- ALTER TABLE performance DISABLE ROW LEVEL SECURITY;
+-- ALTER TABLE error_notebook DISABLE ROW LEVEL SECURITY;
+-- ALTER TABLE user_comments DISABLE ROW LEVEL SECURITY;
 
-ALTER TABLE users DISABLE ROW LEVEL SECURITY;
-ALTER TABLE questions DISABLE ROW LEVEL SECURITY;
-ALTER TABLE performance DISABLE ROW LEVEL SECURITY;
-ALTER TABLE error_notebook DISABLE ROW LEVEL SECURITY;
-ALTER TABLE user_comments DISABLE ROW LEVEL SECURITY;
-
--- Se existirem políticas criadas, dropamos elas
-DROP POLICY IF EXISTS "Todos podem ler questões" ON questions;
-DROP POLICY IF EXISTS "Apenas admins podem inserir questões" ON questions;
-DROP POLICY IF EXISTS "Apenas admins podem atualizar questões" ON questions;
-DROP POLICY IF EXISTS "Apenas admins podem deletar questões" ON questions;
-DROP POLICY IF EXISTS "Usuário pode ver seus dados" ON performance;
-DROP POLICY IF EXISTS "Usuário pode inserir performance" ON performance;
-DROP POLICY IF EXISTS "Usuário pode ver seu caderno" ON error_notebook;
-DROP POLICY IF EXISTS "Usuário pode gerenciar caderno" ON error_notebook;
-DROP POLICY IF EXISTS "Usuário pode ver seus comentários" ON user_comments;
-DROP POLICY IF EXISTS "Usuário pode gerenciar comentários" ON user_comments;
-DROP POLICY IF EXISTS "Usuários podem ver outros usuários" ON users;
-DROP POLICY IF EXISTS "Apenas admins podem inserir usuários" ON users;
-DROP POLICY IF EXISTS "Apenas admins podem atualizar usuários" ON users;
-DROP POLICY IF EXISTS "Apenas admins podem deletar usuários" ON users;
+-- ============================================
+-- IMPORTANTE:
+-- As funções RPC (supabase-rpc-functions.sql)
+-- usam SECURITY DEFINER, então funcionam mesmo
+-- com RLS habilitado.
+-- 
+-- Recomendado: execute supabase-rls-policies.sql
+-- em vez de desabilitar RLS.
+-- ============================================

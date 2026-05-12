@@ -1,4 +1,4 @@
-import { supabase } from './lib/supabase';
+import { supabase } from './supabase';
 
 (async () => {
   console.log('=== TESTE DE CONEXÃO COM SUPABASE ===\n');

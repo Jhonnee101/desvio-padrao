@@ -45,7 +45,7 @@ const AdminUsers: React.FC<AdminUsersProps> = ({
     return true;
   });
 
-  const handleCreateUser = (e: React.FormEvent) => {
+  const handleCreateUser = async (e: React.FormEvent) => {
     e.preventDefault();
     setFormError(null);
     setFormSuccess(null);
@@ -55,74 +55,89 @@ const AdminUsers: React.FC<AdminUsersProps> = ({
       return;
     }
 
-    if (users.some(u => u.email === formData.email.trim().toLowerCase())) {
-      setFormError('Este email já está cadastrado.');
-      return;
-    }
-
     if (formData.senha.length < 4) {
       setFormError('A senha deve ter pelo menos 4 caracteres.');
       return;
     }
 
-    onAddUser({
-      nome: formData.nome.trim(),
-      email: formData.email.trim().toLowerCase(),
-      senha: formData.senha,
-      role: formData.role,
-      ativo: formData.ativo
-    });
+    try {
+      await onAddUser({
+        nome: formData.nome.trim(),
+        email: formData.email.trim().toLowerCase(),
+        senha: formData.senha,
+        role: formData.role,
+        ativo: formData.ativo
+      });
 
-    setFormSuccess('Usuário criado com sucesso!');
-    setFormData({
-      nome: '',
-      email: '',
-      senha: '',
-      confirmarSenha: '',
-      role: 'student',
-      ativo: true
-    });
+      setFormSuccess('Usuário criado com sucesso!');
+      setFormData({
+        nome: '',
+        email: '',
+        senha: '',
+        confirmarSenha: '',
+        role: 'student',
+        ativo: true
+      });
 
-    setTimeout(() => {
-      setActiveTab('list');
-      setFormSuccess(null);
-    }, 1500);
+      setTimeout(() => {
+        setActiveTab('list');
+        setFormSuccess(null);
+      }, 1500);
+    } catch (err: any) {
+      setFormError(err.message || 'Erro ao criar usuário.');
+    }
   };
 
-  const handleUpdateUser = (e: React.FormEvent) => {
+  const handleUpdateUser = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!editingUser) return;
 
-    onUpdateUser({
-      ...editingUser,
-      updatedAt: Date.now()
-    });
+    try {
+      await onUpdateUser({
+        ...editingUser,
+        updatedAt: Date.now()
+      });
 
-    setEditingUser(null);
-    setFormSuccess('Usuário atualizado com sucesso!');
-    
-    setTimeout(() => setFormSuccess(null), 2000);
+      setEditingUser(null);
+      setFormSuccess('Usuário atualizado com sucesso!');
+      setTimeout(() => setFormSuccess(null), 2000);
+    } catch (err: any) {
+      setFormError(err.message || 'Erro ao atualizar usuário.');
+    }
   };
 
-  const handleToggleActive = (user: User) => {
-    onUpdateUser({
-      ...user,
-      ativo: !user.ativo,
-      updatedAt: Date.now()
-    });
+  const handleToggleActive = async (user: User) => {
+    try {
+      await onUpdateUser({
+        ...user,
+        ativo: !user.ativo,
+        updatedAt: Date.now()
+      });
+    } catch (err: any) {
+      setFormError(err.message || 'Erro ao alterar status.');
+    }
   };
 
-  const handleChangeRole = (user: User, newRole: UserRole) => {
-    onUpdateUser({
-      ...user,
-      role: newRole,
-      updatedAt: Date.now()
-    });
+  const handleChangeRole = async (user: User, newRole: UserRole) => {
+    try {
+      await onUpdateUser({
+        ...user,
+        role: newRole,
+        updatedAt: Date.now()
+      });
+    } catch (err: any) {
+      setFormError(err.message || 'Erro ao alterar função.');
+    }
   };
 
-  const handleDeleteUser = (id: string) => {
-    onDeleteUser(id);
-    setShowDeleteConfirm(null);
+  const handleDeleteUser = async (id: string) => {
+    try {
+      await onDeleteUser(id);
+      setShowDeleteConfirm(null);
+    } catch (err: any) {
+      setFormError(err.message || 'Erro ao deletar usuário.');
+      setShowDeleteConfirm(null);
+    }
   };
 
   const getRoleLabel = (role: UserRole) => {

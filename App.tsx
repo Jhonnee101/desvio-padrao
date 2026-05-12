@@ -30,40 +30,10 @@ const App: React.FC = () => {
       try {
         setLoading(true);
 
-        const { data: usersData } = await supabase
-          .from('users')
-          .select('*')
-          .order('created_at', { ascending: false });
-
-        if (usersData && usersData.length > 0) {
-          const mappedUsers: User[] = usersData.map(u => ({
-            id: u.id,
-            nome: u.nome,
-            email: u.email,
-            senha: u.senha,
-            role: u.role,
-            ativo: u.ativo,
-            createdAt: new Date(u.created_at).getTime(),
-            updatedAt: new Date(u.updated_at).getTime()
-          }));
-          setUsers(mappedUsers);
-        } else {
-          const defaultAdmin: User = {
-            id: '00000000-0000-0000-0000-000000000001',
-            nome: 'Administrador',
-            email: 'admin@desvio.com',
-            senha: 'admin123',
-            role: 'admin',
-            ativo: true,
-            createdAt: Date.now(),
-            updatedAt: Date.now()
-          };
-          setUsers([defaultAdmin]);
-        }
-
         const { data: questionsData } = await supabase
           .from('questions')
-          .select('*');
+          .select('*')
+          .order('created_at', { ascending: false });
 
         if (questionsData) {
           const mappedQuestions: Question[] = questionsData.map(q => ({
@@ -76,25 +46,40 @@ const App: React.FC = () => {
             explicacao: q.explicacao
           }));
           setQuestions(mappedQuestions);
+
+          const uniqueSubjects = [...new Set(mappedQuestions.map(q => q.materia))];
+          const allSubjects = [...new Set([...INITIAL_SUBJECTS, ...uniqueSubjects])];
+          setSubjects(allSubjects as string[]);
         }
 
-        const uniqueSubjects = [...new Set(questions.map(q => q.materia))];
-        const allSubjects = [...new Set([...INITIAL_SUBJECTS, ...uniqueSubjects])];
-        setSubjects(allSubjects as string[]);
+        const savedSession = localStorage.getItem('dp_session');
+        if (savedSession) {
+          const parsed = JSON.parse(savedSession);
+          const { data: userData } = await supabase
+            .from('users')
+            .select('id, nome, email, role, ativo, created_at, updated_at')
+            .eq('id', parsed.id)
+            .single();
 
-        const savedErrorIds = localStorage.getItem('dp_error_notebook');
-        if (savedErrorIds) setErrorNotebookIds(JSON.parse(savedErrorIds));
-
-        const savedPerf = localStorage.getItem('dp_performance');
-        if (savedPerf) setPerformance(JSON.parse(savedPerf));
-
-        const savedComments = localStorage.getItem('dp_user_comments');
-        if (savedComments) setUserComments(JSON.parse(savedComments));
-
+          if (userData && userData.ativo) {
+            const restoredUser: User = {
+              id: userData.id,
+              nome: userData.nome,
+              email: userData.email,
+              senha: '',
+              role: userData.role as UserRole,
+              ativo: userData.ativo,
+              createdAt: new Date(userData.created_at).getTime(),
+              updatedAt: new Date(userData.updated_at).getTime()
+            };
+            setCurrentUser(restoredUser);
+            await loadUserData(restoredUser.id);
+          } else {
+            localStorage.removeItem('dp_session');
+          }
+        }
       } catch (error) {
         console.error("Erro de Sincronização:", error);
-        const fallbackRaw = localStorage.getItem('dp_questions');
-        if (fallbackRaw) setQuestions(JSON.parse(fallbackRaw));
       } finally {
         setLoading(false);
       }
@@ -102,6 +87,75 @@ const App: React.FC = () => {
 
     initializeApp();
   }, []);
+
+  const loadUserData = async (userId: string) => {
+    try {
+      const { data: perfData } = await supabase
+        .from('performance')
+        .select('*')
+        .eq('user_id', userId);
+
+      if (perfData) {
+        const mappedPerf: PerformanceRecord[] = perfData.map(p => ({
+          questionId: p.question_id,
+          materia: p.materia,
+          assunto: p.assunto,
+          isCorrect: p.is_correct,
+          timestamp: new Date(p.answered_at).getTime()
+        }));
+        setPerformance(mappedPerf);
+      }
+
+      const { data: notebookData } = await supabase
+        .from('error_notebook')
+        .select('question_id')
+        .eq('user_id', userId);
+
+      if (notebookData) {
+        setErrorNotebookIds(notebookData.map(n => n.question_id));
+      }
+
+      const { data: commentsData } = await supabase
+        .from('user_comments')
+        .select('question_id, comment')
+        .eq('user_id', userId);
+
+      if (commentsData) {
+        const commentsMap: Record<string, string> = {};
+        commentsData.forEach(c => {
+          commentsMap[c.question_id] = c.comment;
+        });
+        setUserComments(commentsMap);
+      }
+    } catch (error) {
+      console.error('Erro ao carregar dados do usuário:', error);
+    }
+  };
+
+  const loadUsers = async () => {
+    try {
+      const { data: usersData } = await supabase
+        .from('users')
+        .select('id, nome, email, role, ativo, created_at, updated_at')
+        .order('created_at', { ascending: false });
+
+      if (usersData) {
+        const mappedUsers: User[] = usersData.map(u => ({
+          id: u.id,
+          nome: u.nome,
+          email: u.email,
+          senha: '',
+          role: u.role as UserRole,
+          ativo: u.ativo,
+          createdAt: new Date(u.created_at).getTime(),
+          updatedAt: new Date(u.updated_at).getTime()
+        }));
+        setUsers(mappedUsers);
+      }
+    } catch (error) {
+      console.error('Erro ao carregar usuários:', error);
+    }
+  };
 
   const addQuestions = async (newQuestions: (Omit<Question, 'id'> & { id?: string })[]) => {
     const questionsToInsert = newQuestions.map(newQ => {
@@ -176,17 +230,15 @@ const App: React.FC = () => {
 
   const addSubject = (name: string) => {
     if (subjects.includes(name)) return;
-    const updated = [...subjects, name];
-    setSubjects(updated);
+    setSubjects(prev => [...prev, name]);
   };
 
   const recordPerformance = async (record: PerformanceRecord) => {
     const updated = [...performance, record];
     setPerformance(updated);
-    localStorage.setItem('dp_performance', JSON.stringify(updated));
 
     if (currentUser) {
-      await supabase
+      const { error } = await supabase
         .from('performance')
         .insert({
           user_id: currentUser.id,
@@ -195,6 +247,11 @@ const App: React.FC = () => {
           assunto: record.assunto,
           is_correct: record.isCorrect
         });
+
+      if (error) {
+        console.error('Erro ao salvar performance no servidor:', error);
+        localStorage.setItem('dp_performance', JSON.stringify(updated));
+      }
     }
   };
 
@@ -202,41 +259,66 @@ const App: React.FC = () => {
     const updated = { ...userComments, [questionId]: comment };
     if (!comment.trim()) delete updated[questionId];
     setUserComments(updated);
-    localStorage.setItem('dp_user_comments', JSON.stringify(updated));
 
     if (currentUser) {
-      const { data: existing } = await supabase
-        .from('user_comments')
-        .select('id')
-        .eq('user_id', currentUser.id)
-        .eq('question_id', questionId)
-        .single();
-
       if (!comment.trim()) {
         await supabase
           .from('user_comments')
           .delete()
           .eq('user_id', currentUser.id)
           .eq('question_id', questionId);
-      } else if (existing) {
-        await supabase
-          .from('user_comments')
-          .update({ comment })
-          .eq('id', existing.id);
       } else {
-        await supabase
+        const { data: existing } = await supabase
           .from('user_comments')
-          .insert({
-            user_id: currentUser.id,
-            question_id: questionId,
-            comment
-          });
+          .select('id')
+          .eq('user_id', currentUser.id)
+          .eq('question_id', questionId)
+          .maybeSingle();
+
+        if (existing) {
+          await supabase
+            .from('user_comments')
+            .update({ comment, updated_at: new Date().toISOString() })
+            .eq('id', existing.id);
+        } else {
+          await supabase
+            .from('user_comments')
+            .insert({
+              user_id: currentUser.id,
+              question_id: questionId,
+              comment
+            });
+        }
       }
     }
   };
 
-  const handleLogin = (user: User) => {
+  const handleLogin = async (email: string, password: string) => {
+    const { data, error } = await supabase.rpc('login_user', {
+      p_email: email,
+      p_senha: password
+    });
+
+    if (error || !data || data.length === 0) {
+      throw new Error('Email ou senha inválidos.');
+    }
+
+    const userData = data[0];
+    const user: User = {
+      id: userData.id,
+      nome: userData.nome,
+      email: userData.email,
+      senha: '',
+      role: userData.role as UserRole,
+      ativo: userData.ativo,
+      createdAt: new Date(userData.created_at).getTime(),
+      updatedAt: new Date(userData.updated_at).getTime()
+    };
+
     setCurrentUser(user);
+    localStorage.setItem('dp_session', JSON.stringify({ id: user.id, nome: user.nome, email: user.email }));
+    await loadUserData(user.id);
+
     if (user.role === 'admin') {
       setView('admin');
     } else {
@@ -246,114 +328,115 @@ const App: React.FC = () => {
 
   const handleLogout = () => {
     setCurrentUser(null);
+    setPerformance([]);
+    setErrorNotebookIds([]);
+    setUserComments({});
+    setUsers([]);
+    localStorage.removeItem('dp_session');
     setView('landing');
   };
 
   const handleRegisterUser = async (userData: Omit<User, 'id' | 'createdAt' | 'updatedAt'>) => {
-    if (users.some(u => u.email === userData.email)) {
-      alert('Este email já está cadastrado.');
-      return;
-    }
-
-    const { data: inserted, error } = await supabase
-      .from('users')
-      .insert({
-        nome: userData.nome,
-        email: userData.email,
-        senha: userData.senha,
-        role: userData.role,
-        ativo: userData.ativo
-      })
-      .select()
-      .single();
+    const { data, error } = await supabase.rpc('register_user', {
+      p_nome: userData.nome,
+      p_email: userData.email,
+      p_senha: userData.senha,
+      p_role: userData.role,
+      p_ativo: userData.ativo
+    });
 
     if (error) {
-      console.error('Erro ao criar usuário:', error);
-      alert(`Erro ao criar conta: ${error.message}`);
-      return;
+      if (error.message?.includes('duplicate key') || error.message?.includes('already exists')) {
+        throw new Error('Este email já está cadastrado.');
+      }
+      throw new Error(error.message || 'Erro ao criar conta.');
     }
 
+    const inserted = data[0];
     const newUser: User = {
       id: inserted.id,
       nome: inserted.nome,
       email: inserted.email,
-      senha: inserted.senha,
-      role: inserted.role,
+      senha: '',
+      role: inserted.role as UserRole,
       ativo: inserted.ativo,
       createdAt: new Date(inserted.created_at).getTime(),
       updatedAt: new Date(inserted.updated_at).getTime()
     };
-    
-    setUsers(prev => [...prev, newUser]);
+
     setCurrentUser(newUser);
+    localStorage.setItem('dp_session', JSON.stringify({ id: newUser.id, nome: newUser.nome, email: newUser.email }));
     setView('dashboard');
   };
 
   const handleAddUser = async (userData: Omit<User, 'id' | 'createdAt' | 'updatedAt'>) => {
-    const { data: inserted, error } = await supabase
-      .from('users')
-      .insert({
-        nome: userData.nome,
-        email: userData.email,
-        senha: userData.senha,
-        role: userData.role,
-        ativo: userData.ativo
-      })
-      .select()
-      .single();
+    const { data, error } = await supabase.rpc('create_user', {
+      p_nome: userData.nome,
+      p_email: userData.email,
+      p_senha: userData.senha,
+      p_role: userData.role,
+      p_ativo: userData.ativo
+    });
 
     if (error) {
-      console.error('Erro ao criar usuário:', error);
-      return;
+      throw new Error(error.message || 'Erro ao criar usuário.');
     }
 
+    const inserted = data[0];
     const newUser: User = {
       id: inserted.id,
       nome: inserted.nome,
       email: inserted.email,
-      senha: inserted.senha,
-      role: inserted.role,
+      senha: '',
+      role: inserted.role as UserRole,
       ativo: inserted.ativo,
       createdAt: new Date(inserted.created_at).getTime(),
       updatedAt: new Date(inserted.updated_at).getTime()
     };
-    
+
     setUsers(prev => [...prev, newUser]);
   };
 
   const handleUpdateUser = async (updatedUser: User) => {
-    const { error } = await supabase
-      .from('users')
-      .update({
-        nome: updatedUser.nome,
-        email: updatedUser.email,
-        senha: updatedUser.senha,
-        role: updatedUser.role,
-        ativo: updatedUser.ativo
-      })
-      .eq('id', updatedUser.id);
+    const { data, error } = await supabase.rpc('update_user', {
+      p_id: updatedUser.id,
+      p_nome: updatedUser.nome,
+      p_email: updatedUser.email,
+      p_senha: updatedUser.senha || null,
+      p_role: updatedUser.role,
+      p_ativo: updatedUser.ativo
+    });
 
     if (error) {
-      console.error('Erro ao atualizar usuário:', error);
-      return;
+      throw new Error(error.message || 'Erro ao atualizar usuário.');
     }
 
-    setUsers(prev => prev.map(u => u.id === updatedUser.id ? updatedUser : u));
-    
-    if (currentUser?.id === updatedUser.id) {
-      setCurrentUser(updatedUser);
+    const updated = data[0];
+    const mappedUser: User = {
+      id: updated.id,
+      nome: updated.nome,
+      email: updated.email,
+      senha: '',
+      role: updated.role as UserRole,
+      ativo: updated.ativo,
+      createdAt: new Date(updated.created_at).getTime(),
+      updatedAt: new Date(updated.updated_at).getTime()
+    };
+
+    setUsers(prev => prev.map(u => u.id === mappedUser.id ? mappedUser : u));
+
+    if (currentUser?.id === mappedUser.id) {
+      setCurrentUser(mappedUser);
     }
   };
 
   const handleDeleteUser = async (userId: string) => {
-    const { error } = await supabase
-      .from('users')
-      .delete()
-      .eq('id', userId);
+    const { error } = await supabase.rpc('delete_user', {
+      p_id: userId
+    });
 
     if (error) {
-      console.error('Erro ao deletar usuário:', error);
-      return;
+      throw new Error(error.message || 'Erro ao deletar usuário.');
     }
 
     setUsers(prev => prev.filter(u => u.id !== userId));
@@ -385,7 +468,6 @@ const App: React.FC = () => {
       updated.push(questionId);
     }
     setErrorNotebookIds(updated);
-    localStorage.setItem('dp_error_notebook', JSON.stringify(updated));
 
     if (currentUser) {
       if (updated.includes(questionId)) {
@@ -409,7 +491,7 @@ const App: React.FC = () => {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center bg-legal-50">
         <div className="w-12 h-12 border-4 border-legal-200 border-t-legal-500 rounded-full animate-spin mb-4"></div>
-        <p className="text-legal-800 font-serif-legal font-bold animate-pulse uppercase tracking-widest text-sm">Sincronizando Banco de Dados...</p>
+        <p className="text-legal-800 font-serif-legal font-bold animate-pulse uppercase tracking-widest text-sm">Carregando...</p>
       </div>
     );
   }
@@ -417,39 +499,31 @@ const App: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col">
       {currentUser && view !== 'login' && view !== 'register' && (
-        <Navbar 
+        <Navbar
           currentUser={currentUser}
           onLogout={handleLogout}
-          onNavigate={(v) => setView(v)}
+          onNavigate={(v) => {
+            if (v === 'admin-users') loadUsers();
+            setView(v);
+          }}
           currentView={view}
         />
       )}
-      
+
       <main className="flex-grow container mx-auto px-4 py-8 max-w-6xl">
-        {view === 'landing' && (
-          <Landing 
-            onStart={() => setView('login')} 
-          />
-        )}
-        
+        {view === 'landing' && <Landing onStart={() => setView('login')} />}
+
         {view === 'login' && (
-          <Login 
-            users={users}
-            onLogin={handleLogin}
-            onNavigateToRegister={() => setView('register')}
-          />
+          <Login onLogin={handleLogin} onNavigateToRegister={() => setView('register')} />
         )}
 
         {view === 'register' && (
-          <Register 
-            onRegister={handleRegisterUser}
-            onBackToLogin={() => setView('login')}
-          />
+          <Register onRegister={handleRegisterUser} onBackToLogin={() => setView('login')} />
         )}
-        
+
         {view === 'dashboard' && (
-          <Dashboard 
-            subjects={subjects} 
+          <Dashboard
+            subjects={subjects}
             questions={questions}
             performance={performance}
             errorNotebookIds={errorNotebookIds}
@@ -458,7 +532,7 @@ const App: React.FC = () => {
         )}
 
         {(view === 'solver' || view === 'simulado-active' || view === 'notebook-session') && (
-          <QuestionSolver 
+          <QuestionSolver
             subject={selectedSubject || 'Sessão Especial'}
             topic={selectedTopic}
             isSimulado={view === 'simulado-active' || view === 'notebook-session'}
@@ -471,52 +545,52 @@ const App: React.FC = () => {
           />
         )}
 
-        {view === 'admin' && currentUser?.role === 'admin' && (
-          <AdminPanel 
-            subjects={subjects}
-            questions={questions}
-            onAddSubject={addSubject}
-            onAddQuestions={addQuestions}
-            onUpdateQuestion={updateQuestion}
-            onDeleteQuestion={deleteQuestion}
-            onBack={() => setView('dashboard')} 
-          />
+        {view === 'admin' && (
+          currentUser?.role === 'admin' ? (
+            <AdminPanel
+              subjects={subjects}
+              questions={questions}
+              onAddSubject={addSubject}
+              onAddQuestions={addQuestions}
+              onUpdateQuestion={updateQuestion}
+              onDeleteQuestion={deleteQuestion}
+              onBack={() => setView('dashboard')}
+            />
+          ) : (
+            <div className="text-center py-20">
+              <h2 className="text-2xl font-bold text-red-600 mb-4">Acesso Negado</h2>
+              <p className="text-legal-600 mb-6">Apenas administradores podem acessar o painel administrativo.</p>
+              <button onClick={() => setView('dashboard')} className="bg-legal-500 text-white px-6 py-3 rounded-xl font-bold hover:bg-legal-600">
+                Voltar ao Dashboard
+              </button>
+            </div>
+          )
         )}
 
-        {view === 'admin' && currentUser?.role !== 'admin' && (
-          <div className="text-center py-20">
-            <h2 className="text-2xl font-bold text-red-600 mb-4">Acesso Negado</h2>
-            <p className="text-legal-600 mb-6">Apenas administradores podem acessar o painel administrativo.</p>
-            <button onClick={() => setView('dashboard')} className="bg-legal-500 text-white px-6 py-3 rounded-xl font-bold hover:bg-legal-600">
-              Voltar ao Dashboard
-            </button>
-          </div>
-        )}
-
-        {view === 'admin-users' && currentUser?.role === 'admin' && (
-          <AdminUsers
-            users={users}
-            currentUser={currentUser}
-            onAddUser={handleAddUser}
-            onUpdateUser={handleUpdateUser}
-            onDeleteUser={handleDeleteUser}
-            onBack={() => setView('dashboard')}
-          />
-        )}
-
-        {view === 'admin-users' && currentUser?.role !== 'admin' && (
-          <div className="text-center py-20">
-            <h2 className="text-2xl font-bold text-red-600 mb-4">Acesso Negado</h2>
-            <p className="text-legal-600 mb-6">Apenas administradores podem gerenciar usuários.</p>
-            <button onClick={() => setView('dashboard')} className="bg-legal-500 text-white px-6 py-3 rounded-xl font-bold hover:bg-legal-600">
-              Voltar ao Dashboard
-            </button>
-          </div>
+        {view === 'admin-users' && (
+          currentUser?.role === 'admin' ? (
+            <AdminUsers
+              users={users}
+              currentUser={currentUser}
+              onAddUser={handleAddUser}
+              onUpdateUser={handleUpdateUser}
+              onDeleteUser={handleDeleteUser}
+              onBack={() => setView('dashboard')}
+            />
+          ) : (
+            <div className="text-center py-20">
+              <h2 className="text-2xl font-bold text-red-600 mb-4">Acesso Negado</h2>
+              <p className="text-legal-600 mb-6">Apenas administradores podem gerenciar usuários.</p>
+              <button onClick={() => setView('dashboard')} className="bg-legal-500 text-white px-6 py-3 rounded-xl font-bold hover:bg-legal-600">
+                Voltar ao Dashboard
+              </button>
+            </div>
+          )
         )}
 
         {view === 'student-panel' && (
-          <StudentPanel 
-            errorNotebookIds={errorNotebookIds} 
+          <StudentPanel
+            errorNotebookIds={errorNotebookIds}
             allQuestions={questions}
             performance={performance}
             userComments={userComments}

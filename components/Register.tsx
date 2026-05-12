@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { User } from '../types';
 
 interface RegisterProps {
-  onRegister: (user: Omit<User, 'id' | 'createdAt' | 'updatedAt'>) => void;
+  onRegister: (user: Omit<User, 'id' | 'createdAt' | 'updatedAt'>) => Promise<void>;
   onBackToLogin: () => void;
 }
 
@@ -14,11 +14,11 @@ const Register: React.FC<RegisterProps> = ({ onRegister, onBackToLogin }) => {
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError(null);
 
-    if (!nome.trim() || !email.trim() || !senha.trim() || !confirmarSenha.trim()) {
+    if (!nome.trim() || !email.trim() || !senha || !confirmarSenha) {
       setError('Preencha todos os campos.');
       return;
     }
@@ -34,17 +34,20 @@ const Register: React.FC<RegisterProps> = ({ onRegister, onBackToLogin }) => {
     }
 
     setLoading(true);
-    
-    setTimeout(() => {
-      onRegister({
+
+    try {
+      await onRegister({
         nome: nome.trim(),
         email: email.trim().toLowerCase(),
         senha: senha,
         role: 'student',
         ativo: true
       });
+    } catch (err: any) {
+      setError(err.message || 'Erro ao criar conta.');
+    } finally {
       setLoading(false);
-    }, 500);
+    }
   };
 
   return (
@@ -61,7 +64,7 @@ const Register: React.FC<RegisterProps> = ({ onRegister, onBackToLogin }) => {
         <form onSubmit={handleSubmit} className="bg-white p-8 rounded-2xl border border-legal-200 shadow-sm space-y-6">
           {error && (
             <div className="bg-red-50 text-red-700 p-4 rounded-xl text-sm font-medium border border-red-100">
-              ⚠️ {error}
+              {error}
             </div>
           )}
 

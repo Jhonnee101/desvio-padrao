@@ -19,47 +19,36 @@
 5. Preencha:
    - **Organization:** crie uma ou selecione existente
    - **Project name:** `desvio-padrao`
-   - **Database Password:** gere uma senha forte (salve em local seguro) - 36457454Joao@
+   - **Database Password:** gere uma senha forte (salve em local seguro)
    - **Region:** escolha a mais próxima (ex: `South America (Brazil)`)
 6. Clique em **Create new project**
 7. Aguarde ~2 minutos enquanto o banco é criado
 
-### 1.2 Executar o Schema SQL
+### 1.2 Executar os SQLs (ORDEM CORRETA)
 
-1. No painel do Supabase, vá em **SQL Editor** (ícone de terminal no menu lateral)
-2. Clique em **New query**
-3. Copie TODO o conteúdo do arquivo `supabase-schema.sql` deste projeto
-4. Cole no editor e clique em **Run** (ou `Ctrl+Enter`)
-5. Você verá mensagens de sucesso para cada tabela criada
+Execute os arquivos SQL na ordem abaixo no **SQL Editor** do Supabase:
 
-### 1.3 Desativar RLS temporariamente para importação (OPCIONAL)
+#### PASSO 1: `supabase-schema.sql`
+Cria as tabelas (users, questions, performance, error_notebook, user_comments), habilita pgcrypto e insere o admin padrão.
 
-Se quiser importar questões em massa, execute no SQL Editor:
+#### PASSO 2: `supabase-rpc-functions.sql`
+Cria as funções RPC para operações seguras:
+- `login_user` — login com verificação de senha hasheada (bcrypt)
+- `register_user` — registro com hash automático da senha
+- `create_user` — admin cria usuário com hash
+- `update_user` — admin atualiza dados (senha opcional, hash se fornecida)
+- `delete_user` — deleta usuário e dados relacionados
 
-```sql
--- Temporariamente desativar RLS para importação
-ALTER TABLE questions DISABLE ROW LEVEL SECURITY;
+#### PASSO 3: `supabase-rls-policies.sql`
+Habilita RLS nas tabelas com políticas que permitem as operações necessárias.
 
--- Após importar, reativar:
-ALTER TABLE questions ENABLE ROW LEVEL SECURITY;
-```
-
-### 1.4 Importar questões iniciais (OPCIONAL)
-
-Se já tiver questões no `questions.json`, importe pelo **Table Editor**:
-
-1. Vá em **Table Editor** (ícone de tabela no menu lateral)
-2. Selecione a tabela `questions`
-3. Clique em **Insert > Import data from CSV**
-4. Converta o JSON para CSV primeiro (ou use o SQL Editor para inserts diretos)
-
-### 1.5 Pegar as credenciais do Supabase
+### 1.3 Pegar as credenciais do Supabase
 
 1. No painel do Supabase, vá em **Project Settings** (ícone de engrenagem)
 2. Clique em **API** no menu lateral
 3. Copie:
-   - **Project URL:** `https://vullvbmzvwaxcthpcbuo.supabase.co/rest/v1/`
-   - **anon public key:** uma chave longa que começa com `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZ1bGx2Ym16dndheGN0aHBjYnVvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc4Mjc4MDAsImV4cCI6MjA5MzQwMzgwMH0.FRiFs6wPkasnf5rX-Z-XOmwpZvf7fI0Lh-LAiP22xrI`
+   - **Project URL:** a URL base (ex: `https://SEU-PROJETO.supabase.co`)
+   - **anon public key:** a chave anônima
 
 ---
 
@@ -67,22 +56,16 @@ Se já tiver questões no `questions.json`, importe pelo **Table Editor**:
 
 ### 2.1 Criar arquivo .env
 
-Na raiz do projeto, crie um arquivo `.env`:
-
-```bash
-cp .env.example .env
-```
-
-### 2.2 Preencher as variáveis
-
-Edite o `.env` com suas credenciais do Supabase:
+Na raiz do projeto, crie ou edite o arquivo `.env`:
 
 ```
-VITE_SUPABASE_URL=https://sua-project-id.supabase.co
-VITE_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+VITE_SUPABASE_URL=https://SEU-PROJETO.supabase.co
+VITE_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIs...
 ```
 
-### 2.3 Testar localmente
+**A URL NÃO deve conter `/rest/v1/`** no final. O cliente Supabase adiciona isso automaticamente.
+
+### 2.2 Testar localmente
 
 ```bash
 npm install
@@ -99,12 +82,10 @@ O app estará em `http://localhost:5173/`. Teste o login com:
 
 ### 3.1 Preparar o repositório no GitHub
 
-1. Crie um repositório no GitHub (se ainda não tem)
-2. No terminal do projeto:
-
 ```bash
+git init
 git add .
-git commit -m "Preparando para deploy com Supabase e Netlify"
+git commit -m "Initial commit"
 git branch -M main
 git remote add origin https://github.com/SEU-USUARIO/SEU-REPO.git
 git push -u origin main
@@ -114,33 +95,30 @@ git push -u origin main
 
 1. Acesse https://app.netlify.com
 2. Clique em **Add new site** > **Import an existing project**
-3. Faça login com GitHub (se ainda não fez)
-4. Selecione **GitHub** e autorize o acesso
-5. Selecione seu repositório `desvio-padrao`
-6. Na tela de configuração:
+3. Faça login com GitHub
+4. Selecione seu repositório
+5. Configurações:
    - **Build command:** `npm run build`
    - **Publish directory:** `dist`
-7. Clique em **Deploy site**
+6. Clique em **Deploy site**
 
 ### 3.3 Adicionar variáveis de ambiente no Netlify
 
 1. No painel do Netlify, vá em **Site configuration**
-2. Clique em **Environment variables** no menu lateral
-3. Clique em **Add a variable**
-4. Adicione as duas variáveis:
+2. Clique em **Environment variables**
+3. Adicione:
 
 | Key | Value |
 |-----|-------|
-| `VITE_SUPABASE_URL` | Sua URL do Supabase |
-| `VITE_SUPABASE_ANON_KEY` | Sua anon key do Supabase |
+| `VITE_SUPABASE_URL` | URL do Supabase (sem /rest/v1/) |
+| `VITE_SUPABASE_ANON_KEY` | Anon key do Supabase |
 
-5. Clique em **Save**
+4. Clique em **Save**
 
 ### 3.4 Redeploy
 
 1. Vá em **Deploys** no Netlify
 2. Clique em **Trigger deploy** > **Clear build cache and deploy site**
-3. Aguarde o deploy (~1-2 minutos)
 
 ### 3.5 Seu site estará disponível em
 
@@ -150,55 +128,36 @@ https://desvio-padrao-xxxxx.netlify.app
 
 ---
 
-## 4. (Opcional) Domínio Personalizado
-
-Se quiser usar um domínio próprio:
-
-1. No Netlify, vá em **Domain settings**
-2. Clique em **Add a domain**
-3. Digite seu domínio (ex: `desviopadrao.com.br`)
-4. Siga as instruções para configurar os DNS no Registro.br ou seu provedor
-
----
-
-## 5. (Opcional) Deploy Contínuo
-
-Com a configuração atual, **todo push para a branch `main`** dispara um deploy automático no Netlify.
-
-Se quiser mudar a branch, vá em:
-**Site configuration** > **Build & deploy** > **Continuous deployment** > **Branches**
-
----
-
-## Estrutura de Arquivos Criados/Modificados
+## 4. Estrutura de Arquivos
 
 | Arquivo | Descrição |
 |---------|-----------|
-| `supabase-schema.sql` | Schema SQL para criar tabelas no Supabase |
+| `supabase-schema.sql` | Schema das tabelas + pgcrypto + admin padrão |
+| `supabase-rpc-functions.sql` | Funções RPC para login/registro/CRUD com hash |
+| `supabase-rls-policies.sql` | Políticas de segurança RLS |
 | `lib/supabase.ts` | Cliente Supabase configurado |
 | `lib/database.types.ts` | Tipos TypeScript para as tabelas |
-| `.env.example` | Modelo de variáveis de ambiente |
-| `.env` | **NÃO COMMITAR!** Suas credenciais locais |
-| `.gitignore` | Adicionado `.env` para segurança |
+| `.env` | Variáveis de ambiente (NÃO COMMITAR) |
 | `netlify.toml` | Configuração de deploy do Netlify |
-| `App.tsx` | Refatorado para usar Supabase |
-| `src-env.d.ts` | Tipos para variáveis do Vite |
 
 ---
 
 ## Troubleshooting
 
-### Erro: "Missing Supabase environment variables"
-Verifique se o `.env` está preenchido corretamente no Netlify (não adianta ter só no local).
+### "Missing Supabase environment variables"
+Verifique se as variáveis estão no Netlify (não adianta ter só no `.env` local).
 
-### Erro: "relation does not exist"
-O schema SQL não foi executado corretamente no Supabase. Execute novamente.
+### "relation does not exist"
+Os SQLs não foram executados ou foram pulados passos.
+
+### "function login_user does not exist"
+O `supabase-rpc-functions.sql` não foi executado.
+
+### Login não funciona
+Verifique se o `supabase-schema.sql` foi executado (cria o admin) e o `supabase-rpc-functions.sql` também (cria a função de login).
 
 ### Questões não aparecem
 Verifique no **Table Editor** do Supabase se a tabela `questions` tem dados.
 
-### Login não funciona
-Verifique no **Table Editor** se existe o usuário admin com email `admin@desvio.com`.
-
 ### Build falha no Netlify
-Verifique os logs de deploy no Netlify. Geralmente é variável de ambiente faltando.
+Verifique os logs de deploy. Provavelmente variável de ambiente faltando.

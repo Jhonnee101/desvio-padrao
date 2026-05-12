@@ -1,33 +1,28 @@
 import React, { useState } from 'react';
-import { User } from '../types';
 
 interface LoginProps {
-  users: User[];
-  onLogin: (user: User) => void;
+  onLogin: (email: string, password: string) => Promise<void>;
   onNavigateToRegister: () => void;
 }
 
-const Login: React.FC<LoginProps> = ({ users, onLogin, onNavigateToRegister }) => {
+const Login: React.FC<LoginProps> = ({ onLogin, onNavigateToRegister }) => {
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError(null);
     setLoading(true);
 
-    setTimeout(() => {
-      const user = users.find(u => u.email === email.trim() && u.senha === senha && u.ativo);
-      
-      if (user) {
-        onLogin(user);
-      } else {
-        setError('Email ou senha inválidos, ou usuário inativo.');
-      }
+    try {
+      await onLogin(email.trim(), senha);
+    } catch (err: any) {
+      setError(err.message || 'Erro ao fazer login.');
+    } finally {
       setLoading(false);
-    }, 500);
+    }
   };
 
   return (
@@ -44,7 +39,7 @@ const Login: React.FC<LoginProps> = ({ users, onLogin, onNavigateToRegister }) =
         <form onSubmit={handleSubmit} className="bg-white p-8 rounded-2xl border border-legal-200 shadow-sm space-y-6">
           {error && (
             <div className="bg-red-50 text-red-700 p-4 rounded-xl text-sm font-medium border border-red-100">
-              ⚠️ {error}
+              {error}
             </div>
           )}
 
@@ -65,7 +60,7 @@ const Login: React.FC<LoginProps> = ({ users, onLogin, onNavigateToRegister }) =
             <input
               type="password"
               className="w-full border border-legal-200 rounded-xl p-3 outline-none focus:border-legal-500 focus:ring-2 focus:ring-legal-100 transition-all"
-              placeholder="••••••••"
+              placeholder="Insira sua senha"
               value={senha}
               onChange={e => setSenha(e.target.value)}
               required
