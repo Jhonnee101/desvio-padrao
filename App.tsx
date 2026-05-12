@@ -299,7 +299,12 @@ const App: React.FC = () => {
       p_senha: password
     });
 
-    if (error || !data || data.length === 0) {
+    if (error) {
+      console.error('Erro completo do RPC:', error);
+      throw new Error(`Erro no login: ${error.message}`);
+    }
+
+    if (!data || data.length === 0) {
       throw new Error('Email ou senha inválidos.');
     }
 

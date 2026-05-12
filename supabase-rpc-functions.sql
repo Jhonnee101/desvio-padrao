@@ -7,6 +7,12 @@
 CREATE EXTENSION IF NOT EXISTS pgcrypto;
 
 -- ============================================
+-- Permissões para a chave anônima (anon key)
+-- Necessário para chamar as funções via REST
+-- ============================================
+GRANT USAGE ON SCHEMA public TO anon;
+
+-- ============================================
 -- login_user (email, senha) -> dados do usuário
 -- ============================================
 CREATE OR REPLACE FUNCTION login_user(p_email TEXT, p_senha TEXT)
@@ -184,3 +190,12 @@ SELECT
   'admin'::user_role,
   true
 WHERE NOT EXISTS (SELECT 1 FROM users WHERE email = 'admin@desvio.com');
+
+-- ============================================
+-- Permissões para executar as funções
+-- ============================================
+GRANT EXECUTE ON FUNCTION login_user TO anon;
+GRANT EXECUTE ON FUNCTION register_user TO anon;
+GRANT EXECUTE ON FUNCTION create_user TO anon;
+GRANT EXECUTE ON FUNCTION update_user TO anon;
+GRANT EXECUTE ON FUNCTION delete_user TO anon;
