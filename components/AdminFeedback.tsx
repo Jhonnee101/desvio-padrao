@@ -5,7 +5,7 @@ interface AdminFeedbackProps {
   feedbacks: QuestionFeedback[];
   questions: Question[];
   onUpdateStatus: (id: string, status: FeedbackStatus) => Promise<void>;
-  onDeleteQuestion: (id: string) => Promise<void>;
+  onEditQuestion: (id: string) => void;
   onBack: () => void;
 }
 
@@ -15,26 +15,15 @@ const STATUS_CONFIG: Record<FeedbackStatus, { label: string, color: string, icon
   'concluida': { label: 'Concluída', color: 'bg-green-100 text-green-700', icon: '✅' }
 };
 
-const AdminFeedback: React.FC<AdminFeedbackProps> = ({ feedbacks, questions, onUpdateStatus, onDeleteQuestion, onBack }) => {
+const AdminFeedback: React.FC<AdminFeedbackProps> = ({ feedbacks, questions, onUpdateStatus, onEditQuestion, onBack }) => {
   const [filterStatus, setFilterStatus] = useState<FeedbackStatus | 'all'>('all');
   const [expandedId, setExpandedId] = useState<string | null>(null);
-  const [deleting, setDeleting] = useState<string | null>(null);
 
   const getQuestion = (qId: string) => questions.find(q => q.id === qId);
 
   const filteredFeedbacks = filterStatus === 'all'
     ? feedbacks
     : feedbacks.filter(f => f.status === filterStatus);
-
-  const handleDeleteQuestion = async (questionId: string) => {
-    if (!confirm('Tem certeza que deseja excluir esta questão? Todos os feedbacks relacionados também serão removidos.')) return;
-    setDeleting(questionId);
-    try {
-      await onDeleteQuestion(questionId);
-    } finally {
-      setDeleting(null);
-    }
-  };
 
   const nextStatus = (current: FeedbackStatus): FeedbackStatus | null => {
     switch (current) {
@@ -141,11 +130,10 @@ const AdminFeedback: React.FC<AdminFeedbackProps> = ({ feedbacks, questions, onU
                       )}
                       {question && (
                         <button
-                          onClick={() => handleDeleteQuestion(fb.questionId)}
-                          disabled={deleting === fb.questionId}
-                          className="px-3 py-1.5 text-xs font-bold rounded-lg bg-red-500 text-white hover:bg-red-600 transition-all disabled:opacity-50"
+                          onClick={() => onEditQuestion(fb.questionId)}
+                          className="px-3 py-1.5 text-xs font-bold rounded-lg bg-legal-500 text-white hover:bg-legal-600 transition-all"
                         >
-                          {deleting === fb.questionId ? '...' : '🗑 Excluir Questão'}
+                          ✏️ Editar Questão
                         </button>
                       )}
                     </div>

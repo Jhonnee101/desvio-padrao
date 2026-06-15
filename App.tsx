@@ -26,6 +26,7 @@ const App: React.FC = () => {
   const [performance, setPerformance] = useState<PerformanceRecord[]>([]);
   const [userComments, setUserComments] = useState<Record<string, string>>({});
   const [feedbacks, setFeedbacks] = useState<QuestionFeedback[]>([]);
+  const [editQuestionId, setEditQuestionId] = useState<string | null>(null);
 
   useEffect(() => {
     const initializeApp = async () => {
@@ -354,29 +355,9 @@ const App: React.FC = () => {
     setFeedbacks(prev => prev.map(f => f.id === id ? { ...f, status, updatedAt: Date.now() } : f));
   };
 
-  const deleteQuestionFromFeedback = async (questionId: string) => {
-    const { error: fbError } = await supabase
-      .from('question_feedback')
-      .delete()
-      .eq('question_id', questionId);
-
-    if (fbError) {
-      console.error('Erro ao deletar feedbacks:', fbError);
-      return;
-    }
-
-    const { error } = await supabase
-      .from('questions')
-      .delete()
-      .eq('id', questionId);
-
-    if (error) {
-      console.error('Erro ao deletar questão:', error);
-      return;
-    }
-
-    setQuestions(prev => prev.filter(q => q.id !== questionId));
-    setFeedbacks(prev => prev.filter(f => f.questionId !== questionId));
+  const handleEditQuestionFromFeedback = (questionId: string) => {
+    setEditQuestionId(questionId);
+    setView('admin');
   };
 
   const handleLogin = async (email: string, password: string) => {
@@ -579,6 +560,7 @@ const App: React.FC = () => {
           currentUser={currentUser}
           onLogout={handleLogout}
           onNavigate={(v) => {
+            setEditQuestionId(null);
             if (v === 'admin-users') loadUsers();
             if (v === 'admin-feedback') loadFeedbacks();
             setView(v);
@@ -633,7 +615,8 @@ const App: React.FC = () => {
               onAddQuestions={addQuestions}
               onUpdateQuestion={updateQuestion}
               onDeleteQuestion={deleteQuestion}
-              onBack={() => setView('dashboard')}
+              onBack={() => { setEditQuestionId(null); setView('dashboard'); }}
+              editQuestionId={editQuestionId}
             />
           ) : (
             <div className="text-center py-20">
@@ -673,7 +656,7 @@ const App: React.FC = () => {
               feedbacks={feedbacks}
               questions={questions}
               onUpdateStatus={updateFeedbackStatus}
-              onDeleteQuestion={deleteQuestionFromFeedback}
+              onEditQuestion={handleEditQuestionFromFeedback}
               onBack={() => setView('dashboard')}
             />
           ) : (

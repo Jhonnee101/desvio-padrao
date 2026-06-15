@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Question, SUBJECT_TOPICS } from '../types';
 
 interface AdminPanelProps {
@@ -9,9 +9,10 @@ interface AdminPanelProps {
   onUpdateQuestion: (question: Question) => void;
   onDeleteQuestion: (id: string) => void;
   onBack: () => void;
+  editQuestionId?: string | null;
 }
 
-const AdminPanel: React.FC<AdminPanelProps> = ({ subjects, questions, onAddSubject, onAddQuestions, onUpdateQuestion, onDeleteQuestion, onBack }) => {
+const AdminPanel: React.FC<AdminPanelProps> = ({ subjects, questions, onAddSubject, onAddQuestions, onUpdateQuestion, onDeleteQuestion, onBack, editQuestionId }) => {
   const [activeSubTab, setActiveSubTab] = useState<'form' | 'import' | 'list'>('form');
   const [error, setError] = useState<string | null>(null);
   const [successMsg, setSuccessMsg] = useState<string | null>(null);
@@ -27,6 +28,26 @@ const AdminPanel: React.FC<AdminPanelProps> = ({ subjects, questions, onAddSubje
     indiceCorreto: 0,
     explicacao: ''
   });
+
+  useEffect(() => {
+    if (editQuestionId) {
+      const q = questions.find(q => q.id === editQuestionId);
+      if (q) {
+        setFormData({
+          materia: q.materia,
+          assunto: q.assunto,
+          enunciado: q.enunciado,
+          alternativas: [...q.alternativas],
+          indiceCorreto: q.indiceCorreto,
+          explicacao: q.explicacao
+        });
+        setEditingId(q.id);
+        setActiveSubTab('form');
+        setError(null);
+        setSuccessMsg(null);
+      }
+    }
+  }, [editQuestionId]);
 
   const resetForm = () => {
     setFormData({
