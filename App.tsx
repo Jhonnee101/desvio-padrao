@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Question, INITIAL_SUBJECTS, PerformanceRecord, User, UserRole } from './types';
+import { View, Question, INITIAL_SUBJECTS, PerformanceRecord, User, UserRole, QuestionFeedback, FeedbackStatus } from './types';
 import { supabase } from './lib/supabase';
 import Navbar from './components/Navbar';
 import Landing from './components/Landing';
@@ -10,6 +10,7 @@ import QuestionSolver from './components/QuestionSolver';
 import AdminPanel from './components/AdminPanel';
 import AdminUsers from './components/AdminUsers';
 import StudentPanel from './components/StudentPanel';
+import AdminFeedback from './components/AdminFeedback';
 
 const App: React.FC = () => {
   const [view, setView] = useState<View>('landing');
@@ -24,6 +25,7 @@ const App: React.FC = () => {
   const [errorNotebookIds, setErrorNotebookIds] = useState<string[]>([]);
   const [performance, setPerformance] = useState<PerformanceRecord[]>([]);
   const [userComments, setUserComments] = useState<Record<string, string>>({});
+  const [feedbacks, setFeedbacks] = useState<QuestionFeedback[]>([]);
 
   useEffect(() => {
     const initializeApp = async () => {
@@ -129,6 +131,31 @@ const App: React.FC = () => {
       }
     } catch (error) {
       console.error('Erro ao carregar dados do usuário:', error);
+    }
+  };
+
+  const loadFeedbacks = async () => {
+    try {
+      const { data } = await supabase
+        .from('question_feedback')
+        .select('*, users(nome)')
+        .order('created_at', { ascending: false });
+
+      if (data) {
+        const mapped: QuestionFeedback[] = data.map(f => ({
+          id: f.id,
+          userId: f.user_id,
+          userNome: (f.users as { nome: string } | null)?.nome || 'Desconhecido',
+          questionId: f.question_id,
+          mensagem: f.mensagem,
+          status: f.status as FeedbackStatus,
+          createdAt: new Date(f.created_at).getTime(),
+          updatedAt: new Date(f.updated_at).getTime()
+        }));
+        setFeedbacks(mapped);
+      }
+    } catch (error) {
+      console.error('Erro ao carregar feedbacks:', error);
     }
   };
 
@@ -293,6 +320,65 @@ const App: React.FC = () => {
     }
   };
 
+  const submitFeedback = async (questionId: string, mensagem: string) => {
+    if (!currentUser) return;
+
+    const { error } = await supabase
+      .from('question_feedback')
+      .insert({
+        user_id: currentUser.id,
+        question_id: questionId,
+        mensagem,
+        status: 'pendente'
+      });
+
+    if (error) {
+      console.error('Erro ao enviar feedback:', error);
+      throw new Error('Erro ao enviar feedback.');
+    }
+
+    await loadFeedbacks();
+  };
+
+  const updateFeedbackStatus = async (id: string, status: FeedbackStatus) => {
+    const { error } = await supabase
+      .from('question_feedback')
+      .update({ status, updated_at: new Date().toISOString() })
+      .eq('id', id);
+
+    if (error) {
+      console.error('Erro ao atualizar feedback:', error);
+      return;
+    }
+
+    setFeedbacks(prev => prev.map(f => f.id === id ? { ...f, status, updatedAt: Date.now() } : f));
+  };
+
+  const deleteQuestionFromFeedback = async (questionId: string) => {
+    const { error: fbError } = await supabase
+      .from('question_feedback')
+      .delete()
+      .eq('question_id', questionId);
+
+    if (fbError) {
+      console.error('Erro ao deletar feedbacks:', fbError);
+      return;
+    }
+
+    const { error } = await supabase
+      .from('questions')
+      .delete()
+      .eq('id', questionId);
+
+    if (error) {
+      console.error('Erro ao deletar questão:', error);
+      return;
+    }
+
+    setQuestions(prev => prev.filter(q => q.id !== questionId));
+    setFeedbacks(prev => prev.filter(f => f.questionId !== questionId));
+  };
+
   const handleLogin = async (email: string, password: string) => {
     const { data, error } = await supabase.rpc('login_user', {
       p_email: email,
@@ -337,6 +423,7 @@ const App: React.FC = () => {
     setErrorNotebookIds([]);
     setUserComments({});
     setUsers([]);
+    setFeedbacks([]);
     localStorage.removeItem('dp_session');
     setView('landing');
   };
@@ -347,7 +434,7 @@ const App: React.FC = () => {
       p_email: userData.email,
       p_senha: userData.senha,
       p_role: userData.role,
-      p_ativo: userData.ativo
+      p_ativo: false
     });
 
     if (error) {
@@ -356,22 +443,6 @@ const App: React.FC = () => {
       }
       throw new Error(error.message || 'Erro ao criar conta.');
     }
-
-    const inserted = data[0];
-    const newUser: User = {
-      id: inserted.id,
-      nome: inserted.nome,
-      email: inserted.email,
-      senha: '',
-      role: inserted.role as UserRole,
-      ativo: inserted.ativo,
-      createdAt: new Date(inserted.created_at).getTime(),
-      updatedAt: new Date(inserted.updated_at).getTime()
-    };
-
-    setCurrentUser(newUser);
-    localStorage.setItem('dp_session', JSON.stringify({ id: newUser.id, nome: newUser.nome, email: newUser.email }));
-    setView('dashboard');
   };
 
   const handleAddUser = async (userData: Omit<User, 'id' | 'createdAt' | 'updatedAt'>) => {
@@ -509,6 +580,7 @@ const App: React.FC = () => {
           onLogout={handleLogout}
           onNavigate={(v) => {
             if (v === 'admin-users') loadUsers();
+            if (v === 'admin-feedback') loadFeedbacks();
             setView(v);
           }}
           currentView={view}
@@ -547,6 +619,8 @@ const App: React.FC = () => {
             onRecordPerformance={recordPerformance}
             errorNotebookIds={errorNotebookIds}
             performance={performance}
+            currentUser={currentUser}
+            onSubmitFeedback={submitFeedback}
           />
         )}
 
@@ -586,6 +660,26 @@ const App: React.FC = () => {
             <div className="text-center py-20">
               <h2 className="text-2xl font-bold text-red-600 mb-4">Acesso Negado</h2>
               <p className="text-legal-600 mb-6">Apenas administradores podem gerenciar usuários.</p>
+              <button onClick={() => setView('dashboard')} className="bg-legal-500 text-white px-6 py-3 rounded-xl font-bold hover:bg-legal-600">
+                Voltar ao Dashboard
+              </button>
+            </div>
+          )
+        )}
+
+        {view === 'admin-feedback' && (
+          currentUser?.role === 'admin' || currentUser?.role === 'collaborator' ? (
+            <AdminFeedback
+              feedbacks={feedbacks}
+              questions={questions}
+              onUpdateStatus={updateFeedbackStatus}
+              onDeleteQuestion={deleteQuestionFromFeedback}
+              onBack={() => setView('dashboard')}
+            />
+          ) : (
+            <div className="text-center py-20">
+              <h2 className="text-2xl font-bold text-red-600 mb-4">Acesso Negado</h2>
+              <p className="text-legal-600 mb-6">Apenas administradores e colaboradores podem acessar esta página.</p>
               <button onClick={() => setView('dashboard')} className="bg-legal-500 text-white px-6 py-3 rounded-xl font-bold hover:bg-legal-600">
                 Voltar ao Dashboard
               </button>

@@ -46,7 +46,7 @@ CREATE OR REPLACE FUNCTION register_user(
   p_email TEXT,
   p_senha TEXT,
   p_role TEXT DEFAULT 'student',
-  p_ativo BOOLEAN DEFAULT true
+  p_ativo BOOLEAN DEFAULT false
 )
 RETURNS TABLE (
   id UUID,

@@ -139,6 +139,35 @@ export interface Database {
           updated_at?: string;
         };
       };
+      question_feedback: {
+        Row: {
+          id: string;
+          user_id: string;
+          question_id: string;
+          mensagem: string;
+          status: string;
+          created_at: string;
+          updated_at: string;
+        };
+        Insert: {
+          id?: string;
+          user_id: string;
+          question_id: string;
+          mensagem: string;
+          status?: string;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Update: {
+          id?: string;
+          user_id?: string;
+          question_id?: string;
+          mensagem?: string;
+          status?: string;
+          created_at?: string;
+          updated_at?: string;
+        };
+      };
     };
   };
 }

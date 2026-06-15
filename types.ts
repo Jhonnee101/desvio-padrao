@@ -35,7 +35,20 @@ export interface Notebook {
   questoesIds: string[];
 }
 
-export type View = 'landing' | 'login' | 'register' | 'dashboard' | 'solver' | 'admin' | 'admin-users' | 'student-panel' | 'simulado-active' | 'notebook-session';
+export type FeedbackStatus = 'pendente' | 'em_analise' | 'concluida';
+
+export interface QuestionFeedback {
+  id: string;
+  userId: string;
+  userNome: string;
+  questionId: string;
+  mensagem: string;
+  status: FeedbackStatus;
+  createdAt: number;
+  updatedAt: number;
+}
+
+export type View = 'landing' | 'login' | 'register' | 'dashboard' | 'solver' | 'admin' | 'admin-users' | 'student-panel' | 'simulado-active' | 'notebook-session' | 'admin-feedback';
 
 export const INITIAL_SUBJECTS = [
   "Direito Constitucional",

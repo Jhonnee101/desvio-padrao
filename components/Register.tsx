@@ -13,6 +13,7 @@ const Register: React.FC<RegisterProps> = ({ onRegister, onBackToLogin }) => {
   const [confirmarSenha, setConfirmarSenha] = useState('');
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -41,14 +42,40 @@ const Register: React.FC<RegisterProps> = ({ onRegister, onBackToLogin }) => {
         email: email.trim().toLowerCase(),
         senha: senha,
         role: 'student',
-        ativo: true
+        ativo: false
       });
+      setSuccess(true);
     } catch (err: any) {
       setError(err.message || 'Erro ao criar conta.');
     } finally {
       setLoading(false);
     }
   };
+
+  if (success) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-legal-50 px-4">
+        <div className="w-full max-w-md text-center">
+          <div className="bg-white p-8 rounded-2xl border border-legal-200 shadow-sm space-y-6">
+            <div className="text-6xl">🎉</div>
+            <h2 className="text-2xl font-serif-legal font-bold text-legal-800">Conta Criada!</h2>
+            <p className="text-legal-600 leading-relaxed">
+              Sua conta foi criada com sucesso, mas precisa ser aprovada por um administrador antes de você poder acessar o site.
+            </p>
+            <p className="text-sm text-legal-400">
+              Você receberá um email quando sua conta for ativada.
+            </p>
+            <button
+              onClick={onBackToLogin}
+              className="w-full bg-legal-500 text-white py-4 rounded-xl font-bold hover:bg-legal-600 shadow-lg transition-all active:scale-95"
+            >
+              Ir para o Login
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-legal-50 px-4">

@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect, useMemo } from 'react';
-import { Question, PerformanceRecord } from '../types';
+import { Question, PerformanceRecord, User } from '../types';
 
 interface QuestionSolverProps {
   subject: string;
@@ -12,11 +12,17 @@ interface QuestionSolverProps {
   errorNotebookIds: string[];
   performance: PerformanceRecord[];
   isSimulado?: boolean;
+  currentUser?: User | null;
+  onSubmitFeedback?: (questionId: string, mensagem: string) => Promise<void>;
 }
 
-const QuestionSolver: React.FC<QuestionSolverProps> = ({ subject, topic, questions, onBack, onToggleErrorNotebook, onRecordPerformance, errorNotebookIds, performance, isSimulado }) => {
+const QuestionSolver: React.FC<QuestionSolverProps> = ({ subject, topic, questions, onBack, onToggleErrorNotebook, onRecordPerformance, errorNotebookIds, performance, isSimulado, currentUser, onSubmitFeedback }) => {
   const [currentPage, setCurrentPage] = useState(0);
   const [responses, setResponses] = useState<Record<string, { selected: number | null, discarded: number[], answered: boolean }>>({});
+  const [feedbackOpen, setFeedbackOpen] = useState<Record<string, boolean>>({});
+  const [feedbackText, setFeedbackText] = useState<Record<string, string>>({});
+  const [feedbackSent, setFeedbackSent] = useState<Record<string, boolean>>({});
+  const [feedbackLoading, setFeedbackLoading] = useState<Record<string, boolean>>({});
   
   const [isFinalized, setIsFinalized] = useState(false);
   const [isReviewingErrors, setIsReviewingErrors] = useState(false);
@@ -279,6 +285,75 @@ const QuestionSolver: React.FC<QuestionSolverProps> = ({ subject, topic, questio
                   >
                     Responder
                   </button>
+                </div>
+              )}
+
+              {currentUser && (
+                <div className="pt-4 border-t border-legal-50">
+                  {!feedbackOpen[q.id] && !feedbackSent[q.id] && (
+                    <button
+                      onClick={() => setFeedbackOpen(prev => ({ ...prev, [q.id]: true }))}
+                      className="text-xs text-gray-400 hover:text-legal-500 font-medium transition-colors flex items-center gap-1"
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fillRule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zm-4 0H9v2h2V9z" clipRule="evenodd" />
+                      </svg>
+                      Reportar erro / Deixar feedback
+                    </button>
+                  )}
+
+                  {feedbackOpen[q.id] && (
+                    <div className="animate-fadeIn space-y-3">
+                      <textarea
+                        className="w-full border border-legal-200 rounded-xl p-3 text-sm outline-none focus:border-legal-500 resize-none bg-legal-50/20"
+                        rows={3}
+                        placeholder="Descreva o erro ou sugestão para esta questão..."
+                        value={feedbackText[q.id] || ''}
+                        onChange={e => setFeedbackText(prev => ({ ...prev, [q.id]: e.target.value }))}
+                      />
+                      <div className="flex gap-2">
+                        <button
+                          onClick={async () => {
+                            const msg = feedbackText[q.id]?.trim();
+                            if (!msg || !onSubmitFeedback) return;
+                            setFeedbackLoading(prev => ({ ...prev, [q.id]: true }));
+                            try {
+                              await onSubmitFeedback(q.id, msg);
+                              setFeedbackSent(prev => ({ ...prev, [q.id]: true }));
+                              setFeedbackOpen(prev => ({ ...prev, [q.id]: false }));
+                              setFeedbackText(prev => ({ ...prev, [q.id]: '' }));
+                            } catch (err) {
+                              console.error('Erro ao enviar feedback:', err);
+                            } finally {
+                              setFeedbackLoading(prev => ({ ...prev, [q.id]: false }));
+                            }
+                          }}
+                          disabled={!feedbackText[q.id]?.trim() || feedbackLoading[q.id]}
+                          className="bg-legal-500 hover:bg-legal-600 disabled:bg-gray-200 text-white px-6 py-2 rounded-xl font-bold text-xs transition-all"
+                        >
+                          {feedbackLoading[q.id] ? 'Enviando...' : 'Enviar Feedback'}
+                        </button>
+                        <button
+                          onClick={() => {
+                            setFeedbackOpen(prev => ({ ...prev, [q.id]: false }));
+                            setFeedbackText(prev => ({ ...prev, [q.id]: '' }));
+                          }}
+                          className="border border-legal-200 text-legal-600 px-4 py-2 rounded-xl font-bold text-xs hover:bg-legal-50 transition-all"
+                        >
+                          Cancelar
+                        </button>
+                      </div>
+                    </div>
+                  )}
+
+                  {feedbackSent[q.id] && (
+                    <div className="text-xs text-green-600 font-medium flex items-center gap-1">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                      Feedback enviado! Obrigado por contribuir.
+                    </div>
+                  )}
                 </div>
               )}
             </div>

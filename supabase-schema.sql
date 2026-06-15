@@ -80,6 +80,19 @@ CREATE TABLE IF NOT EXISTS user_comments (
 );
 
 -- ============================================
+-- Tabela: feedback de questões
+-- ============================================
+CREATE TABLE IF NOT EXISTS question_feedback (
+  id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
+  user_id UUID REFERENCES users(id) ON DELETE CASCADE,
+  question_id TEXT NOT NULL,
+  mensagem TEXT NOT NULL,
+  status TEXT NOT NULL DEFAULT 'pendente',
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+  updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+
+-- ============================================
 -- Índices para performance
 -- ============================================
 CREATE INDEX IF NOT EXISTS idx_performance_user_id ON performance(user_id);
@@ -87,6 +100,9 @@ CREATE INDEX IF NOT EXISTS idx_performance_question_id ON performance(question_i
 CREATE INDEX IF NOT EXISTS idx_error_notebook_user_id ON error_notebook(user_id);
 CREATE INDEX IF NOT EXISTS idx_user_comments_user_id ON user_comments(user_id);
 CREATE INDEX IF NOT EXISTS idx_questions_materia ON questions(materia);
+CREATE INDEX IF NOT EXISTS idx_question_feedback_user_id ON question_feedback(user_id);
+CREATE INDEX IF NOT EXISTS idx_question_feedback_question_id ON question_feedback(question_id);
+CREATE INDEX IF NOT EXISTS idx_question_feedback_status ON question_feedback(status);
 
 -- ============================================
 -- Admin padrão (senha: admin123)

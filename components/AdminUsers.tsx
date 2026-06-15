@@ -192,6 +192,13 @@ const AdminUsers: React.FC<AdminUsersProps> = ({
         >
           Criar Conta
         </button>
+        <div className="flex-grow" />
+        <div className="flex items-center gap-2 text-xs">
+          <span className="text-gray-400">Pendentes:</span>
+          <span className="bg-yellow-100 text-yellow-700 px-2 py-0.5 rounded-full font-bold">
+            {users.filter(u => !u.ativo).length}
+          </span>
+        </div>
       </div>
 
       {formError && (
