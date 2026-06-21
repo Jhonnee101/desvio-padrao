@@ -233,10 +233,12 @@ const StudentPanel: React.FC<StudentPanelProps> = ({
               <div className="flex flex-wrap gap-4 items-end">
                 {focoJuridico.map((s, idx) => (
                   <div key={idx} className="flex flex-col items-center group">
-                    <div className="relative w-16 bg-gray-100 rounded-t-lg overflow-hidden h-40 flex flex-col justify-end">
-                       <div className="w-full bg-red-500" style={{ height: `${100 - s.percent}%` }}></div>
-                      <div className="absolute inset-0 flex items-center justify-center text-[10px] font-bold text-legal-900 bg-white/10 group-hover:bg-white/40">
-                        {Math.round(100 - s.percent)}% erro
+                    <div className="relative w-16 bg-gray-100 rounded-t-lg overflow-hidden h-40 flex flex-col">
+                      <div className="w-full bg-red-500 transition-all" style={{ height: `${100 - s.percent}%` }}></div>
+                      <div className="w-full bg-green-500 transition-all" style={{ height: `${s.percent}%` }}></div>
+                      <div className="absolute inset-0 flex items-center justify-center text-[10px] font-bold text-legal-900 bg-white/10 group-hover:bg-white/40 flex-col gap-0.5">
+                        <span className="text-red-700">{Math.round(100 - s.percent)}% erro</span>
+                        <span className="text-green-700">{Math.round(s.percent)}% acerto</span>
                       </div>
                     </div>
                     <div className="mt-2 text-[8px] font-bold text-gray-500 uppercase tracking-tighter w-16 text-center leading-tight truncate">{s.name}</div>
