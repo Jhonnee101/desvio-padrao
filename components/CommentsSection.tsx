@@ -40,7 +40,10 @@ const CommentsSection: React.FC<CommentsSectionProps> = ({
     if (!newComment.trim() || submitting) return;
     setSubmitting(true);
     const success = await onAddComment(questionId, newComment.trim(), null);
-    if (success) setNewComment('');
+    if (success) {
+      setNewComment('');
+      await loadComments();
+    }
     setSubmitting(false);
   };
 
@@ -51,17 +54,20 @@ const CommentsSection: React.FC<CommentsSectionProps> = ({
     if (success) {
       setReplyText('');
       setReplyTo(null);
+      await loadComments();
     }
     setSubmitting(false);
   };
 
   const handleVote = async (commentId: string, voteType: 'like' | 'dislike') => {
     await onVoteComment(commentId, voteType, questionId);
+    await loadComments();
   };
 
   const handleDelete = async (commentId: string) => {
     if (!confirm('Tem certeza que deseja excluir este comentário?')) return;
     await onDeleteComment(commentId, questionId);
+    await loadComments();
   };
 
   const formatDate = (timestamp: number) => {
