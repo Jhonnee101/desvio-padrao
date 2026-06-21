@@ -28,6 +28,7 @@ const QuestionSolver: React.FC<QuestionSolverProps> = ({ subject, topic, questio
   const [feedbackText, setFeedbackText] = useState<Record<string, string>>({});
   const [feedbackSent, setFeedbackSent] = useState<Record<string, boolean>>({});
   const [feedbackLoading, setFeedbackLoading] = useState<Record<string, boolean>>({});
+  const [commentsOpen, setCommentsOpen] = useState<Record<string, boolean>>({});
   
   const [isFinalized, setIsFinalized] = useState(false);
   const [isReviewingErrors, setIsReviewingErrors] = useState(false);
@@ -364,14 +365,37 @@ const QuestionSolver: React.FC<QuestionSolverProps> = ({ subject, topic, questio
 
               {!isSimulado && onLoadComments && onAddComment && onDeleteComment && onVoteComment && (
                 <div className="pt-4 border-t border-legal-50">
-                  <CommentsSection
-                    questionId={q.id}
-                    currentUser={currentUser || null}
-                    onLoadComments={onLoadComments}
-                    onAddComment={onAddComment}
-                    onDeleteComment={onDeleteComment}
-                    onVoteComment={onVoteComment}
-                  />
+                  {!commentsOpen[q.id] ? (
+                    <button
+                      onClick={() => setCommentsOpen(prev => ({ ...prev, [q.id]: true }))}
+                      className="flex items-center gap-2 text-xs text-gray-400 hover:text-legal-600 font-medium transition-colors"
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                        <path fillRule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zm-4 0H9v2h2V9z" clipRule="evenodd" />
+                      </svg>
+                      Comentários
+                    </button>
+                  ) : (
+                    <div className="space-y-3">
+                      <button
+                        onClick={() => setCommentsOpen(prev => ({ ...prev, [q.id]: false }))}
+                        className="flex items-center gap-2 text-xs text-gray-400 hover:text-legal-600 font-medium transition-colors mb-3"
+                      >
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                          <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+                        </svg>
+                        Fechar comentários
+                      </button>
+                      <CommentsSection
+                        questionId={q.id}
+                        currentUser={currentUser || null}
+                        onLoadComments={onLoadComments}
+                        onAddComment={onAddComment}
+                        onDeleteComment={onDeleteComment}
+                        onVoteComment={onVoteComment}
+                      />
+                    </div>
+                  )}
                 </div>
               )}
             </div>
