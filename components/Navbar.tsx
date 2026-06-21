@@ -37,30 +37,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentUser, onLogout, onNavigate, curr
         </div>
 
         <div className="flex items-center space-x-6">
-          {currentUser && currentUser.role === 'admin' && (
-            <>
-              <button 
-                onClick={() => onNavigate('dashboard')}
-                className={`text-sm font-medium transition-colors ${currentView === 'dashboard' ? 'text-legal-500' : 'text-gray-500 hover:text-legal-500'}`}
-              >
-                Matérias
-              </button>
-              <button 
-                onClick={() => onNavigate('admin-users')}
-                className={`text-sm font-medium transition-colors ${currentView === 'admin-users' ? 'text-legal-500' : 'text-gray-500 hover:text-legal-500'}`}
-              >
-                Usuários
-              </button>
-              <button 
-                onClick={() => onNavigate('admin')}
-                className={`text-sm font-medium transition-colors ${currentView === 'admin' ? 'text-legal-500' : 'text-gray-500 hover:text-legal-500'}`}
-              >
-                BANCO
-              </button>
-            </>
-          )}
-
-          {currentUser && currentUser.role !== 'admin' && (
+          {currentUser && (
             <button 
               onClick={() => onNavigate('dashboard')}
               className={`text-sm font-medium transition-colors ${currentView === 'dashboard' ? 'text-legal-500' : 'text-gray-500 hover:text-legal-500'}`}
@@ -70,15 +47,22 @@ const Navbar: React.FC<NavbarProps> = ({ currentUser, onLogout, onNavigate, curr
           )}
 
           {(currentUser?.role === 'admin' || currentUser?.role === 'collaborator') && (
-            <button 
-              onClick={() => onNavigate('admin-feedback')}
-              className={`text-sm font-medium transition-colors flex items-center gap-1 ${currentView === 'admin-feedback' ? 'text-legal-500' : 'text-gray-500 hover:text-legal-500'}`}
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                <path fillRule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zm-4 0H9v2h2V9z" clipRule="evenodd" />
-              </svg>
-              Feedback
-            </button>
+            <>
+              <button 
+                onClick={() => onNavigate('admin')}
+                className={`text-sm font-medium transition-colors ${currentView === 'admin' ? 'text-legal-500' : 'text-gray-500 hover:text-legal-500'}`}
+              >
+                BANCO
+              </button>
+              {currentUser.role === 'admin' && (
+                <button 
+                  onClick={() => onNavigate('admin-users')}
+                  className={`text-sm font-medium transition-colors ${currentView === 'admin-users' ? 'text-legal-500' : 'text-gray-500 hover:text-legal-500'}`}
+                >
+                  Usuários
+                </button>
+              )}
+            </>
           )}
 
           <div className="relative">

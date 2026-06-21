@@ -6,6 +6,7 @@ interface AdminFeedbackProps {
   questions: Question[];
   onUpdateStatus: (id: string, status: FeedbackStatus) => Promise<void>;
   onEditQuestion: (id: string) => void;
+  onDeleteQuestion: (id: string) => void;
   onBack: () => void;
 }
 
@@ -15,7 +16,7 @@ const STATUS_CONFIG: Record<FeedbackStatus, { label: string, color: string, icon
   'concluida': { label: 'Concluída', color: 'bg-green-100 text-green-700', icon: '✅' }
 };
 
-const AdminFeedback: React.FC<AdminFeedbackProps> = ({ feedbacks, questions, onUpdateStatus, onEditQuestion, onBack }) => {
+const AdminFeedback: React.FC<AdminFeedbackProps> = ({ feedbacks, questions, onUpdateStatus, onEditQuestion, onDeleteQuestion, onBack }) => {
   const [filterStatus, setFilterStatus] = useState<FeedbackStatus | 'all'>('all');
   const [expandedId, setExpandedId] = useState<string | null>(null);
 
@@ -129,12 +130,20 @@ const AdminFeedback: React.FC<AdminFeedbackProps> = ({ feedbacks, questions, onU
                         </button>
                       )}
                       {question && (
-                        <button
-                          onClick={() => onEditQuestion(fb.questionId)}
-                          className="px-3 py-1.5 text-xs font-bold rounded-lg bg-legal-500 text-white hover:bg-legal-600 transition-all"
-                        >
-                          ✏️ Editar Questão
-                        </button>
+                        <>
+                          <button
+                            onClick={() => onEditQuestion(fb.questionId)}
+                            className="px-3 py-1.5 text-xs font-bold rounded-lg bg-legal-500 text-white hover:bg-legal-600 transition-all"
+                          >
+                            ✏️ Editar
+                          </button>
+                          <button
+                            onClick={() => { if (confirm(`Tem certeza que deseja excluir a questão "${question.id}"? Esta ação afetará desempenhos e comentários vinculados.`)) onDeleteQuestion(fb.questionId); }}
+                            className="px-3 py-1.5 text-xs font-bold rounded-lg bg-red-500 text-white hover:bg-red-600 transition-all"
+                          >
+                            🗑️ Excluir
+                          </button>
+                        </>
                       )}
                     </div>
                   </div>

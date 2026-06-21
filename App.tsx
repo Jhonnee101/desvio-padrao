@@ -10,7 +10,6 @@ import QuestionSolver from './components/QuestionSolver';
 import AdminPanel from './components/AdminPanel';
 import AdminUsers from './components/AdminUsers';
 import StudentPanel from './components/StudentPanel';
-import AdminFeedback from './components/AdminFeedback';
 
 const App: React.FC = () => {
   const [view, setView] = useState<View>('landing');
@@ -732,7 +731,7 @@ const App: React.FC = () => {
           onNavigate={(v) => {
             setEditQuestionId(null);
             if (v === 'admin-users') loadUsers();
-            if (v === 'admin-feedback') loadFeedbacks();
+            if (v === 'admin') loadFeedbacks();
             setView(v);
           }}
           currentView={view}
@@ -781,7 +780,7 @@ const App: React.FC = () => {
         )}
 
         {view === 'admin' && (
-          currentUser?.role === 'admin' ? (
+          currentUser?.role === 'admin' || currentUser?.role === 'collaborator' ? (
             <AdminPanel
               subjects={subjects}
               questions={questions}
@@ -791,11 +790,14 @@ const App: React.FC = () => {
               onDeleteQuestion={deleteQuestion}
               onBack={() => { setEditQuestionId(null); setView('dashboard'); }}
               editQuestionId={editQuestionId}
+              feedbacks={feedbacks}
+              onUpdateStatus={updateFeedbackStatus}
+              onEditQuestionFromFeedback={handleEditQuestionFromFeedback}
             />
           ) : (
             <div className="text-center py-20">
               <h2 className="text-2xl font-bold text-red-600 mb-4">Acesso Negado</h2>
-              <p className="text-legal-600 mb-6">Apenas administradores podem acessar o painel administrativo.</p>
+              <p className="text-legal-600 mb-6">Apenas administradores e colaboradores podem acessar o painel administrativo.</p>
               <button onClick={() => setView('dashboard')} className="bg-legal-500 text-white px-6 py-3 rounded-xl font-bold hover:bg-legal-600">
                 Voltar ao Dashboard
               </button>
@@ -817,26 +819,6 @@ const App: React.FC = () => {
             <div className="text-center py-20">
               <h2 className="text-2xl font-bold text-red-600 mb-4">Acesso Negado</h2>
               <p className="text-legal-600 mb-6">Apenas administradores podem gerenciar usuários.</p>
-              <button onClick={() => setView('dashboard')} className="bg-legal-500 text-white px-6 py-3 rounded-xl font-bold hover:bg-legal-600">
-                Voltar ao Dashboard
-              </button>
-            </div>
-          )
-        )}
-
-        {view === 'admin-feedback' && (
-          currentUser?.role === 'admin' || currentUser?.role === 'collaborator' ? (
-            <AdminFeedback
-              feedbacks={feedbacks}
-              questions={questions}
-              onUpdateStatus={updateFeedbackStatus}
-              onEditQuestion={handleEditQuestionFromFeedback}
-              onBack={() => setView('dashboard')}
-            />
-          ) : (
-            <div className="text-center py-20">
-              <h2 className="text-2xl font-bold text-red-600 mb-4">Acesso Negado</h2>
-              <p className="text-legal-600 mb-6">Apenas administradores e colaboradores podem acessar esta página.</p>
               <button onClick={() => setView('dashboard')} className="bg-legal-500 text-white px-6 py-3 rounded-xl font-bold hover:bg-legal-600">
                 Voltar ao Dashboard
               </button>

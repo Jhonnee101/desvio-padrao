@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Question, SUBJECT_TOPICS } from '../types';
+import { Question, SUBJECT_TOPICS, QuestionFeedback, FeedbackStatus } from '../types';
+import AdminFeedback from './AdminFeedback';
 
 interface AdminPanelProps {
   subjects: string[];
@@ -10,10 +11,13 @@ interface AdminPanelProps {
   onDeleteQuestion: (id: string) => void;
   onBack: () => void;
   editQuestionId?: string | null;
+  feedbacks?: QuestionFeedback[];
+  onUpdateStatus?: (id: string, status: FeedbackStatus) => Promise<void>;
+  onEditQuestionFromFeedback?: (id: string) => void;
 }
 
-const AdminPanel: React.FC<AdminPanelProps> = ({ subjects, questions, onAddSubject, onAddQuestions, onUpdateQuestion, onDeleteQuestion, onBack, editQuestionId }) => {
-  const [activeSubTab, setActiveSubTab] = useState<'form' | 'import' | 'list'>('form');
+const AdminPanel: React.FC<AdminPanelProps> = ({ subjects, questions, onAddSubject, onAddQuestions, onUpdateQuestion, onDeleteQuestion, onBack, editQuestionId, feedbacks, onUpdateStatus, onEditQuestionFromFeedback }) => {
+  const [activeSubTab, setActiveSubTab] = useState<'form' | 'import' | 'list' | 'feedback'>('form');
   const [error, setError] = useState<string | null>(null);
   const [successMsg, setSuccessMsg] = useState<string | null>(null);
   const [editingId, setEditingId] = useState<string | null>(null);
@@ -219,7 +223,8 @@ const AdminPanel: React.FC<AdminPanelProps> = ({ subjects, questions, onAddSubje
         {[
           { id: 'form', label: 'Cadastrar Questão', icon: '✍️' },
           { id: 'import', label: 'Importar JSON', icon: '📂' },
-          { id: 'list', label: `Questões (${questions.length})`, icon: '📋' }
+          { id: 'list', label: `Questões (${questions.length})`, icon: '📋' },
+          { id: 'feedback', label: `Feedbacks (${feedbacks?.length || 0})`, icon: '💬' }
         ].map(tab => (
           <button
             key={tab.id}
@@ -450,6 +455,17 @@ const AdminPanel: React.FC<AdminPanelProps> = ({ subjects, questions, onAddSubje
             </div>
           )}
         </div>
+      )}
+
+      {activeSubTab === 'feedback' && feedbacks && onUpdateStatus && onEditQuestionFromFeedback && (
+        <AdminFeedback
+          feedbacks={feedbacks}
+          questions={questions}
+          onUpdateStatus={onUpdateStatus}
+          onEditQuestion={onEditQuestionFromFeedback}
+          onDeleteQuestion={onDeleteQuestion}
+          onBack={() => setActiveSubTab('list')}
+        />
       )}
     </div>
   );
