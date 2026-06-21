@@ -323,7 +323,7 @@ const App: React.FC = () => {
   };
 
   const loadComments = async (questionId: string): Promise<QuestionComment[]> => {
-    if (commentsCache[questionId]) return commentsCache[questionId];
+    if (commentsCache[questionId] && commentsCache[questionId].length > 0) return commentsCache[questionId];
     try {
       const { data: commentsData } = await supabase
         .from('question_comments')
@@ -417,7 +417,7 @@ const App: React.FC = () => {
         return false;
       }
 
-      setCommentsCache(prev => ({ ...prev, [questionId]: [] }));
+      setCommentsCache(prev => { const next = { ...prev }; delete next[questionId]; return next; });
       await loadComments(questionId);
       return true;
     } catch (error) {
@@ -440,7 +440,7 @@ const App: React.FC = () => {
         return false;
       }
 
-      setCommentsCache(prev => ({ ...prev, [questionId]: [] }));
+      setCommentsCache(prev => { const next = { ...prev }; delete next[questionId]; return next; });
       await loadComments(questionId);
       return true;
     } catch (error) {
@@ -481,7 +481,7 @@ const App: React.FC = () => {
           });
       }
 
-      setCommentsCache(prev => ({ ...prev, [questionId]: [] }));
+      setCommentsCache(prev => { const next = { ...prev }; delete next[questionId]; return next; });
       await loadComments(questionId);
       return true;
     } catch (error) {
