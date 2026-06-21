@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Question, INITIAL_SUBJECTS, PerformanceRecord, User, UserRole, QuestionFeedback, FeedbackStatus } from './types';
+import { View, Question, INITIAL_SUBJECTS, PerformanceRecord, User, UserRole, QuestionFeedback, FeedbackStatus, QuestionComment } from './types';
 import { supabase } from './lib/supabase';
 import Navbar from './components/Navbar';
 import Landing from './components/Landing';
@@ -27,6 +27,7 @@ const App: React.FC = () => {
   const [userComments, setUserComments] = useState<Record<string, string>>({});
   const [feedbacks, setFeedbacks] = useState<QuestionFeedback[]>([]);
   const [editQuestionId, setEditQuestionId] = useState<string | null>(null);
+  const [commentsCache, setCommentsCache] = useState<Record<string, QuestionComment[]>>({});
 
   useEffect(() => {
     const initializeApp = async () => {
@@ -321,6 +322,174 @@ const App: React.FC = () => {
     }
   };
 
+  const loadComments = async (questionId: string): Promise<QuestionComment[]> => {
+    if (commentsCache[questionId]) return commentsCache[questionId];
+    try {
+      const { data: commentsData } = await supabase
+        .from('question_comments')
+        .select('*, users!inner(nome)')
+        .eq('question_id', questionId)
+        .order('created_at', { ascending: true });
+
+      if (!commentsData) return [];
+
+      let userVotes: Record<string, 'like' | 'dislike'> = {};
+      if (currentUser) {
+        const { data: votesData } = await supabase
+          .from('comment_votes')
+          .select('comment_id, vote_type')
+          .eq('user_id', currentUser.id);
+
+        if (votesData) {
+          votesData.forEach(v => { userVotes[v.comment_id] = v.vote_type as 'like' | 'dislike'; });
+        }
+      }
+
+      const { data: likesData } = await supabase
+        .from('comment_votes')
+        .select('comment_id, vote_type');
+
+      const likeCount: Record<string, { likes: number; dislikes: number }> = {};
+      if (likesData) {
+        likesData.forEach(v => {
+          if (!likeCount[v.comment_id]) likeCount[v.comment_id] = { likes: 0, dislikes: 0 };
+          if (v.vote_type === 'like') likeCount[v.comment_id].likes++;
+          else likeCount[v.comment_id].dislikes++;
+        });
+      }
+
+      const commentsMap: Record<string, QuestionComment> = {};
+      const rootComments: QuestionComment[] = [];
+
+      commentsData.forEach(c => {
+        const comment: QuestionComment = {
+          id: c.id,
+          userId: c.user_id,
+          userNome: (c.users as { nome: string } | null)?.nome || 'Desconhecido',
+          questionId: c.question_id,
+          parentId: c.parent_id,
+          content: c.content,
+          createdAt: new Date(c.created_at).getTime(),
+          updatedAt: new Date(c.updated_at).getTime(),
+          likes: likeCount[c.id]?.likes || 0,
+          dislikes: likeCount[c.id]?.dislikes || 0,
+          userVote: userVotes[c.id] || null,
+          replies: []
+        };
+        commentsMap[c.id] = comment;
+      });
+
+      commentsData.forEach(c => {
+        const comment = commentsMap[c.id];
+        if (c.parent_id && commentsMap[c.parent_id]) {
+          commentsMap[c.parent_id].replies.push(comment);
+        } else if (!c.parent_id) {
+          rootComments.push(comment);
+        }
+      });
+
+      const sortByLikes = (a: QuestionComment, b: QuestionComment) => b.likes - a.likes;
+      rootComments.sort(sortByLikes);
+      rootComments.forEach(r => r.replies.sort(sortByLikes));
+
+      setCommentsCache(prev => ({ ...prev, [questionId]: rootComments }));
+      return rootComments;
+    } catch (error) {
+      console.error('Erro ao carregar comentários:', error);
+      return [];
+    }
+  };
+
+  const addComment = async (questionId: string, content: string, parentId: string | null = null): Promise<boolean> => {
+    if (!currentUser) return false;
+    try {
+      const { error } = await supabase
+        .from('question_comments')
+        .insert({
+          user_id: currentUser.id,
+          question_id: questionId,
+          parent_id: parentId,
+          content
+        });
+
+      if (error) {
+        console.error('Erro ao adicionar comentário:', error);
+        return false;
+      }
+
+      setCommentsCache(prev => ({ ...prev, [questionId]: [] }));
+      await loadComments(questionId);
+      return true;
+    } catch (error) {
+      console.error('Erro ao adicionar comentário:', error);
+      return false;
+    }
+  };
+
+  const deleteComment = async (commentId: string, questionId: string): Promise<boolean> => {
+    if (!currentUser) return false;
+    try {
+      const { error } = await supabase
+        .from('question_comments')
+        .delete()
+        .eq('id', commentId)
+        .eq('user_id', currentUser.id);
+
+      if (error) {
+        console.error('Erro ao deletar comentário:', error);
+        return false;
+      }
+
+      setCommentsCache(prev => ({ ...prev, [questionId]: [] }));
+      await loadComments(questionId);
+      return true;
+    } catch (error) {
+      console.error('Erro ao deletar comentário:', error);
+      return false;
+    }
+  };
+
+  const voteComment = async (commentId: string, voteType: 'like' | 'dislike', questionId: string): Promise<boolean> => {
+    if (!currentUser) return false;
+    try {
+      const { data: existing } = await supabase
+        .from('comment_votes')
+        .select('id, vote_type')
+        .eq('user_id', currentUser.id)
+        .eq('comment_id', commentId)
+        .maybeSingle();
+
+      if (existing) {
+        if (existing.vote_type === voteType) {
+          await supabase
+            .from('comment_votes')
+            .delete()
+            .eq('id', existing.id);
+        } else {
+          await supabase
+            .from('comment_votes')
+            .update({ vote_type: voteType })
+            .eq('id', existing.id);
+        }
+      } else {
+        await supabase
+          .from('comment_votes')
+          .insert({
+            user_id: currentUser.id,
+            comment_id: commentId,
+            vote_type: voteType
+          });
+      }
+
+      setCommentsCache(prev => ({ ...prev, [questionId]: [] }));
+      await loadComments(questionId);
+      return true;
+    } catch (error) {
+      console.error('Erro ao votar no comentário:', error);
+      return false;
+    }
+  };
+
   const submitFeedback = async (questionId: string, mensagem: string) => {
     if (!currentUser) return;
 
@@ -405,6 +574,7 @@ const App: React.FC = () => {
     setUserComments({});
     setUsers([]);
     setFeedbacks([]);
+    setCommentsCache({});
     localStorage.removeItem('dp_session');
     setView('landing');
   };
@@ -603,6 +773,10 @@ const App: React.FC = () => {
             performance={performance}
             currentUser={currentUser}
             onSubmitFeedback={submitFeedback}
+            onLoadComments={loadComments}
+            onAddComment={addComment}
+            onDeleteComment={deleteComment}
+            onVoteComment={voteComment}
           />
         )}
 

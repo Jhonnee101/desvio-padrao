@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect, useMemo } from 'react';
-import { Question, PerformanceRecord, User } from '../types';
+import { Question, PerformanceRecord, User, QuestionComment } from '../types';
+import CommentsSection from './CommentsSection';
 
 interface QuestionSolverProps {
   subject: string;
@@ -14,9 +15,13 @@ interface QuestionSolverProps {
   isSimulado?: boolean;
   currentUser?: User | null;
   onSubmitFeedback?: (questionId: string, mensagem: string) => Promise<void>;
+  onLoadComments?: (questionId: string) => Promise<QuestionComment[]>;
+  onAddComment?: (questionId: string, content: string, parentId: string | null) => Promise<boolean>;
+  onDeleteComment?: (commentId: string, questionId: string) => Promise<boolean>;
+  onVoteComment?: (commentId: string, voteType: 'like' | 'dislike', questionId: string) => Promise<boolean>;
 }
 
-const QuestionSolver: React.FC<QuestionSolverProps> = ({ subject, topic, questions, onBack, onToggleErrorNotebook, onRecordPerformance, errorNotebookIds, performance, isSimulado, currentUser, onSubmitFeedback }) => {
+const QuestionSolver: React.FC<QuestionSolverProps> = ({ subject, topic, questions, onBack, onToggleErrorNotebook, onRecordPerformance, errorNotebookIds, performance, isSimulado, currentUser, onSubmitFeedback, onLoadComments, onAddComment, onDeleteComment, onVoteComment }) => {
   const [currentPage, setCurrentPage] = useState(0);
   const [responses, setResponses] = useState<Record<string, { selected: number | null, discarded: number[], answered: boolean }>>({});
   const [feedbackOpen, setFeedbackOpen] = useState<Record<string, boolean>>({});
@@ -354,6 +359,19 @@ const QuestionSolver: React.FC<QuestionSolverProps> = ({ subject, topic, questio
                       Feedback enviado! Obrigado por contribuir.
                     </div>
                   )}
+                </div>
+              )}
+
+              {!isSimulado && onLoadComments && onAddComment && onDeleteComment && onVoteComment && (
+                <div className="pt-4 border-t border-legal-50">
+                  <CommentsSection
+                    questionId={q.id}
+                    currentUser={currentUser || null}
+                    onLoadComments={onLoadComments}
+                    onAddComment={onAddComment}
+                    onDeleteComment={onDeleteComment}
+                    onVoteComment={onVoteComment}
+                  />
                 </div>
               )}
             </div>

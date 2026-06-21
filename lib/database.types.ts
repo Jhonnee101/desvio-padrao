@@ -169,5 +169,57 @@ export interface Database {
         };
       };
     };
-  };
-}
+    question_comments: {
+        Row: {
+          id: string;
+          user_id: string | null;
+          question_id: string;
+          parent_id: string | null;
+          content: string;
+          created_at: string;
+          updated_at: string;
+        };
+        Insert: {
+          id?: string;
+          user_id: string | null;
+          question_id: string;
+          parent_id?: string | null;
+          content: string;
+          created_at?: string;
+          updated_at?: string;
+        };
+        Update: {
+          id?: string;
+          user_id?: string | null;
+          question_id?: string;
+          parent_id?: string | null;
+          content?: string;
+          created_at?: string;
+          updated_at?: string;
+        };
+      };
+      comment_votes: {
+        Row: {
+          id: string;
+          user_id: string | null;
+          comment_id: string;
+          vote_type: string;
+          created_at: string;
+        };
+        Insert: {
+          id?: string;
+          user_id: string | null;
+          comment_id: string;
+          vote_type: string;
+          created_at?: string;
+        };
+        Update: {
+          id?: string;
+          user_id?: string | null;
+          comment_id?: string;
+          vote_type?: string;
+          created_at?: string;
+        };
+      };
+   };
+ }

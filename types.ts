@@ -48,6 +48,21 @@ export interface QuestionFeedback {
   updatedAt: number;
 }
 
+export interface QuestionComment {
+  id: string;
+  userId: string;
+  userNome: string;
+  questionId: string;
+  parentId: string | null;
+  content: string;
+  createdAt: number;
+  updatedAt: number;
+  likes: number;
+  dislikes: number;
+  userVote: 'like' | 'dislike' | null;
+  replies: QuestionComment[];
+}
+
 export type View = 'landing' | 'login' | 'register' | 'dashboard' | 'solver' | 'admin' | 'admin-users' | 'student-panel' | 'simulado-active' | 'notebook-session' | 'admin-feedback';
 
 export const INITIAL_SUBJECTS = [

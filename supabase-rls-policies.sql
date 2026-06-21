@@ -19,6 +19,8 @@ ALTER TABLE performance ENABLE ROW LEVEL SECURITY;
 ALTER TABLE error_notebook ENABLE ROW LEVEL SECURITY;
 ALTER TABLE user_comments ENABLE ROW LEVEL SECURITY;
 ALTER TABLE question_feedback ENABLE ROW LEVEL SECURITY;
+ALTER TABLE question_comments ENABLE ROW LEVEL SECURITY;
+ALTER TABLE comment_votes ENABLE ROW LEVEL SECURITY;
 
 -- Remove políticas antigas (nomes antigos e atuais)
 DROP POLICY IF EXISTS "Todos podem ler questões" ON questions;
@@ -57,6 +59,14 @@ DROP POLICY IF EXISTS "select_question_feedback" ON question_feedback;
 DROP POLICY IF EXISTS "insert_question_feedback" ON question_feedback;
 DROP POLICY IF EXISTS "update_question_feedback" ON question_feedback;
 DROP POLICY IF EXISTS "delete_question_feedback" ON question_feedback;
+DROP POLICY IF EXISTS "select_question_comments" ON question_comments;
+DROP POLICY IF EXISTS "insert_question_comments" ON question_comments;
+DROP POLICY IF EXISTS "update_question_comments" ON question_comments;
+DROP POLICY IF EXISTS "delete_question_comments" ON question_comments;
+DROP POLICY IF EXISTS "select_comment_votes" ON comment_votes;
+DROP POLICY IF EXISTS "insert_comment_votes" ON comment_votes;
+DROP POLICY IF EXISTS "update_comment_votes" ON comment_votes;
+DROP POLICY IF EXISTS "delete_comment_votes" ON comment_votes;
 
 -- ============================================
 -- POLÍTICAS PARA users
@@ -151,4 +161,36 @@ CREATE POLICY "update_question_feedback" ON question_feedback
   FOR UPDATE USING (true) WITH CHECK (true);
 
 CREATE POLICY "delete_question_feedback" ON question_feedback
+  FOR DELETE USING (true);
+
+-- ============================================
+-- POLÍTICAS PARA question_comments
+-- ============================================
+
+CREATE POLICY "select_question_comments" ON question_comments
+  FOR SELECT USING (true);
+
+CREATE POLICY "insert_question_comments" ON question_comments
+  FOR INSERT WITH CHECK (true);
+
+CREATE POLICY "update_question_comments" ON question_comments
+  FOR UPDATE USING (true) WITH CHECK (true);
+
+CREATE POLICY "delete_question_comments" ON question_comments
+  FOR DELETE USING (true);
+
+-- ============================================
+-- POLÍTICAS PARA comment_votes
+-- ============================================
+
+CREATE POLICY "select_comment_votes" ON comment_votes
+  FOR SELECT USING (true);
+
+CREATE POLICY "insert_comment_votes" ON comment_votes
+  FOR INSERT WITH CHECK (true);
+
+CREATE POLICY "update_comment_votes" ON comment_votes
+  FOR UPDATE USING (true) WITH CHECK (true);
+
+CREATE POLICY "delete_comment_votes" ON comment_votes
   FOR DELETE USING (true);

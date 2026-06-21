@@ -166,6 +166,8 @@ BEGIN
   DELETE FROM performance WHERE user_id = p_id;
   DELETE FROM error_notebook WHERE user_id = p_id;
   DELETE FROM user_comments WHERE user_id = p_id;
+  DELETE FROM comment_votes WHERE user_id = p_id;
+  DELETE FROM question_comments WHERE user_id = p_id;
   DELETE FROM users WHERE id = p_id;
 END;
 $$;

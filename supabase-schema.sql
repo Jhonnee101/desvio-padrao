@@ -93,6 +93,31 @@ CREATE TABLE IF NOT EXISTS question_feedback (
 );
 
 -- ============================================
+-- Tabela: comentários públicos das questões
+-- ============================================
+CREATE TABLE IF NOT EXISTS question_comments (
+  id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
+  user_id UUID REFERENCES users(id) ON DELETE CASCADE,
+  question_id TEXT NOT NULL,
+  parent_id UUID REFERENCES question_comments(id) ON DELETE CASCADE,
+  content TEXT NOT NULL,
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+  updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+
+-- ============================================
+-- Tabela: votos (like/dislike) nos comentários
+-- ============================================
+CREATE TABLE IF NOT EXISTS comment_votes (
+  id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
+  user_id UUID REFERENCES users(id) ON DELETE CASCADE,
+  comment_id UUID REFERENCES question_comments(id) ON DELETE CASCADE,
+  vote_type TEXT NOT NULL CHECK (vote_type IN ('like', 'dislike')),
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+  UNIQUE(user_id, comment_id)
+);
+
+-- ============================================
 -- Índices para performance
 -- ============================================
 CREATE INDEX IF NOT EXISTS idx_performance_user_id ON performance(user_id);
@@ -103,6 +128,11 @@ CREATE INDEX IF NOT EXISTS idx_questions_materia ON questions(materia);
 CREATE INDEX IF NOT EXISTS idx_question_feedback_user_id ON question_feedback(user_id);
 CREATE INDEX IF NOT EXISTS idx_question_feedback_question_id ON question_feedback(question_id);
 CREATE INDEX IF NOT EXISTS idx_question_feedback_status ON question_feedback(status);
+
+CREATE INDEX IF NOT EXISTS idx_question_comments_question_id ON question_comments(question_id);
+CREATE INDEX IF NOT EXISTS idx_question_comments_parent_id ON question_comments(parent_id);
+CREATE INDEX IF NOT EXISTS idx_comment_votes_comment_id ON comment_votes(comment_id);
+CREATE INDEX IF NOT EXISTS idx_comment_votes_user_id ON comment_votes(user_id);
 
 -- ============================================
 -- Admin padrão (senha: admin123)
